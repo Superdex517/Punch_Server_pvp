@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PacketGenerator
 {
     class PacketFormat
-    {
+    { 
         // {0} Enum MsgId
         // {1} 패킷 등록
         public static string managerFormat =

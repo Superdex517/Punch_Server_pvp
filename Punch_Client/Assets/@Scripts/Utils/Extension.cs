@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Random = UnityEngine.Random;
@@ -15,7 +14,7 @@ public static class Extension
 
     public static void BindEvent(this GameObject go, Action<PointerEventData> action = null, Define.ETouchEvent type = Define.ETouchEvent.Click)
     {
-        //UI_Base.BindEvent(go, action, type);
+        UI_Base.BindEvent(go, action, type);
     }
 
     public static bool IsValid(this GameObject go)

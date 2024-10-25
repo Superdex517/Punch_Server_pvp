@@ -16,7 +16,7 @@ namespace PacketGenerator
 
     public class Options
     {
-        [Option('o', "outputPath", Required = true, HelpText = "Set output path. ex) Server/GameServer/Packet/Generated/ or Client/Assets/Scripts/Packet/Generated/ (root = M2/부터 경로)")]
+        [Option('o', "outputPath", Required = true, HelpText = "Set output path. ex) Server/GameServer/Packet/Generated/ or Punch_Client/Assets/Scripts/Packet/Generated/ (root = PunchServer/부터 경로)")]
         public string outputPath { get; set; }
         [Option('t', "programType", Required = true, HelpText = "Client = 0, GameServer = 1")]
         public int programType { get; set; }

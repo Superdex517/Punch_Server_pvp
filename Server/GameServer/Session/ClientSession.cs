@@ -18,8 +18,9 @@ namespace GameServer
         public long AccountDbId { get; set; }
         public int SessionId { get; set; }
 
+        public Hero MyHero { get; set; }
         object _lock = new object();
-
+         
         #region Network
         public void Send(IMessage packet)
         {
@@ -41,6 +42,7 @@ namespace GameServer
         {
             Console.WriteLine($"OnConnected : {endPoint}");
         }
+
         public override void OnRecvPacket(ArraySegment<byte> buffer)
         {
             PacketManager.Instance.OnRecvPacket(this, buffer);
@@ -48,15 +50,23 @@ namespace GameServer
 
         public override void OnDisconnected(EndPoint endPoint)
         {
+            GameLogic.Instance.Push(() =>
+            {
+                if (MyHero == null)
+                    return;
+
+                GameRoom room = GameLogic.Instance.Find(1);
+                room.Push(room.LeaveGame, MyHero.ObjectId, false);
+            });
+
             SessionManager.Instance.Remove(this);
 
             Console.WriteLine($"OnDisconnected : {endPoint}");
         }
 
-
         public override void OnSend(int numOfBytes)
         {
-            Console.WriteLine($"Transferred bytes: {numOfBytes}");
+            //Console.WriteLine($"Transferred bytes: {numOfBytes}");
         }
         #endregion
     }

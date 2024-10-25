@@ -8,5 +8,6 @@ public class UI_Scene : UI_Base
     {
         base.Awake();
 
+        Managers.UI.SetCanvas(gameObject, false);
     }
 }

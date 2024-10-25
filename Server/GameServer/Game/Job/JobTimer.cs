@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ServerCore;
 
-namespace GameServer.Game
+namespace GameServer
 {
     struct JobTimerElem : IComparable<JobTimerElem>
     {

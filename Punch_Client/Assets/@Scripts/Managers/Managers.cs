@@ -2,6 +2,7 @@ using System;
 using System.Resources;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Managers : MonoBehaviour
 {
@@ -10,12 +11,21 @@ public class Managers : MonoBehaviour
     public static Managers s_instance;
     public static Managers Instance { get { Init(); return s_instance; } }
 
+    private ObjectManager _object = new ObjectManager();
+    public static ObjectManager Object { get { return Instance?._object; } }
+
+
+
     private PoolManager _pool = new PoolManager();
     private ResourceManager _resource = new ResourceManager();
+    private SceneManagerEx _scene = new SceneManagerEx();
+    private UIManager _ui = new UIManager();
     private NetworkManager _network = new NetworkManager();
 
     public static PoolManager Pool { get { return Instance?._pool; } }
     public static ResourceManager Resource { get { return Instance?._resource; } }
+    public static SceneManagerEx Scene { get { return Instance?._scene; } }
+    public static UIManager UI { get { return Instance?._ui; } }
     public static NetworkManager Network { get { return Instance?._network; } }
 
     public static void Init()
@@ -45,8 +55,8 @@ public class Managers : MonoBehaviour
     public static void Clear()
     {
         //Sound.Clear();
-        //Scene.Clear();
+        Scene.Clear();
         //UI.Clear();
-        //Pool.Clear();
+        Pool.Clear();
     }
 }

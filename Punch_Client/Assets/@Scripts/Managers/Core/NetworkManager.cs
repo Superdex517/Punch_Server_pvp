@@ -91,7 +91,7 @@ public class ServerInstance
     #endregion
 }
 
-public class NetworkManager : MonoBehaviour
+public class NetworkManager
 {
     public ServerInstance GameServer { get; } = new ServerInstance();
 

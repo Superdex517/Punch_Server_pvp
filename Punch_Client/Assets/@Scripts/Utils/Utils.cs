@@ -1,3 +1,4 @@
+using Google.Protobuf.Protocol;
 using System;
 using System.Net;
 using UnityEngine;
@@ -123,5 +124,11 @@ public static class Utils
 
         Debug.LogError("AuthServer IPv4 Failed");
         return null;
+    }
+
+    public static EGameObjectType GetObjectTypeFromId(int id)
+    {
+        int type = (id >> 28) & 0x0F;
+        return (EGameObjectType)type;
     }
 }
