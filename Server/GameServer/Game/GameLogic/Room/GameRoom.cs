@@ -17,7 +17,6 @@ namespace GameServer
 
         Dictionary<int, Hero> _heroes = new Dictionary<int, Hero>();
 
-        public MapComponent Map { get; private set; } = new MapComponent();
 
         public void Init(int mapTemplateId, int zoneCells)
         {

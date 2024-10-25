@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameServer.Game
+namespace GameServer
 {
     public class HeroDb
     {

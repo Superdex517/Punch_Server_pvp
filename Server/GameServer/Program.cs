@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using GameServer.Data;
-using GameServer.Game;
+using GameServer;
 using Google.Protobuf;
 using Microsoft.Extensions.Configuration;
 using ServerCore;

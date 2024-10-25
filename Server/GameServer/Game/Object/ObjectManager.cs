@@ -11,7 +11,7 @@ namespace GameServer
     {
         object _lock = new object();
         Dictionary<int, Hero> _heroes = new Dictionary<int, Hero> ();
-        Dictionary<int, BaseObject> _gameObjects = new Dictionary<int, BaseObject> ();
+        Dictionary<int, BaseObject> _gameobjects = new Dictionary<int, BaseObject> ();
 
         int _counter = 0;
 
@@ -23,11 +23,12 @@ namespace GameServer
             {
                 obj.ObjectId = GenerateId(obj.ObjectType, templateId);
 
-                if(obj.ObjectType == EGameObjectType.Hero)
+                if (obj.ObjectType == EGameObjectType.Hero)
                 {
                     _heroes.Add(obj.ObjectId, obj as Hero);
                 }
             }
+
             return obj;
         }
 
@@ -35,7 +36,7 @@ namespace GameServer
         {
             lock (_lock)
             {
-                return ((int)type << 28 | (templateId << 20) | (_counter++));
+                return ((int)type << 28) | (templateId << 20) | (_counter++);
             }
         }
 
@@ -70,23 +71,23 @@ namespace GameServer
 
             lock (_lock)
             {
-                if(objectType == EGameObjectType.Hero)
+                if (objectType == EGameObjectType.Hero)
                 {
-                    if(_heroes.TryGetValue(objectId, out Hero hero))
-                    {
+                    if (_heroes.TryGetValue(objectId, out Hero hero))
                         return hero;
-                    }
                 }
             }
+
             return null;
         }
 
         public T Find<T>(int objectId) where T : BaseObject, new()
         {
-            if (_gameObjects.TryGetValue(objectId, out BaseObject bo))
+            if (_gameobjects.TryGetValue(objectId, out BaseObject bo))
             {
                 return bo as T;
             }
+
             return null;
         }
     }

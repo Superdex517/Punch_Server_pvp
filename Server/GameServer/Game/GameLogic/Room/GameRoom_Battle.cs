@@ -21,7 +21,6 @@ namespace GameServer
 
             info.PosInfo.State = movePosInfo.State;
             info.PosInfo.MoveDir = movePosInfo.MoveDir;
-            Map.ApplyMove(hero, new System.Numerics.Vector3(movePosInfo.PosX, movePosInfo.PosY, movePosInfo.PosZ));
 
             hero.BroadcastMove();
         }

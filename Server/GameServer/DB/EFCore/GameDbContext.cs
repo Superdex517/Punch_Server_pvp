@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace GameServer.Game
+namespace GameServer
 {
     public class GameDbContext : DbContext
     {

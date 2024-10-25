@@ -29,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Game\GameLogic\Map\" />
     <Folder Include="Packet\Generated\" />
     <Folder Include="Packet\Schema\" />
   </ItemGroup>

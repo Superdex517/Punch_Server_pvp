@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using ServerCore;
 using System.Net;
 using Google.Protobuf;
-using GameServer.Game;
+using GameServer;
 using GameServer.Data;
 
 
