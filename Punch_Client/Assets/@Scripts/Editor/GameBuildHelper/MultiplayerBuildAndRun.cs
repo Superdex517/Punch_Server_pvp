@@ -59,8 +59,8 @@ public class MultiplayerBuildAndRun : MonoBehaviour
             BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows);
 
         // 해상도 설정
-        PlayerSettings.defaultScreenWidth = 400;
-        PlayerSettings.defaultScreenHeight = 400;
+        PlayerSettings.defaultScreenWidth = 1600;
+        PlayerSettings.defaultScreenHeight = 1000;
         PlayerSettings.fullScreenMode = FullScreenMode.Windowed;
 
         for (int i = 1; i <= playerCount; i++)
@@ -76,7 +76,7 @@ public class MultiplayerBuildAndRun : MonoBehaviour
         List<Process> _processes = new List<Process>();
         for (int i = 1; i <= playerCount; i++)
         {
-            string exePath = "Builds/" + GetProjectName() + i.ToString() + ".exe";
+            string exePath = "Build/Punch_Client.exe";
             _processes.Add(RunProcess(exePath));
         }
     }
