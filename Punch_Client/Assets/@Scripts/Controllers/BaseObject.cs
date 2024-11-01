@@ -161,6 +161,11 @@ public class BaseObject : MonoBehaviour
 
         float moveDist = moveSpeed * Time.deltaTime;
 
+        if(dir.magnitude >= moveDist)
+        {
+            //transform.position = 
+        }
+
         SyncPosition();
 
         controller.Move(transform.position);
