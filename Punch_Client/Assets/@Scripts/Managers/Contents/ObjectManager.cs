@@ -1,3 +1,4 @@
+using Cinemachine;
 using Google.Protobuf.Protocol;
 using System;
 using System.Collections;
@@ -6,7 +7,7 @@ using UnityEngine;
 
 public class ObjectManager : MonoBehaviour
 {
-    public MyHero MyHero { get; set; }
+    public MyPlayer MyPlayer { get; set; }
     Dictionary<int, GameObject> _objects = new Dictionary<int, GameObject>();
 
     public Transform GetRootTransform(string name)
@@ -31,13 +32,13 @@ public class ObjectManager : MonoBehaviour
     public Transform NpcRoot { get { return GetRootTransform("@Npc"); } }
     public Transform ItemHolderRoot { get { return GetRootTransform("@ItemHolders"); } }
 
-    public MyHero Spawn(MyHeroInfo myHeroInfo)
+    public MyPlayer Spawn(MyHeroInfo myHeroInfo)
     {
         HeroInfo info = myHeroInfo.HeroInfo;
         if (info == null || info.CreatureInfo == null || info.CreatureInfo.ObjectInfo == null)
             return null;
         ObjectInfo objectInfo = info.CreatureInfo.ObjectInfo;
-        if (MyHero != null && MyHero.ObjectId == objectInfo.ObjectId)
+        if (MyPlayer != null && MyPlayer.ObjectId == objectInfo.ObjectId)
             return null;
         if (_objects.ContainsKey(objectInfo.ObjectId))
             return null;
@@ -45,26 +46,29 @@ public class ObjectManager : MonoBehaviour
         if (objectType != EGameObjectType.Hero)
             return null;
 
-        GameObject go = Managers.Resource.Instantiate("KnightPrefab"); // TEMP		
+        GameObject go = Managers.Resource.Instantiate("Player"); // TEMP		
         go.name = info.Name;
         go.transform.parent = HeroRoot;
         _objects.Add(objectInfo.ObjectId, go);
 
-        MyHero = Utils.GetOrAddComponent<MyHero>(go);
-        MyHero.ObjectId = objectInfo.ObjectId;
-        MyHero.PosInfo = objectInfo.PosInfo;
+        MyPlayer = Utils.GetOrAddComponent<MyPlayer>(go);
+        MyPlayer.ObjectId = objectInfo.ObjectId;
+        MyPlayer.PosInfo = objectInfo.PosInfo;
+        MyPlayer.freeLookCam = Utils.FindAndGetComponent<CinemachineFreeLook>("ThirdPersonCamera");
+        MyPlayer.controller = Utils.GetOrAddComponent<CharacterController>(go);
+        MyPlayer.cam = Camera.main.transform;
 
         //MyHero.SyncWorldPosWithCellPos();
 
-        return MyHero;
+        return MyPlayer;
     }
 
-    public Hero Spawn(HeroInfo info)
+    public Player Spawn(HeroInfo info)
     {
         if (info == null || info.CreatureInfo == null || info.CreatureInfo.ObjectInfo == null)
             return null;
         ObjectInfo objectInfo = info.CreatureInfo.ObjectInfo;
-        if (MyHero.ObjectId == objectInfo.ObjectId)
+        if (MyPlayer.ObjectId == objectInfo.ObjectId)
             return null;
         if (_objects.ContainsKey(objectInfo.ObjectId))
             return null;
@@ -72,24 +76,25 @@ public class ObjectManager : MonoBehaviour
         if (objectType != EGameObjectType.Hero)
             return null;
 
-        GameObject go = Managers.Resource.Instantiate("KnightPrefab"); // TEMP
+        GameObject go = Managers.Resource.Instantiate("Player"); // TEMP
         go.name = info.Name;
         go.transform.parent = HeroRoot;
         _objects.Add(objectInfo.ObjectId, go);
 
-        Hero hero = Utils.GetOrAddComponent<Hero>(go);
-        hero.ObjectId = objectInfo.ObjectId;
-        hero.PosInfo = objectInfo.PosInfo;
-        hero.SetInfo(1);
+        Player player = Utils.GetOrAddComponent<Player>(go);
+        player.controller = Utils.GetOrAddComponent<CharacterController>(go);
+        player.ObjectId = objectInfo.ObjectId;
+        player.PosInfo = objectInfo.PosInfo;
+        player.SetInfo(1);
 
         //hero.SyncWorldPosWithCellPos();
 
-        return hero;
+        return player;
     }
 
     public void Despawn(int objectId)
     {
-        if (MyHero != null && MyHero.ObjectId == objectId)
+        if (MyPlayer != null && MyPlayer.ObjectId == objectId)
             return;
         if (_objects.ContainsKey(objectId) == false)
             return;
@@ -161,6 +166,6 @@ public class ObjectManager : MonoBehaviour
             Managers.Resource.Destroy(obj);
 
         _objects.Clear();
-        MyHero = null;
+        MyPlayer = null;
     }
 }

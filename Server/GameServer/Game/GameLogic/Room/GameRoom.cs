@@ -15,12 +15,13 @@ namespace GameServer
         public int GameRoomId { get; set; }
         public int TemplateId { get; set; }
 
-        Dictionary<int, Hero> _heroes = new Dictionary<int, Hero>();
+        public Dictionary<int, Hero> _heroes = new Dictionary<int, Hero>();
 
+        public Zone[,] Zones { get; private set; }
 
         public void Init(int mapTemplateId, int zoneCells)
         {
-
+            
         }
 
         public void Update()
@@ -39,16 +40,18 @@ namespace GameServer
                 obj.Pos = GetSpawnPos(obj, checkObjects: true);
 
             EGameObjectType type = ObjectManager.GetObjectTypeFromId(obj.ObjectId);
-            if(type == EGameObjectType.Hero)
+            if (type == EGameObjectType.Hero)
             {
                 Hero hero = (Hero)obj;
                 _heroes.Add(obj.ObjectId, hero);
                 hero.Room = this;
 
+                ApplyMove(hero, new Vector3(hero.Pos.X, hero.Pos.Y, hero.Pos.Z));
+
                 hero.State = EObjectState.Idle;
                 hero.Update();
 
-                 // 입장한 사람한테 패킷 보내기.
+                // 입장한 사람한테 패킷 보내기.
                 {
                     S_EnterGame enterPacket = new S_EnterGame();
                     enterPacket.MyHeroInfo = hero.MyHeroInfo;
@@ -56,6 +59,7 @@ namespace GameServer
 
                     hero.Session?.Send(enterPacket);
 
+                    hero.Vision?.Update();
                 }
 
                 // 다른 사람들한테 입장 알려주기.

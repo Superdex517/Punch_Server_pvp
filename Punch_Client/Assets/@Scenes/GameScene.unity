@@ -131,7 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6233725}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 10393478}
   - component: {fileID: 10393477}
   - component: {fileID: 10393476}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 19613306}
   - component: {fileID: 19613305}
   - component: {fileID: 19613304}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 25259440}
   - component: {fileID: 25259439}
   - component: {fileID: 25259438}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 26769951}
   - component: {fileID: 26769950}
   - component: {fileID: 26769949}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +587,7 @@ GameObject:
   - component: {fileID: 27238985}
   - component: {fileID: 27238984}
   - component: {fileID: 27238983}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: vBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -717,7 +717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 31211474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 34142789}
   - component: {fileID: 34142790}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -814,7 +814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 34465014}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -855,7 +855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 41425823}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VbotStatue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -891,7 +891,7 @@ GameObject:
   - component: {fileID: 46577101}
   - component: {fileID: 46577103}
   - component: {fileID: 46577102}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -972,7 +972,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 48518218}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1015,7 +1015,7 @@ GameObject:
   - component: {fileID: 50651344}
   - component: {fileID: 50651346}
   - component: {fileID: 50651345}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1098,7 +1098,7 @@ GameObject:
   - component: {fileID: 54918121}
   - component: {fileID: 54918123}
   - component: {fileID: 54918122}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1182,7 +1182,7 @@ GameObject:
   - component: {fileID: 57575496}
   - component: {fileID: 57575495}
   - component: {fileID: 57575494}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1287,7 +1287,7 @@ GameObject:
   - component: {fileID: 57676180}
   - component: {fileID: 57676179}
   - component: {fileID: 57676178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1392,7 +1392,7 @@ GameObject:
   - component: {fileID: 63115582}
   - component: {fileID: 63115581}
   - component: {fileID: 63115580}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1496,7 +1496,7 @@ GameObject:
   - component: {fileID: 73513990}
   - component: {fileID: 73513992}
   - component: {fileID: 73513991}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1581,7 +1581,7 @@ GameObject:
   - component: {fileID: 90045910}
   - component: {fileID: 90045909}
   - component: {fileID: 90045908}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1764,7 +1764,7 @@ GameObject:
   - component: {fileID: 91841284}
   - component: {fileID: 91841283}
   - component: {fileID: 91841282}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1869,7 +1869,7 @@ GameObject:
   - component: {fileID: 99553002}
   - component: {fileID: 99553001}
   - component: {fileID: 99553000}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1974,7 +1974,7 @@ GameObject:
   - component: {fileID: 107381108}
   - component: {fileID: 107381107}
   - component: {fileID: 107381106}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2079,7 +2079,7 @@ GameObject:
   - component: {fileID: 108222789}
   - component: {fileID: 108222788}
   - component: {fileID: 108222787}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2181,7 +2181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 109500533}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2216,7 +2216,7 @@ GameObject:
   - component: {fileID: 117194727}
   - component: {fileID: 117194726}
   - component: {fileID: 117194725}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2318,7 +2318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 117554400}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Static
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2358,7 +2358,7 @@ GameObject:
   - component: {fileID: 121932507}
   - component: {fileID: 121932509}
   - component: {fileID: 121932508}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2442,7 +2442,7 @@ GameObject:
   - component: {fileID: 123664331}
   - component: {fileID: 123664330}
   - component: {fileID: 123664329}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: columnB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2546,7 +2546,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 123847669}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2578,7 +2578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 127875703}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Static
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2615,7 +2615,7 @@ GameObject:
   - component: {fileID: 138095094}
   - component: {fileID: 138095093}
   - component: {fileID: 138095092}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2720,7 +2720,7 @@ GameObject:
   - component: {fileID: 142677798}
   - component: {fileID: 142677797}
   - component: {fileID: 142677796}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2825,7 +2825,7 @@ GameObject:
   - component: {fileID: 146957930}
   - component: {fileID: 146957929}
   - component: {fileID: 146957928}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2928,7 +2928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 147117601}
   - component: {fileID: 147117602}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spotlight (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3024,7 +3024,7 @@ GameObject:
   - component: {fileID: 152817386}
   - component: {fileID: 152817385}
   - component: {fileID: 152817384}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3129,7 +3129,7 @@ GameObject:
   - component: {fileID: 163405461}
   - component: {fileID: 163405460}
   - component: {fileID: 163405459}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3231,7 +3231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 165091212}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3266,7 +3266,7 @@ GameObject:
   - component: {fileID: 169912085}
   - component: {fileID: 169912084}
   - component: {fileID: 169912083}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3368,7 +3368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 179404366}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: vIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3404,7 +3404,7 @@ GameObject:
   - component: {fileID: 197870019}
   - component: {fileID: 197870018}
   - component: {fileID: 197870017}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3509,7 +3509,7 @@ GameObject:
   - component: {fileID: 204540802}
   - component: {fileID: 204540801}
   - component: {fileID: 204540800}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3613,7 +3613,7 @@ GameObject:
   - component: {fileID: 211671608}
   - component: {fileID: 211671610}
   - component: {fileID: 211671609}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3698,7 +3698,7 @@ GameObject:
   - component: {fileID: 217850128}
   - component: {fileID: 217850127}
   - component: {fileID: 217850126}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3802,7 +3802,7 @@ GameObject:
   - component: {fileID: 218051064}
   - component: {fileID: 218051066}
   - component: {fileID: 218051065}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3887,7 +3887,7 @@ GameObject:
   - component: {fileID: 222149453}
   - component: {fileID: 222149452}
   - component: {fileID: 222149451}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3992,7 +3992,7 @@ GameObject:
   - component: {fileID: 225898279}
   - component: {fileID: 225898278}
   - component: {fileID: 225898277}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4096,7 +4096,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 228100531}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4139,7 +4139,7 @@ GameObject:
   - component: {fileID: 235032657}
   - component: {fileID: 235032659}
   - component: {fileID: 235032658}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-Hexagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4222,7 +4222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 239146085}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4254,7 +4254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 240847603}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4289,7 +4289,7 @@ GameObject:
   - component: {fileID: 245377947}
   - component: {fileID: 245377946}
   - component: {fileID: 245377945}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4382,6 +4382,133 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245377943}
   m_Mesh: {fileID: 4300000, guid: dee2cc7c00fcd6b4f90719f3660798f8, type: 3}
+--- !u!1 &247677654
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 247677655}
+  - component: {fileID: 247677658}
+  - component: {fileID: 247677657}
+  - component: {fileID: 247677656}
+  m_Layer: 0
+  m_Name: cm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &247677655
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247677654}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 884066517}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &247677656
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247677654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
+  m_LookaheadTime: 0
+  m_LookaheadSmoothing: 0
+  m_LookaheadIgnoreY: 0
+  m_HorizontalDamping: 0
+  m_VerticalDamping: 0
+  m_ScreenX: 0.5
+  m_ScreenY: 0.55
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
+  m_SoftZoneWidth: 0.8
+  m_SoftZoneHeight: 0.8
+  m_BiasX: 0
+  m_BiasY: 0
+  m_CenterOnActivate: 1
+--- !u!114 &247677657
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247677654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BindingMode: 4
+  m_FollowOffset: {x: 0, y: 14, z: -12}
+  m_XDamping: 1
+  m_YDamping: 1
+  m_ZDamping: 1
+  m_AngularDampingMode: 0
+  m_PitchDamping: 0
+  m_YawDamping: 0
+  m_RollDamping: 0
+  m_AngularDamping: 0
+  m_Heading:
+    m_Definition: 2
+    m_VelocityFilterStrength: 4
+    m_Bias: 0
+  m_RecenterToTargetHeading:
+    m_enabled: 0
+    m_WaitTime: 1
+    m_RecenteringTime: 2
+    m_LegacyHeadingDefinition: -1
+    m_LegacyVelocityFilterStrength: -1
+  m_XAxis:
+    Value: 0
+    m_SpeedMode: 0
+    m_MaxSpeed: 300
+    m_AccelTime: 0.1
+    m_DecelTime: 0.1
+    m_InputAxisName: 
+    m_InputAxisValue: 0
+    m_InvertInput: 1
+    m_MinValue: -180
+    m_MaxValue: 180
+    m_Wrap: 1
+    m_Recentering:
+      m_enabled: 0
+      m_WaitTime: 1
+      m_RecenteringTime: 2
+      m_LegacyHeadingDefinition: -1
+      m_LegacyVelocityFilterStrength: -1
+  m_LegacyRadius: 3.4028235e+38
+  m_LegacyHeightOffset: 3.4028235e+38
+  m_LegacyHeadingBias: 3.4028235e+38
+  m_HeadingIsSlave: 1
+--- !u!114 &247677658
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247677654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &255134258
 GameObject:
   m_ObjectHideFlags: 0
@@ -4394,7 +4521,7 @@ GameObject:
   - component: {fileID: 255134262}
   - component: {fileID: 255134261}
   - component: {fileID: 255134260}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4498,7 +4625,7 @@ GameObject:
   - component: {fileID: 255805393}
   - component: {fileID: 255805395}
   - component: {fileID: 255805394}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4580,7 +4707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 258982318}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4619,7 +4746,7 @@ GameObject:
   - component: {fileID: 270517474}
   - component: {fileID: 270517473}
   - component: {fileID: 270517472}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4722,7 +4849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 271134177}
   - component: {fileID: 271134178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4778,7 +4905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 271899681}
   - component: {fileID: 271899682}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4930,7 +5057,7 @@ GameObject:
   - component: {fileID: 275934470}
   - component: {fileID: 275934469}
   - component: {fileID: 275934468}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5035,7 +5162,7 @@ GameObject:
   - component: {fileID: 276595100}
   - component: {fileID: 276595099}
   - component: {fileID: 276595098}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5140,7 +5267,7 @@ GameObject:
   - component: {fileID: 290060358}
   - component: {fileID: 290060357}
   - component: {fileID: 290060356}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5245,7 +5372,7 @@ GameObject:
   - component: {fileID: 296768646}
   - component: {fileID: 296768645}
   - component: {fileID: 296768644}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: columnB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5349,7 +5476,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 300995850}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5384,7 +5511,7 @@ GameObject:
   - component: {fileID: 312877269}
   - component: {fileID: 312877268}
   - component: {fileID: 312877267}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: columnB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5491,7 +5618,7 @@ GameObject:
   - component: {fileID: 315947555}
   - component: {fileID: 315947554}
   - component: {fileID: 315947553}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5598,7 +5725,7 @@ GameObject:
   - component: {fileID: 324627480}
   - component: {fileID: 324627479}
   - component: {fileID: 324627478}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5702,7 +5829,7 @@ GameObject:
   - component: {fileID: 328409515}
   - component: {fileID: 328409517}
   - component: {fileID: 328409516}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5786,7 +5913,7 @@ GameObject:
   - component: {fileID: 330605772}
   - component: {fileID: 330605771}
   - component: {fileID: 330605770}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5888,7 +6015,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 332437054}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandMiddle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5922,7 +6049,7 @@ GameObject:
   - component: {fileID: 342998551}
   - component: {fileID: 342998550}
   - component: {fileID: 342998549}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6027,7 +6154,7 @@ GameObject:
   - component: {fileID: 344951093}
   - component: {fileID: 344951092}
   - component: {fileID: 344951091}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6131,7 +6258,7 @@ GameObject:
   - component: {fileID: 352652792}
   - component: {fileID: 352652794}
   - component: {fileID: 352652793}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6216,7 +6343,7 @@ GameObject:
   - component: {fileID: 356342303}
   - component: {fileID: 356342302}
   - component: {fileID: 356342301}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6309,6 +6436,133 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356342299}
   m_Mesh: {fileID: 4300000, guid: dee2cc7c00fcd6b4f90719f3660798f8, type: 3}
+--- !u!1 &358314556
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 358314557}
+  - component: {fileID: 358314560}
+  - component: {fileID: 358314559}
+  - component: {fileID: 358314558}
+  m_Layer: 0
+  m_Name: cm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &358314557
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358314556}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 735768837}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &358314558
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358314556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
+  m_LookaheadTime: 0
+  m_LookaheadSmoothing: 0
+  m_LookaheadIgnoreY: 0
+  m_HorizontalDamping: 0
+  m_VerticalDamping: 0
+  m_ScreenX: 0.5
+  m_ScreenY: 0.5
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
+  m_SoftZoneWidth: 0.8
+  m_SoftZoneHeight: 0.8
+  m_BiasX: 0
+  m_BiasY: 0
+  m_CenterOnActivate: 1
+--- !u!114 &358314559
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358314556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BindingMode: 4
+  m_FollowOffset: {x: 0, y: 14, z: -12}
+  m_XDamping: 1
+  m_YDamping: 1
+  m_ZDamping: 1
+  m_AngularDampingMode: 0
+  m_PitchDamping: 0
+  m_YawDamping: 0
+  m_RollDamping: 0
+  m_AngularDamping: 0
+  m_Heading:
+    m_Definition: 2
+    m_VelocityFilterStrength: 4
+    m_Bias: 0
+  m_RecenterToTargetHeading:
+    m_enabled: 0
+    m_WaitTime: 1
+    m_RecenteringTime: 2
+    m_LegacyHeadingDefinition: -1
+    m_LegacyVelocityFilterStrength: -1
+  m_XAxis:
+    Value: 0
+    m_SpeedMode: 0
+    m_MaxSpeed: 300
+    m_AccelTime: 0.1
+    m_DecelTime: 0.1
+    m_InputAxisName: 
+    m_InputAxisValue: 0
+    m_InvertInput: 1
+    m_MinValue: -180
+    m_MaxValue: 180
+    m_Wrap: 1
+    m_Recentering:
+      m_enabled: 0
+      m_WaitTime: 1
+      m_RecenteringTime: 2
+      m_LegacyHeadingDefinition: -1
+      m_LegacyVelocityFilterStrength: -1
+  m_LegacyRadius: 3.4028235e+38
+  m_LegacyHeightOffset: 3.4028235e+38
+  m_LegacyHeadingBias: 3.4028235e+38
+  m_HeadingIsSlave: 1
+--- !u!114 &358314560
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358314556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &358529713
 GameObject:
   m_ObjectHideFlags: 0
@@ -6321,7 +6575,7 @@ GameObject:
   - component: {fileID: 358529717}
   - component: {fileID: 358529716}
   - component: {fileID: 358529715}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6426,7 +6680,7 @@ GameObject:
   - component: {fileID: 362696733}
   - component: {fileID: 362696732}
   - component: {fileID: 362696731}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6528,7 +6782,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 362803614}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6565,7 +6819,7 @@ GameObject:
   - component: {fileID: 365940425}
   - component: {fileID: 365940424}
   - component: {fileID: 365940423}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6667,7 +6921,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 368066119}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6703,7 +6957,7 @@ GameObject:
   - component: {fileID: 369336655}
   - component: {fileID: 369336654}
   - component: {fileID: 369336653}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ramp45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6808,7 +7062,7 @@ GameObject:
   m_Component:
   - component: {fileID: 372072338}
   - component: {fileID: 372072339}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spotlight (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6901,7 +7155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 374208950}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6936,7 +7190,7 @@ GameObject:
   - component: {fileID: 374508812}
   - component: {fileID: 374508811}
   - component: {fileID: 374508810}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7119,7 +7373,7 @@ GameObject:
   - component: {fileID: 376636046}
   - component: {fileID: 376636045}
   - component: {fileID: 376636044}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7225,7 +7479,7 @@ GameObject:
   - component: {fileID: 389937369}
   - component: {fileID: 389937368}
   - component: {fileID: 389937367}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7407,7 +7661,7 @@ GameObject:
   - component: {fileID: 390527379}
   - component: {fileID: 390527381}
   - component: {fileID: 390527380}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7491,7 +7745,7 @@ GameObject:
   - component: {fileID: 401115181}
   - component: {fileID: 401115180}
   - component: {fileID: 401115179}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7596,7 +7850,7 @@ GameObject:
   - component: {fileID: 411834275}
   - component: {fileID: 411834274}
   - component: {fileID: 411834273}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7698,7 +7952,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 413062268}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandMiddle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7732,7 +7986,7 @@ GameObject:
   - component: {fileID: 419831976}
   - component: {fileID: 419831975}
   - component: {fileID: 419831974}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7837,7 +8091,7 @@ GameObject:
   - component: {fileID: 419882488}
   - component: {fileID: 419882487}
   - component: {fileID: 419882486}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7942,7 +8196,7 @@ GameObject:
   - component: {fileID: 426304923}
   - component: {fileID: 426304922}
   - component: {fileID: 426304921}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8046,7 +8300,7 @@ GameObject:
   - component: {fileID: 427470791}
   - component: {fileID: 427470793}
   - component: {fileID: 427470792}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-Hexagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8129,7 +8383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 430898980}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8164,7 +8418,7 @@ GameObject:
   - component: {fileID: 431382846}
   - component: {fileID: 431382845}
   - component: {fileID: 431382844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8266,7 +8520,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 445449700}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8298,7 +8552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 445645277}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8333,7 +8587,7 @@ GameObject:
   - component: {fileID: 448164248}
   - component: {fileID: 448164247}
   - component: {fileID: 448164246}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8438,7 +8692,7 @@ GameObject:
   - component: {fileID: 449221441}
   - component: {fileID: 449221440}
   - component: {fileID: 449221439}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8543,7 +8797,7 @@ GameObject:
   - component: {fileID: 458864381}
   - component: {fileID: 458864380}
   - component: {fileID: 458864379}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8648,7 +8902,7 @@ GameObject:
   - component: {fileID: 461228286}
   - component: {fileID: 461228285}
   - component: {fileID: 461228284}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8753,7 +9007,7 @@ GameObject:
   - component: {fileID: 468045901}
   - component: {fileID: 468045900}
   - component: {fileID: 468045899}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8855,7 +9109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 472882607}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8899,7 +9153,7 @@ GameObject:
   - component: {fileID: 474727431}
   - component: {fileID: 474727430}
   - component: {fileID: 474727429}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9004,7 +9258,7 @@ GameObject:
   - component: {fileID: 501012017}
   - component: {fileID: 501012016}
   - component: {fileID: 501012015}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9109,7 +9363,7 @@ GameObject:
   - component: {fileID: 501785093}
   - component: {fileID: 501785092}
   - component: {fileID: 501785091}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9214,7 +9468,7 @@ GameObject:
   - component: {fileID: 519482196}
   - component: {fileID: 519482195}
   - component: {fileID: 519482194}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9319,7 +9573,7 @@ GameObject:
   - component: {fileID: 519731404}
   - component: {fileID: 519731403}
   - component: {fileID: 519731402}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: columnB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9426,7 +9680,7 @@ GameObject:
   - component: {fileID: 525473541}
   - component: {fileID: 525473540}
   - component: {fileID: 525473539}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9531,7 +9785,7 @@ GameObject:
   - component: {fileID: 528114669}
   - component: {fileID: 528114668}
   - component: {fileID: 528114667}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9636,7 +9890,7 @@ GameObject:
   - component: {fileID: 532548067}
   - component: {fileID: 532548066}
   - component: {fileID: 532548065}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9739,7 +9993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 533120946}
   - component: {fileID: 533120947}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9797,7 +10051,7 @@ GameObject:
   - component: {fileID: 533407415}
   - component: {fileID: 533407414}
   - component: {fileID: 533407413}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: column
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9902,7 +10156,7 @@ GameObject:
   - component: {fileID: 540163868}
   - component: {fileID: 540163870}
   - component: {fileID: 540163869}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9987,7 +10241,7 @@ GameObject:
   - component: {fileID: 545262453}
   - component: {fileID: 545262452}
   - component: {fileID: 545262451}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10093,7 +10347,7 @@ GameObject:
   - component: {fileID: 550732954}
   - component: {fileID: 550732953}
   - component: {fileID: 550732952}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10276,7 +10530,7 @@ GameObject:
   - component: {fileID: 552125749}
   - component: {fileID: 552125748}
   - component: {fileID: 552125747}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10379,7 +10633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 555400929}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BasicSection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10415,7 +10669,7 @@ GameObject:
   - component: {fileID: 556172090}
   - component: {fileID: 556172089}
   - component: {fileID: 556172088}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10520,7 +10774,7 @@ GameObject:
   - component: {fileID: 558548266}
   - component: {fileID: 558548265}
   - component: {fileID: 558548264}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10625,7 +10879,7 @@ GameObject:
   - component: {fileID: 560712403}
   - component: {fileID: 560712402}
   - component: {fileID: 560712401}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10730,7 +10984,7 @@ GameObject:
   - component: {fileID: 565560264}
   - component: {fileID: 565560263}
   - component: {fileID: 565560262}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10835,7 +11089,7 @@ GameObject:
   - component: {fileID: 569452356}
   - component: {fileID: 569452355}
   - component: {fileID: 569452354}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: meleeBanner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10954,7 +11208,7 @@ GameObject:
   - component: {fileID: 571920496}
   - component: {fileID: 571920495}
   - component: {fileID: 571920494}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11056,7 +11310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 577653583}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11088,7 +11342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 582553229}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11122,7 +11376,7 @@ GameObject:
   - component: {fileID: 591021294}
   - component: {fileID: 591021296}
   - component: {fileID: 591021295}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11207,7 +11461,7 @@ GameObject:
   - component: {fileID: 591234809}
   - component: {fileID: 591234808}
   - component: {fileID: 591234807}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11312,7 +11566,7 @@ GameObject:
   - component: {fileID: 594293004}
   - component: {fileID: 594293003}
   - component: {fileID: 594293002}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11416,7 +11670,7 @@ GameObject:
   - component: {fileID: 596600155}
   - component: {fileID: 596600157}
   - component: {fileID: 596600156}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11497,7 +11751,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 607345179}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11531,7 +11785,7 @@ GameObject:
   - component: {fileID: 608621087}
   - component: {fileID: 608621089}
   - component: {fileID: 608621088}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11613,7 +11867,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 610359660}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11648,7 +11902,7 @@ GameObject:
   - component: {fileID: 614537218}
   - component: {fileID: 614537217}
   - component: {fileID: 614537216}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: columnB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11755,7 +12009,7 @@ GameObject:
   - component: {fileID: 617583559}
   - component: {fileID: 617583558}
   - component: {fileID: 617583557}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: columnB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11861,7 +12115,7 @@ GameObject:
   - component: {fileID: 621289034}
   - component: {fileID: 621289036}
   - component: {fileID: 621289035}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11946,7 +12200,7 @@ GameObject:
   - component: {fileID: 622646424}
   - component: {fileID: 622646423}
   - component: {fileID: 622646422}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12052,7 +12306,7 @@ GameObject:
   - component: {fileID: 626763194}
   - component: {fileID: 626763193}
   - component: {fileID: 626763192}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: InvectorIcon_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12235,7 +12489,7 @@ GameObject:
   - component: {fileID: 627601229}
   - component: {fileID: 627601228}
   - component: {fileID: 627601227}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12339,7 +12593,7 @@ GameObject:
   - component: {fileID: 627695909}
   - component: {fileID: 627695911}
   - component: {fileID: 627695910}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: invector-icon-V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12423,7 +12677,7 @@ GameObject:
   - component: {fileID: 646478892}
   - component: {fileID: 646478894}
   - component: {fileID: 646478893}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12508,7 +12762,7 @@ GameObject:
   - component: {fileID: 647652717}
   - component: {fileID: 647652716}
   - component: {fileID: 647652715}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12612,7 +12866,7 @@ GameObject:
   - component: {fileID: 649048519}
   - component: {fileID: 649048521}
   - component: {fileID: 649048520}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-Hexagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12698,7 +12952,7 @@ GameObject:
   - component: {fileID: 652250844}
   - component: {fileID: 652250843}
   - component: {fileID: 652250842}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12803,7 +13057,7 @@ GameObject:
   - component: {fileID: 652864223}
   - component: {fileID: 652864222}
   - component: {fileID: 652864221}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12908,7 +13162,7 @@ GameObject:
   - component: {fileID: 655403865}
   - component: {fileID: 655403864}
   - component: {fileID: 655403863}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13010,7 +13264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 661549491}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13054,7 +13308,7 @@ GameObject:
   - component: {fileID: 666452533}
   - component: {fileID: 666452532}
   - component: {fileID: 666452531}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13158,7 +13412,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 673191075}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandThumb4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13192,7 +13446,7 @@ GameObject:
   - component: {fileID: 674924000}
   - component: {fileID: 674923999}
   - component: {fileID: 674923998}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13294,7 +13548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 680993454}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13326,7 +13580,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 688056863}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13361,7 +13615,7 @@ GameObject:
   - component: {fileID: 690486221}
   - component: {fileID: 690486220}
   - component: {fileID: 690486219}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13465,7 +13719,7 @@ GameObject:
   - component: {fileID: 695089073}
   - component: {fileID: 695089075}
   - component: {fileID: 695089074}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-Hexagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13551,7 +13805,7 @@ GameObject:
   - component: {fileID: 697896396}
   - component: {fileID: 697896395}
   - component: {fileID: 697896394}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13655,7 +13909,7 @@ GameObject:
   - component: {fileID: 710196840}
   - component: {fileID: 710196842}
   - component: {fileID: 710196841}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-Hexagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13741,7 +13995,7 @@ GameObject:
   - component: {fileID: 711255266}
   - component: {fileID: 711255265}
   - component: {fileID: 711255264}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13846,7 +14100,7 @@ GameObject:
   - component: {fileID: 714464915}
   - component: {fileID: 714464914}
   - component: {fileID: 714464913}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13950,7 +14204,7 @@ GameObject:
   - component: {fileID: 714693729}
   - component: {fileID: 714693731}
   - component: {fileID: 714693730}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14035,7 +14289,7 @@ GameObject:
   - component: {fileID: 715535151}
   - component: {fileID: 715535150}
   - component: {fileID: 715535149}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14140,7 +14394,7 @@ GameObject:
   - component: {fileID: 723278503}
   - component: {fileID: 723278502}
   - component: {fileID: 723278501}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14242,7 +14496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 727391015}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14274,7 +14528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 732431412}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14318,7 +14572,7 @@ GameObject:
   - component: {fileID: 732606259}
   - component: {fileID: 732606258}
   - component: {fileID: 732606257}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14424,7 +14678,7 @@ GameObject:
   - component: {fileID: 734602279}
   - component: {fileID: 734602278}
   - component: {fileID: 734602277}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14517,6 +14771,85 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734602275}
   m_Mesh: {fileID: 4300000, guid: dee2cc7c00fcd6b4f90719f3660798f8, type: 3}
+--- !u!1 &735768835
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 735768837}
+  - component: {fileID: 735768836}
+  m_Layer: 0
+  m_Name: TopRig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &735768836
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735768835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  - Header
+  - Extensions
+  - m_Priority
+  - m_Transitions
+  - m_Follow
+  - m_StandbyUpdate
+  - m_Lens
+  m_LockStageInInspector: 00000000
+  m_StreamingVersion: 20170927
+  m_Priority: 10
+  m_StandbyUpdate: 2
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
+  m_Lens:
+    FieldOfView: 40
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
+    Dutch: 0
+    ModeOverride: 0
+    LensShift: {x: 0, y: 0}
+    GateFit: 2
+    FocusDistance: 10
+    m_SensorSize: {x: 1, y: 1}
+  m_Transitions:
+    m_BlendHint: 0
+    m_InheritPosition: 0
+    m_OnCameraLive:
+      m_PersistentCalls:
+        m_Calls: []
+  m_LegacyBlendHint: 0
+  m_ComponentOwner: {fileID: 358314557}
+--- !u!4 &735768837
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735768835}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 358314557}
+  m_Father: {fileID: 1003500321}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &736422354
 GameObject:
   m_ObjectHideFlags: 0
@@ -14572,7 +14905,7 @@ GameObject:
   - component: {fileID: 737211077}
   - component: {fileID: 737211079}
   - component: {fileID: 737211078}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-Hexagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14658,7 +14991,7 @@ GameObject:
   - component: {fileID: 745132508}
   - component: {fileID: 745132507}
   - component: {fileID: 745132506}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14763,7 +15096,7 @@ GameObject:
   - component: {fileID: 763366646}
   - component: {fileID: 763366645}
   - component: {fileID: 763366644}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ramp60
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14867,7 +15200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 764276184}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14902,7 +15235,7 @@ GameObject:
   - component: {fileID: 770139113}
   - component: {fileID: 770139112}
   - component: {fileID: 770139111}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: columnB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15009,7 +15342,7 @@ GameObject:
   - component: {fileID: 782122177}
   - component: {fileID: 782122176}
   - component: {fileID: 782122175}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15114,7 +15447,7 @@ GameObject:
   - component: {fileID: 783580079}
   - component: {fileID: 783580078}
   - component: {fileID: 783580077}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15219,7 +15552,7 @@ GameObject:
   - component: {fileID: 786702929}
   - component: {fileID: 786702928}
   - component: {fileID: 786702927}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15321,7 +15654,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 787365830}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15357,7 +15690,7 @@ GameObject:
   - component: {fileID: 791994642}
   - component: {fileID: 791994641}
   - component: {fileID: 791994640}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15460,7 +15793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 796440077}
   - component: {fileID: 796440078}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15515,7 +15848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 811142464}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandRing4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15549,7 +15882,7 @@ GameObject:
   - component: {fileID: 811686970}
   - component: {fileID: 811686969}
   - component: {fileID: 811686968}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15654,7 +15987,7 @@ GameObject:
   - component: {fileID: 814013438}
   - component: {fileID: 814013437}
   - component: {fileID: 814013436}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15759,7 +16092,7 @@ GameObject:
   - component: {fileID: 817256721}
   - component: {fileID: 817256720}
   - component: {fileID: 817256719}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15861,7 +16194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 819715749}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandPinky4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15893,7 +16226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 826951792}
   - component: {fileID: 826951793}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15949,7 +16282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 828966569}
   - component: {fileID: 828966570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: statueMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16104,7 +16437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 837356255}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16135,7 +16468,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 840124547}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16170,7 +16503,7 @@ GameObject:
   - component: {fileID: 842223313}
   - component: {fileID: 842223312}
   - component: {fileID: 842223311}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: columnB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16277,7 +16610,7 @@ GameObject:
   - component: {fileID: 868970167}
   - component: {fileID: 868970166}
   - component: {fileID: 868970165}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16382,7 +16715,7 @@ GameObject:
   - component: {fileID: 869713973}
   - component: {fileID: 869713972}
   - component: {fileID: 869713971}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16475,6 +16808,85 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869713969}
   m_Mesh: {fileID: 4300000, guid: dee2cc7c00fcd6b4f90719f3660798f8, type: 3}
+--- !u!1 &884066515
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 884066517}
+  - component: {fileID: 884066516}
+  m_Layer: 0
+  m_Name: MiddleRig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &884066516
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884066515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  - Header
+  - Extensions
+  - m_Priority
+  - m_Transitions
+  - m_Follow
+  - m_StandbyUpdate
+  - m_Lens
+  m_LockStageInInspector: 00000000
+  m_StreamingVersion: 20170927
+  m_Priority: 10
+  m_StandbyUpdate: 2
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
+  m_Lens:
+    FieldOfView: 40
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
+    Dutch: 0
+    ModeOverride: 0
+    LensShift: {x: 0, y: 0}
+    GateFit: 2
+    FocusDistance: 10
+    m_SensorSize: {x: 1, y: 1}
+  m_Transitions:
+    m_BlendHint: 0
+    m_InheritPosition: 0
+    m_OnCameraLive:
+      m_PersistentCalls:
+        m_Calls: []
+  m_LegacyBlendHint: 0
+  m_ComponentOwner: {fileID: 247677655}
+--- !u!4 &884066517
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884066515}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 247677655}
+  m_Father: {fileID: 1003500321}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &889306087
 GameObject:
   m_ObjectHideFlags: 0
@@ -16487,7 +16899,7 @@ GameObject:
   - component: {fileID: 889306091}
   - component: {fileID: 889306090}
   - component: {fileID: 889306089}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16592,7 +17004,7 @@ GameObject:
   - component: {fileID: 891033048}
   - component: {fileID: 891033047}
   - component: {fileID: 891033046}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16697,7 +17109,7 @@ GameObject:
   - component: {fileID: 906516666}
   - component: {fileID: 906516665}
   - component: {fileID: 906516664}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16802,7 +17214,7 @@ GameObject:
   - component: {fileID: 917364759}
   - component: {fileID: 917364758}
   - component: {fileID: 917364757}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16907,7 +17319,7 @@ GameObject:
   - component: {fileID: 921452627}
   - component: {fileID: 921452626}
   - component: {fileID: 921452625}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17012,7 +17424,7 @@ GameObject:
   - component: {fileID: 926398074}
   - component: {fileID: 926398073}
   - component: {fileID: 926398072}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17118,7 +17530,7 @@ GameObject:
   - component: {fileID: 929871678}
   - component: {fileID: 929871677}
   - component: {fileID: 929871676}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17301,7 +17713,7 @@ GameObject:
   - component: {fileID: 933643184}
   - component: {fileID: 933643183}
   - component: {fileID: 933643182}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17407,7 +17819,7 @@ GameObject:
   - component: {fileID: 942634661}
   - component: {fileID: 942634660}
   - component: {fileID: 942634659}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17512,7 +17924,7 @@ GameObject:
   - component: {fileID: 944037502}
   - component: {fileID: 944037501}
   - component: {fileID: 944037500}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17616,7 +18028,7 @@ GameObject:
   - component: {fileID: 948981066}
   - component: {fileID: 948981068}
   - component: {fileID: 948981067}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17701,7 +18113,7 @@ GameObject:
   - component: {fileID: 956041297}
   - component: {fileID: 956041296}
   - component: {fileID: 956041295}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17806,7 +18218,7 @@ GameObject:
   - component: {fileID: 964119180}
   - component: {fileID: 964119179}
   - component: {fileID: 964119178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17908,7 +18320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 968088436}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17943,7 +18355,7 @@ GameObject:
   - component: {fileID: 969203325}
   - component: {fileID: 969203324}
   - component: {fileID: 969203323}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18036,6 +18448,133 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969203321}
   m_Mesh: {fileID: 4300000, guid: dee2cc7c00fcd6b4f90719f3660798f8, type: 3}
+--- !u!1 &972228366
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 972228367}
+  - component: {fileID: 972228370}
+  - component: {fileID: 972228369}
+  - component: {fileID: 972228368}
+  m_Layer: 0
+  m_Name: cm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &972228367
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972228366}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1841983148}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &972228368
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972228366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
+  m_LookaheadTime: 0
+  m_LookaheadSmoothing: 0
+  m_LookaheadIgnoreY: 0
+  m_HorizontalDamping: 0
+  m_VerticalDamping: 0
+  m_ScreenX: 0.5
+  m_ScreenY: 0.6
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
+  m_SoftZoneWidth: 0.8
+  m_SoftZoneHeight: 0.8
+  m_BiasX: 0
+  m_BiasY: 0
+  m_CenterOnActivate: 1
+--- !u!114 &972228369
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972228366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BindingMode: 4
+  m_FollowOffset: {x: 0, y: 14, z: -12}
+  m_XDamping: 1
+  m_YDamping: 1
+  m_ZDamping: 1
+  m_AngularDampingMode: 0
+  m_PitchDamping: 0
+  m_YawDamping: 0
+  m_RollDamping: 0
+  m_AngularDamping: 0
+  m_Heading:
+    m_Definition: 2
+    m_VelocityFilterStrength: 4
+    m_Bias: 0
+  m_RecenterToTargetHeading:
+    m_enabled: 0
+    m_WaitTime: 1
+    m_RecenteringTime: 2
+    m_LegacyHeadingDefinition: -1
+    m_LegacyVelocityFilterStrength: -1
+  m_XAxis:
+    Value: 0
+    m_SpeedMode: 0
+    m_MaxSpeed: 300
+    m_AccelTime: 0.1
+    m_DecelTime: 0.1
+    m_InputAxisName: 
+    m_InputAxisValue: 0
+    m_InvertInput: 1
+    m_MinValue: -180
+    m_MaxValue: 180
+    m_Wrap: 1
+    m_Recentering:
+      m_enabled: 0
+      m_WaitTime: 1
+      m_RecenteringTime: 2
+      m_LegacyHeadingDefinition: -1
+      m_LegacyVelocityFilterStrength: -1
+  m_LegacyRadius: 3.4028235e+38
+  m_LegacyHeightOffset: 3.4028235e+38
+  m_LegacyHeadingBias: 3.4028235e+38
+  m_HeadingIsSlave: 1
+--- !u!114 &972228370
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972228366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &998965914
 GameObject:
   m_ObjectHideFlags: 0
@@ -18048,7 +18587,7 @@ GameObject:
   - component: {fileID: 998965918}
   - component: {fileID: 998965917}
   - component: {fileID: 998965916}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18153,7 +18692,7 @@ GameObject:
   - component: {fileID: 999089051}
   - component: {fileID: 999089050}
   - component: {fileID: 999089049}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18255,7 +18794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 999341382}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:HeadTop_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18286,7 +18825,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1000197704}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18330,7 +18869,7 @@ GameObject:
   - component: {fileID: 1001789151}
   - component: {fileID: 1001789150}
   - component: {fileID: 1001789149}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18423,6 +18962,177 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001789147}
   m_Mesh: {fileID: 4300000, guid: dee2cc7c00fcd6b4f90719f3660798f8, type: 3}
+--- !u!1 &1003500318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1003500321}
+  - component: {fileID: 1003500320}
+  - component: {fileID: 1003500319}
+  m_Layer: 0
+  m_Name: ThirdPersonCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1003500319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003500318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 64
+  m_IgnoreTag: Player
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 1
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0.6
+  m_DampingWhenOccluded: 0.6
+  m_OptimalTargetDistance: 0
+--- !u!114 &1003500320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003500318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 319d2fe34a804e245819465c9505ea59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  m_LockStageInInspector: 
+  m_StreamingVersion: 20170927
+  m_Priority: 10
+  m_StandbyUpdate: 2
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
+  m_CommonLens: 1
+  m_Lens:
+    FieldOfView: 40
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
+    Dutch: 0
+    ModeOverride: 0
+    LensShift: {x: 0, y: 0}
+    GateFit: 2
+    FocusDistance: 10
+    m_SensorSize: {x: 1, y: 1}
+  m_Transitions:
+    m_BlendHint: 0
+    m_InheritPosition: 0
+    m_OnCameraLive:
+      m_PersistentCalls:
+        m_Calls: []
+  m_LegacyBlendHint: 0
+  m_YAxis:
+    Value: 1
+    m_SpeedMode: 0
+    m_MaxSpeed: 4
+    m_AccelTime: 0.1
+    m_DecelTime: 0.1
+    m_InputAxisName: Mouse Y
+    m_InputAxisValue: 0
+    m_InvertInput: 1
+    m_MinValue: 0
+    m_MaxValue: 1
+    m_Wrap: 0
+    m_Recentering:
+      m_enabled: 0
+      m_WaitTime: 1
+      m_RecenteringTime: 2
+      m_LegacyHeadingDefinition: -1
+      m_LegacyVelocityFilterStrength: -1
+  m_YAxisRecentering:
+    m_enabled: 0
+    m_WaitTime: 1
+    m_RecenteringTime: 2
+    m_LegacyHeadingDefinition: -1
+    m_LegacyVelocityFilterStrength: -1
+  m_XAxis:
+    Value: 0
+    m_SpeedMode: 0
+    m_MaxSpeed: 450
+    m_AccelTime: 0.1
+    m_DecelTime: 0.1
+    m_InputAxisName: Mouse X
+    m_InputAxisValue: 0
+    m_InvertInput: 0
+    m_MinValue: 180
+    m_MaxValue: 180
+    m_Wrap: 1
+    m_Recentering:
+      m_enabled: 0
+      m_WaitTime: 1
+      m_RecenteringTime: 2
+      m_LegacyHeadingDefinition: -1
+      m_LegacyVelocityFilterStrength: -1
+  m_Heading:
+    m_Definition: 2
+    m_VelocityFilterStrength: 4
+    m_Bias: 0
+  m_RecenterToTargetHeading:
+    m_enabled: 0
+    m_WaitTime: 1
+    m_RecenteringTime: 2
+    m_LegacyHeadingDefinition: -1
+    m_LegacyVelocityFilterStrength: -1
+  m_BindingMode: 4
+  m_SplineCurvature: 0.2
+  m_Orbits:
+  - m_Height: 14
+    m_Radius: 12
+  - m_Height: 5
+    m_Radius: 10
+  - m_Height: -1.5
+    m_Radius: 12
+  m_LegacyHeadingBias: 3.4028235e+38
+  m_Rigs:
+  - {fileID: 735768836}
+  - {fileID: 884066516}
+  - {fileID: 1841983147}
+--- !u!4 &1003500321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003500318}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.603325, y: 15, z: 14.33779}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 735768837}
+  - {fileID: 884066517}
+  - {fileID: 1841983148}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1008055293
 GameObject:
   m_ObjectHideFlags: 0
@@ -18435,7 +19145,7 @@ GameObject:
   - component: {fileID: 1008055297}
   - component: {fileID: 1008055296}
   - component: {fileID: 1008055295}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18540,7 +19250,7 @@ GameObject:
   - component: {fileID: 1009033120}
   - component: {fileID: 1009033119}
   - component: {fileID: 1009033118}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18645,7 +19355,7 @@ GameObject:
   - component: {fileID: 1021098770}
   - component: {fileID: 1021098769}
   - component: {fileID: 1021098768}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18750,7 +19460,7 @@ GameObject:
   - component: {fileID: 1031144076}
   - component: {fileID: 1031144075}
   - component: {fileID: 1031144074}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18855,7 +19565,7 @@ GameObject:
   - component: {fileID: 1046767221}
   - component: {fileID: 1046767220}
   - component: {fileID: 1046767219}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18960,7 +19670,7 @@ GameObject:
   - component: {fileID: 1049174205}
   - component: {fileID: 1049174204}
   - component: {fileID: 1049174203}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19065,7 +19775,7 @@ GameObject:
   - component: {fileID: 1056339723}
   - component: {fileID: 1056339722}
   - component: {fileID: 1056339721}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19158,6 +19868,133 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056339719}
   m_Mesh: {fileID: 4300000, guid: dee2cc7c00fcd6b4f90719f3660798f8, type: 3}
+--- !u!1 &1058788188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1058788192}
+  - component: {fileID: 1058788191}
+  - component: {fileID: 1058788190}
+  - component: {fileID: 1058788189}
+  m_Layer: 0
+  m_Name: MainCamera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1058788189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058788188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!81 &1058788190
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058788188}
+  m_Enabled: 1
+--- !u!20 &1058788191
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058788188}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
+  orthographic: 0
+  orthographic size: 10
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1058788192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058788188}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.603325, y: 15, z: 14.33779}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1059360062
 GameObject:
   m_ObjectHideFlags: 0
@@ -19170,7 +20007,7 @@ GameObject:
   - component: {fileID: 1059360066}
   - component: {fileID: 1059360065}
   - component: {fileID: 1059360064}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19274,7 +20111,7 @@ GameObject:
   - component: {fileID: 1059395358}
   - component: {fileID: 1059395360}
   - component: {fileID: 1059395359}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19358,7 +20195,7 @@ GameObject:
   - component: {fileID: 1060035555}
   - component: {fileID: 1060035554}
   - component: {fileID: 1060035553}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19463,7 +20300,7 @@ GameObject:
   - component: {fileID: 1060357476}
   - component: {fileID: 1060357475}
   - component: {fileID: 1060357474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: column (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19567,7 +20404,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1067353731}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19628,7 +20465,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1070460867}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19667,7 +20504,7 @@ GameObject:
   - component: {fileID: 1070840813}
   - component: {fileID: 1070840812}
   - component: {fileID: 1070840811}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19772,7 +20609,7 @@ GameObject:
   - component: {fileID: 1074143240}
   - component: {fileID: 1074143239}
   - component: {fileID: 1074143238}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19876,7 +20713,7 @@ GameObject:
   - component: {fileID: 1074370070}
   - component: {fileID: 1074370072}
   - component: {fileID: 1074370071}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-Hexagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19961,7 +20798,7 @@ GameObject:
   - component: {fileID: 1075219326}
   - component: {fileID: 1075219328}
   - component: {fileID: 1075219327}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20045,7 +20882,7 @@ GameObject:
   - component: {fileID: 1077806890}
   - component: {fileID: 1077806889}
   - component: {fileID: 1077806888}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20150,7 +20987,7 @@ GameObject:
   - component: {fileID: 1078683220}
   - component: {fileID: 1078683219}
   - component: {fileID: 1078683218}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20256,7 +21093,7 @@ GameObject:
   - component: {fileID: 1080648668}
   - component: {fileID: 1080648667}
   - component: {fileID: 1080648666}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20439,7 +21276,7 @@ GameObject:
   - component: {fileID: 1084128736}
   - component: {fileID: 1084128735}
   - component: {fileID: 1084128734}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20541,7 +21378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1085095769}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandPinky4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20575,7 +21412,7 @@ GameObject:
   - component: {fileID: 1089185510}
   - component: {fileID: 1089185509}
   - component: {fileID: 1089185508}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20680,7 +21517,7 @@ GameObject:
   - component: {fileID: 1089388208}
   - component: {fileID: 1089388207}
   - component: {fileID: 1089388206}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20782,7 +21619,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1090812466}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20817,7 +21654,7 @@ GameObject:
   - component: {fileID: 1100924546}
   - component: {fileID: 1100924545}
   - component: {fileID: 1100924544}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20922,7 +21759,7 @@ GameObject:
   - component: {fileID: 1103939850}
   - component: {fileID: 1103939852}
   - component: {fileID: 1103939851}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21005,7 +21842,7 @@ GameObject:
   - component: {fileID: 1104771722}
   - component: {fileID: 1104771724}
   - component: {fileID: 1104771723}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-Hexagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21091,7 +21928,7 @@ GameObject:
   - component: {fileID: 1112212814}
   - component: {fileID: 1112212813}
   - component: {fileID: 1112212812}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21196,7 +22033,7 @@ GameObject:
   - component: {fileID: 1112678844}
   - component: {fileID: 1112678843}
   - component: {fileID: 1112678842}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21298,7 +22135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1115605798}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandPinky4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21333,7 +22170,7 @@ GameObject:
   - component: {fileID: 1119106444}
   - component: {fileID: 1119106443}
   - component: {fileID: 1119106442}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: column
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21439,7 +22276,7 @@ GameObject:
   - component: {fileID: 1128925843}
   - component: {fileID: 1128925842}
   - component: {fileID: 1128925841}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21541,7 +22378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1132324472}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandRing4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21575,7 +22412,7 @@ GameObject:
   - component: {fileID: 1132387128}
   - component: {fileID: 1132387127}
   - component: {fileID: 1132387126}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21677,7 +22514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1143438887}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandIndex4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21711,7 +22548,7 @@ GameObject:
   - component: {fileID: 1147473690}
   - component: {fileID: 1147473689}
   - component: {fileID: 1147473688}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21816,7 +22653,7 @@ GameObject:
   - component: {fileID: 1160109936}
   - component: {fileID: 1160109935}
   - component: {fileID: 1160109934}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21922,7 +22759,7 @@ GameObject:
   - component: {fileID: 1171834467}
   - component: {fileID: 1171834466}
   - component: {fileID: 1171834465}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22102,7 +22939,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1175168242}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22137,7 +22974,7 @@ GameObject:
   - component: {fileID: 1183840810}
   - component: {fileID: 1183840809}
   - component: {fileID: 1183840808}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22242,7 +23079,7 @@ GameObject:
   - component: {fileID: 1192094238}
   - component: {fileID: 1192094237}
   - component: {fileID: 1192094236}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22344,7 +23181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1193736614}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22385,7 +23222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1193954181}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22420,7 +23257,7 @@ GameObject:
   - component: {fileID: 1198416079}
   - component: {fileID: 1198416078}
   - component: {fileID: 1198416077}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22522,7 +23359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1201255860}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22556,7 +23393,7 @@ GameObject:
   - component: {fileID: 1207760817}
   - component: {fileID: 1207760819}
   - component: {fileID: 1207760818}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-Hexagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22639,7 +23476,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1224412125}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22674,7 +23511,7 @@ GameObject:
   - component: {fileID: 1228305600}
   - component: {fileID: 1228305599}
   - component: {fileID: 1228305598}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22776,7 +23613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1233671933}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22817,7 +23654,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1250620304}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22852,7 +23689,7 @@ GameObject:
   - component: {fileID: 1268171153}
   - component: {fileID: 1268171152}
   - component: {fileID: 1268171151}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22957,7 +23794,7 @@ GameObject:
   - component: {fileID: 1269497319}
   - component: {fileID: 1269497318}
   - component: {fileID: 1269497317}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23061,7 +23898,7 @@ GameObject:
   - component: {fileID: 1277944511}
   - component: {fileID: 1277944513}
   - component: {fileID: 1277944512}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23145,7 +23982,7 @@ GameObject:
   - component: {fileID: 1279195947}
   - component: {fileID: 1279195946}
   - component: {fileID: 1279195945}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23250,7 +24087,7 @@ GameObject:
   - component: {fileID: 1287110874}
   - component: {fileID: 1287110873}
   - component: {fileID: 1287110872}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23356,7 +24193,7 @@ GameObject:
   - component: {fileID: 1288809234}
   - component: {fileID: 1288809233}
   - component: {fileID: 1288809232}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23537,7 +24374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1289448479}
   - component: {fileID: 1289448480}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Reflection Probe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23604,7 +24441,7 @@ GameObject:
   - component: {fileID: 1289875127}
   - component: {fileID: 1289875126}
   - component: {fileID: 1289875125}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23709,7 +24546,7 @@ GameObject:
   - component: {fileID: 1294132646}
   - component: {fileID: 1294132645}
   - component: {fileID: 1294132644}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23814,7 +24651,7 @@ GameObject:
   - component: {fileID: 1304149075}
   - component: {fileID: 1304149074}
   - component: {fileID: 1304149073}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23920,7 +24757,7 @@ GameObject:
   - component: {fileID: 1311778084}
   - component: {fileID: 1311778083}
   - component: {fileID: 1311778082}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24103,7 +24940,7 @@ GameObject:
   - component: {fileID: 1312561725}
   - component: {fileID: 1312561724}
   - component: {fileID: 1312561723}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24208,7 +25045,7 @@ GameObject:
   - component: {fileID: 1325102275}
   - component: {fileID: 1325102274}
   - component: {fileID: 1325102273}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ramp50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24315,7 +25152,7 @@ GameObject:
   - component: {fileID: 1330368813}
   - component: {fileID: 1330368812}
   - component: {fileID: 1330368811}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24420,7 +25257,7 @@ GameObject:
   - component: {fileID: 1339424193}
   - component: {fileID: 1339424192}
   - component: {fileID: 1339424191}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24525,7 +25362,7 @@ GameObject:
   - component: {fileID: 1345442043}
   - component: {fileID: 1345442042}
   - component: {fileID: 1345442041}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24630,7 +25467,7 @@ GameObject:
   - component: {fileID: 1351942418}
   - component: {fileID: 1351942417}
   - component: {fileID: 1351942416}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24732,7 +25569,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1362273518}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:HeadTop_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24764,7 +25601,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1363442510}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24796,7 +25633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1363819253}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24829,7 +25666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1364081168}
   - component: {fileID: 1364081169}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24882,7 +25719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1365721643}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandPinky4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24958,7 +25795,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1368267144}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24993,7 +25830,7 @@ GameObject:
   - component: {fileID: 1369164336}
   - component: {fileID: 1369164335}
   - component: {fileID: 1369164334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25095,7 +25932,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1370340815}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25130,7 +25967,7 @@ GameObject:
   - component: {fileID: 1377164958}
   - component: {fileID: 1377164957}
   - component: {fileID: 1377164956}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25234,7 +26071,7 @@ GameObject:
   - component: {fileID: 1382037196}
   - component: {fileID: 1382037198}
   - component: {fileID: 1382037197}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25318,7 +26155,7 @@ GameObject:
   - component: {fileID: 1382888846}
   - component: {fileID: 1382888845}
   - component: {fileID: 1382888844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25423,7 +26260,7 @@ GameObject:
   - component: {fileID: 1385026012}
   - component: {fileID: 1385026011}
   - component: {fileID: 1385026010}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25525,7 +26362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1394393181}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25566,7 +26403,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1394812563}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25601,7 +26438,7 @@ GameObject:
   - component: {fileID: 1394887139}
   - component: {fileID: 1394887138}
   - component: {fileID: 1394887137}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25705,7 +26542,7 @@ GameObject:
   - component: {fileID: 1395282654}
   - component: {fileID: 1395282656}
   - component: {fileID: 1395282655}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25790,7 +26627,7 @@ GameObject:
   - component: {fileID: 1405489832}
   - component: {fileID: 1405489831}
   - component: {fileID: 1405489830}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25895,7 +26732,7 @@ GameObject:
   - component: {fileID: 1406320083}
   - component: {fileID: 1406320082}
   - component: {fileID: 1406320081}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26000,7 +26837,7 @@ GameObject:
   - component: {fileID: 1408241623}
   - component: {fileID: 1408241622}
   - component: {fileID: 1408241621}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26105,7 +26942,7 @@ GameObject:
   - component: {fileID: 1412510324}
   - component: {fileID: 1412510323}
   - component: {fileID: 1412510322}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: columnB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26212,7 +27049,7 @@ GameObject:
   - component: {fileID: 1426136123}
   - component: {fileID: 1426136122}
   - component: {fileID: 1426136121}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: statueBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26320,7 +27157,7 @@ GameObject:
   - component: {fileID: 1431133741}
   - component: {fileID: 1431133740}
   - component: {fileID: 1431133739}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26426,7 +27263,7 @@ GameObject:
   - component: {fileID: 1433989595}
   - component: {fileID: 1433989594}
   - component: {fileID: 1433989593}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26609,7 +27446,7 @@ GameObject:
   - component: {fileID: 1448182278}
   - component: {fileID: 1448182277}
   - component: {fileID: 1448182276}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26714,7 +27551,7 @@ GameObject:
   - component: {fileID: 1453467609}
   - component: {fileID: 1453467608}
   - component: {fileID: 1453467607}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26819,7 +27656,7 @@ GameObject:
   - component: {fileID: 1459222812}
   - component: {fileID: 1459222811}
   - component: {fileID: 1459222810}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26924,7 +27761,7 @@ GameObject:
   - component: {fileID: 1463101290}
   - component: {fileID: 1463101289}
   - component: {fileID: 1463101288}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27029,7 +27866,7 @@ GameObject:
   - component: {fileID: 1464893039}
   - component: {fileID: 1464893038}
   - component: {fileID: 1464893037}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27134,7 +27971,7 @@ GameObject:
   - component: {fileID: 1470693495}
   - component: {fileID: 1470693494}
   - component: {fileID: 1470693493}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27241,7 +28078,7 @@ GameObject:
   - component: {fileID: 1472802897}
   - component: {fileID: 1472802896}
   - component: {fileID: 1472802895}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27346,7 +28183,7 @@ GameObject:
   - component: {fileID: 1473211254}
   - component: {fileID: 1473211253}
   - component: {fileID: 1473211252}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27448,7 +28285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1477245492}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27511,7 +28348,7 @@ GameObject:
   - component: {fileID: 1484453626}
   - component: {fileID: 1484453625}
   - component: {fileID: 1484453624}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27616,7 +28453,7 @@ GameObject:
   - component: {fileID: 1486400200}
   - component: {fileID: 1486400199}
   - component: {fileID: 1486400198}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27721,7 +28558,7 @@ GameObject:
   - component: {fileID: 1487459720}
   - component: {fileID: 1487459719}
   - component: {fileID: 1487459718}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27823,7 +28660,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1500799250}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: vIcon (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27856,7 +28693,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1502922354}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dynamic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27891,7 +28728,7 @@ GameObject:
   - component: {fileID: 1510724061}
   - component: {fileID: 1510724063}
   - component: {fileID: 1510724062}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-Hexagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27974,7 +28811,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1514636828}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandIndex4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28006,7 +28843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1516856906}
   - component: {fileID: 1516856907}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28064,7 +28901,7 @@ GameObject:
   - component: {fileID: 1524501346}
   - component: {fileID: 1524501345}
   - component: {fileID: 1524501344}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28168,7 +29005,7 @@ GameObject:
   - component: {fileID: 1524835666}
   - component: {fileID: 1524835668}
   - component: {fileID: 1524835667}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-Hexagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28254,7 +29091,7 @@ GameObject:
   - component: {fileID: 1526749420}
   - component: {fileID: 1526749419}
   - component: {fileID: 1526749418}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28359,7 +29196,7 @@ GameObject:
   - component: {fileID: 1530431577}
   - component: {fileID: 1530431576}
   - component: {fileID: 1530431575}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28464,7 +29301,7 @@ GameObject:
   - component: {fileID: 1535359420}
   - component: {fileID: 1535359419}
   - component: {fileID: 1535359418}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28566,7 +29403,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1539596928}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28601,7 +29438,7 @@ GameObject:
   - component: {fileID: 1540862979}
   - component: {fileID: 1540862978}
   - component: {fileID: 1540862977}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28703,7 +29540,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1541644641}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightToe_End_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28736,7 +29573,7 @@ GameObject:
   - component: {fileID: 1542813939}
   - component: {fileID: 1542813941}
   - component: {fileID: 1542813940}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-Hexagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28820,7 +29657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1549225676}
   - component: {fileID: 1549225677}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spotlight (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28913,7 +29750,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1554226339}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28979,7 +29816,7 @@ GameObject:
   - component: {fileID: 1559719222}
   - component: {fileID: 1559719221}
   - component: {fileID: 1559719220}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29082,7 +29919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1564863088}
   - component: {fileID: 1564863089}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29178,7 +30015,7 @@ GameObject:
   - component: {fileID: 1570277145}
   - component: {fileID: 1570277144}
   - component: {fileID: 1570277143}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29282,7 +30119,7 @@ GameObject:
   - component: {fileID: 1585721092}
   - component: {fileID: 1585721094}
   - component: {fileID: 1585721093}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29367,7 +30204,7 @@ GameObject:
   - component: {fileID: 1585943078}
   - component: {fileID: 1585943077}
   - component: {fileID: 1585943076}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29472,7 +30309,7 @@ GameObject:
   - component: {fileID: 1588007197}
   - component: {fileID: 1588007196}
   - component: {fileID: 1588007195}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29574,7 +30411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1596123603}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29607,7 +30444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1597610718}
   - component: {fileID: 1597610719}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spotlight (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29700,7 +30537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1600719397}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29732,7 +30569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1606180620}
   - component: {fileID: 1606180621}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29788,7 +30625,7 @@ GameObject:
   - component: {fileID: 1607935609}
   - component: {fileID: 1607935608}
   - component: {fileID: 1607935607}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: columnB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29892,7 +30729,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1611433030}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29927,7 +30764,7 @@ GameObject:
   - component: {fileID: 1612512068}
   - component: {fileID: 1612512067}
   - component: {fileID: 1612512066}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30032,7 +30869,7 @@ GameObject:
   - component: {fileID: 1616659654}
   - component: {fileID: 1616659653}
   - component: {fileID: 1616659652}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30137,7 +30974,7 @@ GameObject:
   - component: {fileID: 1617731666}
   - component: {fileID: 1617731665}
   - component: {fileID: 1617731664}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30242,7 +31079,7 @@ GameObject:
   - component: {fileID: 1622381010}
   - component: {fileID: 1622381009}
   - component: {fileID: 1622381008}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30347,7 +31184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1622962309}
   - component: {fileID: 1622962310}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spotlight (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30441,7 +31278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1623182791}
   - component: {fileID: 1623182792}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30499,7 +31336,7 @@ GameObject:
   - component: {fileID: 1628689523}
   - component: {fileID: 1628689522}
   - component: {fileID: 1628689521}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30604,7 +31441,7 @@ GameObject:
   - component: {fileID: 1632426814}
   - component: {fileID: 1632426813}
   - component: {fileID: 1632426812}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30707,7 +31544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1632500146}
   - component: {fileID: 1632500147}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30765,7 +31602,7 @@ GameObject:
   - component: {fileID: 1633422219}
   - component: {fileID: 1633422218}
   - component: {fileID: 1633422217}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30870,7 +31707,7 @@ GameObject:
   - component: {fileID: 1637733627}
   - component: {fileID: 1637733626}
   - component: {fileID: 1637733625}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30975,7 +31812,7 @@ GameObject:
   - component: {fileID: 1638014052}
   - component: {fileID: 1638014051}
   - component: {fileID: 1638014050}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31077,7 +31914,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1645990880}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31118,7 +31955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1652100634}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31153,7 +31990,7 @@ GameObject:
   - component: {fileID: 1656469684}
   - component: {fileID: 1656469683}
   - component: {fileID: 1656469682}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: columnB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31260,7 +32097,7 @@ GameObject:
   - component: {fileID: 1660072557}
   - component: {fileID: 1660072556}
   - component: {fileID: 1660072555}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31365,7 +32202,7 @@ GameObject:
   - component: {fileID: 1665137326}
   - component: {fileID: 1665137325}
   - component: {fileID: 1665137324}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31467,7 +32304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1679029193}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: vIcons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31514,7 +32351,7 @@ GameObject:
   - component: {fileID: 1680362387}
   - component: {fileID: 1680362386}
   - component: {fileID: 1680362385}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31619,7 +32456,7 @@ GameObject:
   - component: {fileID: 1689882596}
   - component: {fileID: 1689882595}
   - component: {fileID: 1689882594}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31724,7 +32561,7 @@ GameObject:
   - component: {fileID: 1692657664}
   - component: {fileID: 1692657663}
   - component: {fileID: 1692657662}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31827,7 +32664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1701620722}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31868,7 +32705,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1702763176}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31902,7 +32739,7 @@ GameObject:
   - component: {fileID: 1712771715}
   - component: {fileID: 1712771717}
   - component: {fileID: 1712771716}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-Hexagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31985,7 +32822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1718537300}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32026,7 +32863,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1736724987}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32061,7 +32898,7 @@ GameObject:
   - component: {fileID: 1740993570}
   - component: {fileID: 1740993569}
   - component: {fileID: 1740993568}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32166,7 +33003,7 @@ GameObject:
   - component: {fileID: 1742038409}
   - component: {fileID: 1742038408}
   - component: {fileID: 1742038407}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32339,7 +33176,7 @@ GameObject:
   - component: {fileID: 1752186767}
   - component: {fileID: 1752186766}
   - component: {fileID: 1752186765}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32444,7 +33281,7 @@ GameObject:
   - component: {fileID: 1755315844}
   - component: {fileID: 1755315843}
   - component: {fileID: 1755315842}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32549,7 +33386,7 @@ GameObject:
   - component: {fileID: 1762241586}
   - component: {fileID: 1762241585}
   - component: {fileID: 1762241584}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32654,7 +33491,7 @@ GameObject:
   - component: {fileID: 1775282607}
   - component: {fileID: 1775282606}
   - component: {fileID: 1775282605}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32759,7 +33596,7 @@ GameObject:
   - component: {fileID: 1783078379}
   - component: {fileID: 1783078378}
   - component: {fileID: 1783078377}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32864,7 +33701,7 @@ GameObject:
   - component: {fileID: 1793223471}
   - component: {fileID: 1793223470}
   - component: {fileID: 1793223469}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32969,7 +33806,7 @@ GameObject:
   - component: {fileID: 1795289597}
   - component: {fileID: 1795289596}
   - component: {fileID: 1795289595}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33073,7 +33910,7 @@ GameObject:
   - component: {fileID: 1795747508}
   - component: {fileID: 1795747510}
   - component: {fileID: 1795747509}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33157,7 +33994,7 @@ GameObject:
   - component: {fileID: 1798853020}
   - component: {fileID: 1798853019}
   - component: {fileID: 1798853018}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: column
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33260,7 +34097,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1802931425}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33302,7 +34139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1809640613}
   - component: {fileID: 1809640614}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spotlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33395,7 +34232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1811147783}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33427,7 +34264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1823961899}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33462,7 +34299,7 @@ GameObject:
   - component: {fileID: 1825635842}
   - component: {fileID: 1825635841}
   - component: {fileID: 1825635840}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33567,7 +34404,7 @@ GameObject:
   - component: {fileID: 1839938603}
   - component: {fileID: 1839938602}
   - component: {fileID: 1839938601}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33660,6 +34497,85 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839938599}
   m_Mesh: {fileID: 4300000, guid: dee2cc7c00fcd6b4f90719f3660798f8, type: 3}
+--- !u!1 &1841983146
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1841983148}
+  - component: {fileID: 1841983147}
+  m_Layer: 0
+  m_Name: BottomRig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1841983147
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841983146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  - Header
+  - Extensions
+  - m_Priority
+  - m_Transitions
+  - m_Follow
+  - m_StandbyUpdate
+  - m_Lens
+  m_LockStageInInspector: 00000000
+  m_StreamingVersion: 20170927
+  m_Priority: 10
+  m_StandbyUpdate: 2
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
+  m_Lens:
+    FieldOfView: 40
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
+    Dutch: 0
+    ModeOverride: 0
+    LensShift: {x: 0, y: 0}
+    GateFit: 2
+    FocusDistance: 10
+    m_SensorSize: {x: 1, y: 1}
+  m_Transitions:
+    m_BlendHint: 0
+    m_InheritPosition: 0
+    m_OnCameraLive:
+      m_PersistentCalls:
+        m_Calls: []
+  m_LegacyBlendHint: 0
+  m_ComponentOwner: {fileID: 972228367}
+--- !u!4 &1841983148
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841983146}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 972228367}
+  m_Father: {fileID: 1003500321}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1846054623
 GameObject:
   m_ObjectHideFlags: 0
@@ -33672,7 +34588,7 @@ GameObject:
   - component: {fileID: 1846054627}
   - component: {fileID: 1846054626}
   - component: {fileID: 1846054625}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33777,7 +34693,7 @@ GameObject:
   - component: {fileID: 1847235403}
   - component: {fileID: 1847235402}
   - component: {fileID: 1847235401}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33882,7 +34798,7 @@ GameObject:
   - component: {fileID: 1850005803}
   - component: {fileID: 1850005802}
   - component: {fileID: 1850005801}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33987,7 +34903,7 @@ GameObject:
   - component: {fileID: 1854330059}
   - component: {fileID: 1854330058}
   - component: {fileID: 1854330057}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: column
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34092,7 +35008,7 @@ GameObject:
   - component: {fileID: 1859198526}
   - component: {fileID: 1859198528}
   - component: {fileID: 1859198527}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-Hexagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34178,7 +35094,7 @@ GameObject:
   - component: {fileID: 1865113630}
   - component: {fileID: 1865113629}
   - component: {fileID: 1865113628}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34280,7 +35196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1865693684}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34315,7 +35231,7 @@ GameObject:
   - component: {fileID: 1870523631}
   - component: {fileID: 1870523630}
   - component: {fileID: 1870523629}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34420,7 +35336,7 @@ GameObject:
   - component: {fileID: 1873878986}
   - component: {fileID: 1873878985}
   - component: {fileID: 1873878984}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34525,7 +35441,7 @@ GameObject:
   - component: {fileID: 1887074696}
   - component: {fileID: 1887074695}
   - component: {fileID: 1887074694}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34629,7 +35545,7 @@ GameObject:
   - component: {fileID: 1888345927}
   - component: {fileID: 1888345929}
   - component: {fileID: 1888345928}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34714,7 +35630,7 @@ GameObject:
   - component: {fileID: 1890266547}
   - component: {fileID: 1890266546}
   - component: {fileID: 1890266545}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: basicBanner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34868,7 +35784,7 @@ GameObject:
   - component: {fileID: 1891101412}
   - component: {fileID: 1891101414}
   - component: {fileID: 1891101413}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34949,7 +35865,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1892329360}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34988,7 +35904,7 @@ GameObject:
   - component: {fileID: 1905233998}
   - component: {fileID: 1905233997}
   - component: {fileID: 1905233996}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35090,7 +36006,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1924842640}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35126,7 +36042,7 @@ GameObject:
   - component: {fileID: 1926101334}
   - component: {fileID: 1926101333}
   - component: {fileID: 1926101332}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35309,7 +36225,7 @@ GameObject:
   - component: {fileID: 1934613734}
   - component: {fileID: 1934613733}
   - component: {fileID: 1934613732}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35414,7 +36330,7 @@ GameObject:
   - component: {fileID: 1944246190}
   - component: {fileID: 1944246189}
   - component: {fileID: 1944246188}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35519,7 +36435,7 @@ GameObject:
   - component: {fileID: 1945445548}
   - component: {fileID: 1945445547}
   - component: {fileID: 1945445546}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shooterBanner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35638,7 +36554,7 @@ GameObject:
   - component: {fileID: 1950351050}
   - component: {fileID: 1950351049}
   - component: {fileID: 1950351048}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35740,7 +36656,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1950557178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35775,7 +36691,7 @@ GameObject:
   - component: {fileID: 1950719810}
   - component: {fileID: 1950719809}
   - component: {fileID: 1950719808}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35877,7 +36793,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1952463851}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35912,7 +36828,7 @@ GameObject:
   - component: {fileID: 1956003511}
   - component: {fileID: 1956003510}
   - component: {fileID: 1956003509}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36017,7 +36933,7 @@ GameObject:
   - component: {fileID: 1963550936}
   - component: {fileID: 1963550935}
   - component: {fileID: 1963550934}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36121,7 +37037,7 @@ GameObject:
   - component: {fileID: 1964976492}
   - component: {fileID: 1964976494}
   - component: {fileID: 1964976493}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-Hexagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36207,7 +37123,7 @@ GameObject:
   - component: {fileID: 1966687678}
   - component: {fileID: 1966687677}
   - component: {fileID: 1966687676}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36309,7 +37225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1972867408}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36341,7 +37257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1975504590}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36376,7 +37292,7 @@ GameObject:
   - component: {fileID: 1980810008}
   - component: {fileID: 1980810007}
   - component: {fileID: 1980810006}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36483,7 +37399,7 @@ GameObject:
   - component: {fileID: 1981846230}
   - component: {fileID: 1981846229}
   - component: {fileID: 1981846228}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36588,7 +37504,7 @@ GameObject:
   - component: {fileID: 1982891343}
   - component: {fileID: 1982891342}
   - component: {fileID: 1982891341}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36694,7 +37610,7 @@ GameObject:
   - component: {fileID: 1984003727}
   - component: {fileID: 1984003726}
   - component: {fileID: 1984003725}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36874,7 +37790,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1996390717}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36906,7 +37822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2003050307}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36939,7 +37855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2008419954}
   - component: {fileID: 2008419955}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spotlight (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37032,7 +37948,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2012101709}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37067,7 +37983,7 @@ GameObject:
   - component: {fileID: 2018846146}
   - component: {fileID: 2018846145}
   - component: {fileID: 2018846144}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37170,7 +38086,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2029113111}
   - component: {fileID: 2029113112}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spotlight (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37265,7 +38181,7 @@ GameObject:
   - component: {fileID: 2038810088}
   - component: {fileID: 2038810090}
   - component: {fileID: 2038810089}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37349,7 +38265,7 @@ GameObject:
   - component: {fileID: 2042913718}
   - component: {fileID: 2042913717}
   - component: {fileID: 2042913716}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37451,7 +38367,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2049258955}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37495,7 +38411,7 @@ GameObject:
   - component: {fileID: 2049802538}
   - component: {fileID: 2049802537}
   - component: {fileID: 2049802536}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37600,7 +38516,7 @@ GameObject:
   - component: {fileID: 2055435948}
   - component: {fileID: 2055435947}
   - component: {fileID: 2055435946}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37704,7 +38620,7 @@ GameObject:
   - component: {fileID: 2056369657}
   - component: {fileID: 2056369659}
   - component: {fileID: 2056369658}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spot_support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37788,7 +38704,7 @@ GameObject:
   - component: {fileID: 2064400014}
   - component: {fileID: 2064400013}
   - component: {fileID: 2064400012}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37890,7 +38806,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2071012559}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37922,7 +38838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2075888624}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VBOT_:RightHandThumb4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37956,7 +38872,7 @@ GameObject:
   - component: {fileID: 2075944220}
   - component: {fileID: 2075944219}
   - component: {fileID: 2075944218}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38061,7 +38977,7 @@ GameObject:
   - component: {fileID: 2096180547}
   - component: {fileID: 2096180546}
   - component: {fileID: 2096180545}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38166,7 +39082,7 @@ GameObject:
   - component: {fileID: 2098107902}
   - component: {fileID: 2098107901}
   - component: {fileID: 2098107900}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: columnB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38273,7 +39189,7 @@ GameObject:
   - component: {fileID: 2099027359}
   - component: {fileID: 2099027358}
   - component: {fileID: 2099027357}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38378,7 +39294,7 @@ GameObject:
   - component: {fileID: 2099065377}
   - component: {fileID: 2099065376}
   - component: {fileID: 2099065375}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38481,7 +39397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2099441501}
   - component: {fileID: 2099441502}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spotlight (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38577,7 +39493,7 @@ GameObject:
   - component: {fileID: 2100896946}
   - component: {fileID: 2100896945}
   - component: {fileID: 2100896944}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38682,7 +39598,7 @@ GameObject:
   - component: {fileID: 2102674382}
   - component: {fileID: 2102674381}
   - component: {fileID: 2102674380}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38787,7 +39703,7 @@ GameObject:
   - component: {fileID: 2102760899}
   - component: {fileID: 2102760898}
   - component: {fileID: 2102760897}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: column (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38892,7 +39808,7 @@ GameObject:
   - component: {fileID: 2103334653}
   - component: {fileID: 2103334655}
   - component: {fileID: 2103334654}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38976,7 +39892,7 @@ GameObject:
   - component: {fileID: 2109799802}
   - component: {fileID: 2109799804}
   - component: {fileID: 2109799803}
-  m_Layer: 11
+  m_Layer: 6
   m_Name: invector-icon-V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39061,7 +39977,7 @@ GameObject:
   - component: {fileID: 2110886865}
   - component: {fileID: 2110886864}
   - component: {fileID: 2110886863}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39166,7 +40082,7 @@ GameObject:
   - component: {fileID: 2116802144}
   - component: {fileID: 2116802143}
   - component: {fileID: 2116802142}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39271,7 +40187,7 @@ GameObject:
   - component: {fileID: 2136976064}
   - component: {fileID: 2136976063}
   - component: {fileID: 2136976062}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39376,7 +40292,7 @@ GameObject:
   - component: {fileID: 2137704512}
   - component: {fileID: 2137704511}
   - component: {fileID: 2137704510}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39481,7 +40397,7 @@ GameObject:
   - component: {fileID: 2137890323}
   - component: {fileID: 2137890322}
   - component: {fileID: 2137890321}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39586,7 +40502,7 @@ GameObject:
   - component: {fileID: 2140635975}
   - component: {fileID: 2140635974}
   - component: {fileID: 2140635973}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2x6 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39691,7 +40607,7 @@ GameObject:
   - component: {fileID: 2143032456}
   - component: {fileID: 2143032455}
   - component: {fileID: 2143032454}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: features
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39794,7 +40710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2143741199}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39835,3 +40751,5 @@ SceneRoots:
   - {fileID: 258982318}
   - {fileID: 736422356}
   - {fileID: 1366773815}
+  - {fileID: 1058788192}
+  - {fileID: 1003500321}

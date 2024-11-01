@@ -10,6 +10,7 @@ namespace GameServer
     public class Hero : Creature
     {
         public ClientSession Session { get; set; }
+        public VisionPlayerComponent Vision { get; protected set; }
         public HeroInfo HeroInfo { get; private set; } = new HeroInfo();
         public MyHeroInfo MyHeroInfo { get; private set; } = new MyHeroInfo();
 
@@ -25,6 +26,8 @@ namespace GameServer
             HeroInfo.CreatureInfo = CreatureInfo;
 
             ObjectType = EGameObjectType.Hero;
+
+            Vision = new VisionPlayerComponent(this);
         }
     }
 }

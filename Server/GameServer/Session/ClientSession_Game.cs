@@ -12,7 +12,7 @@ namespace GameServer
     {
         public void HandleEnterGame(C_EnterGame enterGamePacket)
         {
-            Console.WriteLine("EnterGame");
+            Console.WriteLine("HandleEnterGame");
 
             MyHero = ObjectManager.Instance.Spawn<Hero>(1);
             {
@@ -24,6 +24,7 @@ namespace GameServer
                 MyHero.Session = this;
             }
 
+            // TODO : DB에서 마지막 좌표 등 갖고 와서 처리.
             GameLogic.Instance.Push(() =>
             {
                 GameRoom room = GameLogic.Instance.Find(1);

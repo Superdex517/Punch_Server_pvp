@@ -21,10 +21,10 @@ class PacketHandler
         Debug.Log("EnterGame");
 
         S_EnterGame enterGamePacket = packet as S_EnterGame;
-        MyHero myHero = Managers.Object.Spawn(enterGamePacket.MyHeroInfo);
+        MyPlayer myPlayer = Managers.Object.Spawn(enterGamePacket.MyHeroInfo);
 
-        myHero.SetInfo(1);
-        myHero.ObjectState = EObjectState.Idle;
+        myPlayer.SetInfo(1);
+        myPlayer.ObjectState = EObjectState.Idle;
     }
 
     public static void S_LeaveGameHandler(PacketSession session, IMessage packet)

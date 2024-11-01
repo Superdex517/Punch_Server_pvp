@@ -4,7 +4,6 @@ using UnityEngine;
 public class vThirdPersonCamera : MonoBehaviour
 {
     #region inspector properties    
-
     public Transform target;
     [Tooltip("Lerp speed between Camera States")]
     public float smoothCameraRotation = 12f;
@@ -21,7 +20,6 @@ public class vThirdPersonCamera : MonoBehaviour
     public float yMouseSensitivity = 3f;
     public float yMinLimit = -40f;
     public float yMaxLimit = 80f;
-
     #endregion
 
     #region hide properties    

@@ -16,13 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: b5e8cbffc7a1db7429a48b3f0013ee2a
-  m_SerializeEntries:
-  - m_GUID: 72b0934bf1465bc4482931911603eb80
-    m_Address: KnightPrefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d804e43b0f33d4b42b22abf1ed5c62f6, type: 2}
   m_SchemaSet:

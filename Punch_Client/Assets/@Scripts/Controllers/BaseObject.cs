@@ -9,6 +9,7 @@ public class BaseObject : MonoBehaviour
     public int ObjectId { get; set; }
     public virtual EGameObjectType ObjectType { get { return EGameObjectType.None; } }
     public Animator Anim { get; set; }
+    public CharacterController controller;
 
     public float MoveSpeed = 5.0f;
 
@@ -22,6 +23,8 @@ public class BaseObject : MonoBehaviour
         {
             if (_positionInfo.Equals(value))
                 return;
+
+            Position = new Vector3(value.PosX, value.PosY, value.PosZ);
 
             bool isMyHero = this is MyHero;
             if (isMyHero == false)
@@ -61,6 +64,8 @@ public class BaseObject : MonoBehaviour
             PosInfo.MoveDir = value;
         }
     }
+
+
     protected virtual void Awake()
     {
 
@@ -141,16 +146,28 @@ public class BaseObject : MonoBehaviour
 
         if (forceMove)
         {
+            transform.position = Position;
             LerpPosCompleted = true;
         }
     }
 
     public void UpdateLerpToPos(float moveSpeed, bool canFlip = true)
     {
-        if (LerpPosCompleted)
-            return;
+        //if (LerpPosCompleted)
+        //    return;
 
-        
+        Vector3 destPos = transform.position;
+        Vector3 dir = destPos - transform.position;
+
+        float moveDist = moveSpeed * Time.deltaTime;
+
+        SyncPosition();
+
+        controller.Move(transform.position);
     }
 
+    public void SyncPosition()
+    {
+        Managers.Move.MoveTo(this, Position, forceMove: true);
+    }
 }

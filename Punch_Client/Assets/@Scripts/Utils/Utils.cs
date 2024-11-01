@@ -16,6 +16,21 @@ public static class Utils
         return component;
     }
 
+    public static T FindAndGetComponent<T>(string name) where T : Component
+    {
+        GameObject go = GameObject.Find(name);
+        if (!go)
+            return null;
+        else
+        {
+            T component = go.GetComponent<T>();
+            if (component == null)
+                component = go.AddComponent<T>();
+
+            return component;
+        }
+    }
+
     public static T FindAncestor<T>(GameObject go) where T : Object
     {
         Transform t = go.transform;

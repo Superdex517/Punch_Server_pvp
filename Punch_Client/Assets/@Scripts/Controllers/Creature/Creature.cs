@@ -35,6 +35,6 @@ public class Creature : BaseObject
     public bool MoveToPosition(Vector3 destPos)
     {
 
-        return false;
+        return Managers.Move.MoveTo(this, destPos);
     }
 }

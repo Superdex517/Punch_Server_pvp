@@ -23,8 +23,7 @@ public class PacketHandler
         ClientSession clientSession = (ClientSession)session;
 
         Hero hero = clientSession.MyHero;
-
-        if (hero != null)
+        if (hero == null)
             return;
 
         GameRoom room = hero.Room;

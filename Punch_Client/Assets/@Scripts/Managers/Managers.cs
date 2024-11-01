@@ -11,8 +11,10 @@ public class Managers : MonoBehaviour
     public static Managers s_instance;
     public static Managers Instance { get { Init(); return s_instance; } }
 
-    private ObjectManager _object = new ObjectManager();
+    private ObjectManager _object = new ObjectManager(); 
+    private MoveManager _move = new MoveManager();
     public static ObjectManager Object { get { return Instance?._object; } }
+    public static MoveManager Move { get { return Instance?._move; } }
 
 
 

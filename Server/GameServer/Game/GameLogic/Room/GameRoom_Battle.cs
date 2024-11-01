@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,8 +22,30 @@ namespace GameServer
 
             info.PosInfo.State = movePosInfo.State;
             info.PosInfo.MoveDir = movePosInfo.MoveDir;
+            ApplyMove(hero, new Vector3(movePosInfo.PosX, movePosInfo.PosY, movePosInfo.PosZ));
 
             hero.BroadcastMove();
+        }
+
+        public bool ApplyMove(BaseObject obj, Vector3 dest, bool checkObjects = true, bool collision = true)
+        {
+            if (obj == null)
+                return false;
+            if (obj.Room == null)
+                return false;
+
+            PositionInfo posInfo = obj.PosInfo;
+
+            EGameObjectType type = ObjectManager.GetObjectTypeFromId(obj.ObjectId);
+            
+            Hero hero = (Hero)obj;
+
+            // 실제 좌표 이동
+            posInfo.PosX = dest.X;
+            posInfo.PosY = dest.Y;
+            posInfo.PosZ = dest.Z;
+
+            return true;
         }
     }
 }
