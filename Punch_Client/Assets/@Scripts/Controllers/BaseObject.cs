@@ -7,13 +7,12 @@ using UnityEngine;
 public class BaseObject : MonoBehaviour
 {
     public int ObjectId { get; set; }
-    public virtual EGameObjectType ObjectType { get { return EGameObjectType.None; } }
-    public Animator Anim { get; set; }
-    public CharacterController controller;
+    public virtual EGameObjectType ObjectType { get; protected set; } = EGameObjectType.None;
+    public Animator Anim;
+    private string currentAnimation = "";
+    public CharacterController cc;
 
     public float MoveSpeed = 5.0f;
-
-    bool _lockLeft = true;
 
     PositionInfo _positionInfo = new PositionInfo();
     public PositionInfo PosInfo
@@ -25,12 +24,13 @@ public class BaseObject : MonoBehaviour
                 return;
 
             Position = new Vector3(value.PosX, value.PosY, value.PosZ);
+            Direction = value.Dir;
 
-            bool isMyHero = this is MyHero;
+            bool isMyHero = this is MyPlayer;
             if (isMyHero == false)
                 ObjectState = value.State;
 
-            Dir = value.MoveDir;
+            //Dir = value.MoveDir;
         }
     }
 
@@ -50,22 +50,6 @@ public class BaseObject : MonoBehaviour
         }
     }
 
-    [SerializeField]
-    protected EMoveDir _dir = EMoveDir.None;
-    public EMoveDir Dir
-    {
-        get { return PosInfo.MoveDir; }
-        set
-        {
-            if (_dir == value)
-                return;
-
-            _dir = value;
-            PosInfo.MoveDir = value;
-        }
-    }
-
-
     protected virtual void Awake()
     {
 
@@ -73,12 +57,12 @@ public class BaseObject : MonoBehaviour
 
     protected virtual void Start()
     {
-
+        Anim = GetComponent<Animator>();
     }
 
     protected virtual void Update()
     {
-
+        UpdateLerpToPos(MoveSpeed);
     }
 
     #region AI (FSM)
@@ -113,21 +97,34 @@ public class BaseObject : MonoBehaviour
         switch (ObjectState)
         {
             case EObjectState.Idle:
-                //PlayAnimation(0, AnimName.IDLE, true);
-                break;
-            case EObjectState.Skill:
+                ChangeAnimation("Idle");
                 break;
             case EObjectState.Move:
-                //PlayAnimation(0, AnimName.MOVE, true);
+                ChangeAnimation("Run");
+                break;
+            case EObjectState.Skill:
+                ChangeAnimation("Punch");
                 break;
             case EObjectState.Dead:
-                //PlayAnimation(0, AnimName.DEAD, false);
+                ChangeAnimation("Dead");
                 break;
+        }
+    }
+
+    public void ChangeAnimation(string anim, float crossfade = 0.01f)
+    {
+        if (Anim == null) return;
+
+        if (currentAnimation != anim)
+        {
+            currentAnimation = anim;
+            Anim.CrossFade(anim, crossfade);
         }
     }
     #endregion
 
-    public bool LerpPosCompleted { get; protected set; }
+    public bool MoveCompleted { get; protected set; }
+
     [SerializeField] Vector3 _position;
     public Vector3 Position
     {
@@ -135,40 +132,38 @@ public class BaseObject : MonoBehaviour
         protected set
         {
             _position = value;
-            LerpPosCompleted = false;
+        }
+    }
+
+    [SerializeField] float _direction;
+    public float Direction
+    {
+        get { return _direction; }
+        protected set
+        {
+            _direction = value;
         }
     }
 
     public void SetPosition(Vector3 pos, bool forceMove = false)
     {
         Position = pos;
-        LerpPosCompleted = false;
+        MoveCompleted = false;
 
         if (forceMove)
         {
             transform.position = Position;
-            LerpPosCompleted = true;
+            MoveCompleted = true;
         }
     }
 
     public void UpdateLerpToPos(float moveSpeed, bool canFlip = true)
     {
-        //if (LerpPosCompleted)
-        //    return;
+        if (MoveCompleted)
+            return;
 
-        Vector3 destPos = transform.position;
-        Vector3 dir = destPos - transform.position;
-
-        float moveDist = moveSpeed * Time.deltaTime;
-
-        if(dir.magnitude >= moveDist)
-        {
-            //transform.position = 
-        }
-
-        SyncPosition();
-
-        controller.Move(transform.position);
+        cc.transform.position = Position;
+        cc.transform.rotation = Quaternion.Euler(0f, Direction, 0f);
     }
 
     public void SyncPosition()

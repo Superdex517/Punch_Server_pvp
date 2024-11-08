@@ -57,4 +57,18 @@ public class Define
         //
         Projectile = 20,
     }
+
+    public static class AnimName
+    {
+        public const string ATTACK = "attack";
+        public const string IDLE = "Idle";
+        public const string MOVE = "WalkForword";
+
+        public const string DAMAGED = "hit";
+        public const string DEAD = "Dead";
+        public const string EVENT_ATTACK_A = "event_attack";
+        public const string EVENT_ATTACK_B = "event_attack";
+        public const string EVENT_SKILL_A = "event_attack";
+        public const string EVENT_SKILL_B = "event_attack";
+    }
 }

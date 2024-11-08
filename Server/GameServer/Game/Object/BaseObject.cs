@@ -59,6 +59,12 @@ namespace GameServer
             }
         }
 
+        public float MoveDir
+        {
+            get { return PosInfo.Dir; }
+            set { PosInfo.Dir = value; }
+        }
+
         public void BroadcastMove()
         {
             S_Move movePacket = new S_Move();

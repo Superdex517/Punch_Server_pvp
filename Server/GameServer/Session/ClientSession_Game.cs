@@ -17,10 +17,10 @@ namespace GameServer
             MyHero = ObjectManager.Instance.Spawn<Hero>(1);
             {
                 MyHero.ObjectInfo.PosInfo.State = EObjectState.Idle;
-                MyHero.ObjectInfo.PosInfo.MoveDir = EMoveDir.Down;
                 MyHero.ObjectInfo.PosInfo.PosX = 0;
                 MyHero.ObjectInfo.PosInfo.PosY = 0;
                 MyHero.ObjectInfo.PosInfo.PosZ = 0;
+                MyHero.ObjectInfo.PosInfo.Dir = 0;
                 MyHero.Session = this;
             }
 

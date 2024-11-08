@@ -11,7 +11,7 @@ namespace GameServer
     public class Creature : BaseObject
     {
         public CreatureInfo CreatureInfo { get; private set; } = new CreatureInfo();
-
+         
         public Creature()
         {
             CreatureInfo.ObjectInfo = ObjectInfo;
