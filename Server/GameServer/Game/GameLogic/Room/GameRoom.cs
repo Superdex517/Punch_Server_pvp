@@ -40,13 +40,14 @@ namespace GameServer
                 obj.Pos = GetSpawnPos(obj, checkObjects: true);
 
             EGameObjectType type = ObjectManager.GetObjectTypeFromId(obj.ObjectId);
+
             if (type == EGameObjectType.Hero)
             {
                 Hero hero = (Hero)obj;
                 _heroes.Add(obj.ObjectId, hero);
                 hero.Room = this;
 
-                ApplyMove(hero, new Vector3(hero.Pos.X, hero.Pos.Y, hero.Pos.Z));
+                ApplyMove(hero, new Vector3(hero.Pos.X, hero.Pos.Y, hero.Pos.Z), hero.MoveDir);
 
                 hero.State = EObjectState.Idle;
                 hero.Update();

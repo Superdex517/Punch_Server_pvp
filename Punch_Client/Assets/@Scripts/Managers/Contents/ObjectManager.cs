@@ -55,7 +55,7 @@ public class ObjectManager : MonoBehaviour
         MyPlayer.ObjectId = objectInfo.ObjectId;
         MyPlayer.PosInfo = objectInfo.PosInfo;
         MyPlayer.freeLookCam = Utils.FindAndGetComponent<CinemachineFreeLook>("ThirdPersonCamera");
-        MyPlayer.controller = Utils.GetOrAddComponent<CharacterController>(go);
+        MyPlayer.cc = Utils.GetOrAddComponent<CharacterController>(go);
         MyPlayer.cam = Camera.main.transform;
 
         //MyHero.SyncWorldPosWithCellPos();
@@ -82,7 +82,7 @@ public class ObjectManager : MonoBehaviour
         _objects.Add(objectInfo.ObjectId, go);
 
         Player player = Utils.GetOrAddComponent<Player>(go);
-        player.controller = Utils.GetOrAddComponent<CharacterController>(go);
+        player.cc = Utils.GetOrAddComponent<CharacterController>(go);
         player.ObjectId = objectInfo.ObjectId;
         player.PosInfo = objectInfo.PosInfo;
         player.SetInfo(1);

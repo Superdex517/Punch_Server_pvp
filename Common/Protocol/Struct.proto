@@ -28,6 +28,7 @@ message PositionInfo
 	float posX = 3;
 	float posY = 4;
 	float posZ = 5;
+	float dir = 6;
 }
 
 message ObjectInfo 

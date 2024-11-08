@@ -25,7 +25,7 @@ public class Creature : BaseObject
         base.UpdateMove();
 
         // 이동 끝났으면 Idle 상태로 변경
-        if (LerpPosCompleted)
+        if (MoveCompleted)
         {
             ObjectState = EObjectState.Idle;
             return;
@@ -34,7 +34,6 @@ public class Creature : BaseObject
 
     public bool MoveToPosition(Vector3 destPos)
     {
-
         return Managers.Move.MoveTo(this, destPos);
     }
 }

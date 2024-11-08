@@ -23,7 +23,7 @@ public class Hero : Creature
     {
         base.UpdateMove();
 
-        UpdateLerpToPos(MoveSpeed, true);
+        UpdateLerpToPos(MoveSpeed);
     }
 
     public virtual void SetInfo(int templatedId)

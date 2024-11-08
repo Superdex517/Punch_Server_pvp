@@ -22,12 +22,12 @@ namespace GameServer
 
             info.PosInfo.State = movePosInfo.State;
             info.PosInfo.MoveDir = movePosInfo.MoveDir;
-            ApplyMove(hero, new Vector3(movePosInfo.PosX, movePosInfo.PosY, movePosInfo.PosZ));
+            ApplyMove(hero, new Vector3(movePosInfo.PosX, movePosInfo.PosY, movePosInfo.PosZ), movePosInfo.Dir);
 
             hero.BroadcastMove();
         }
 
-        public bool ApplyMove(BaseObject obj, Vector3 dest, bool checkObjects = true, bool collision = true)
+        public bool ApplyMove(BaseObject obj, Vector3 dest, float dir, bool checkObjects = true, bool collision = true)
         {
             if (obj == null)
                 return false;
@@ -44,6 +44,7 @@ namespace GameServer
             posInfo.PosX = dest.X;
             posInfo.PosY = dest.Y;
             posInfo.PosZ = dest.Z;
+            posInfo.Dir = dir;
 
             return true;
         }
