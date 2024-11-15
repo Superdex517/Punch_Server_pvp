@@ -16,6 +16,25 @@ class PacketHandler
     {
         Debug.Log("S_Connected");
     }
+
+    public static void S_MakeRoomHandler(PacketSession session, IMessage packet)
+    {
+        S_MakeRoom makeRoom = packet as S_MakeRoom;
+
+        RoomObject room = Managers.Object.SpawnUI(makeRoom.MyRoomInfo);
+    }
+
+    public static void S_EnterRoomHandler(PacketSession session, IMessage packet)
+    {
+        S_EnterRoom makeRoom = packet as S_EnterRoom;
+    }
+
+    public static void S_DestroyRoomHandler(PacketSession session, IMessage packet)
+    {
+        S_DestroyRoom destroyRoom = packet as S_DestroyRoom;
+
+    }
+
     public static void S_EnterGameHandler(PacketSession session, IMessage packet)
     {
         Debug.Log("EnterGame");

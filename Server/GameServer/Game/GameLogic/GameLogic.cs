@@ -11,6 +11,7 @@ namespace GameServer
         public static GameLogic Instance { get; } = new GameLogic();
 
         Dictionary<int, GameRoom> _rooms = new Dictionary<int, GameRoom>();
+
         int _roomId = 1;
 
         public void Update()

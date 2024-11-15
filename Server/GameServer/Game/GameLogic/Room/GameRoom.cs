@@ -6,22 +6,29 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
-using System.Threading.Tasks.Dataflow;
 
 namespace GameServer
 {
     public partial class GameRoom : JobSerializer
     {
-        public int GameRoomId { get; set; }
+        public int GameRoomId
+        {
+            get { return RoomInfo.RoomId; }
+            set { RoomInfo.RoomId = value;}
+        }
+
         public int TemplateId { get; set; }
+
+        public int MaxPlayerCount { get; set; }
+
+        public EGameUIType UIType { get; protected set; } = EGameUIType.None;
+        public RoomInfo RoomInfo { get; set; } = new RoomInfo();
 
         public Dictionary<int, Hero> _heroes = new Dictionary<int, Hero>();
 
-        public Zone[,] Zones { get; private set; }
-
         public void Init(int mapTemplateId, int zoneCells)
         {
-            
+
         }
 
         public void Update()
@@ -32,6 +39,9 @@ namespace GameServer
         public void EnterGame(BaseObject obj, bool respawn = false, Vector3? pos = null)
         {
             if (obj == null)
+                return;
+
+            if (MaxPlayerCount == 2)
                 return;
 
             if (pos.HasValue)
@@ -46,7 +56,7 @@ namespace GameServer
                 Hero hero = (Hero)obj;
                 _heroes.Add(obj.ObjectId, hero);
                 hero.Room = this;
-
+                
                 ApplyMove(hero, new Vector3(hero.Pos.X, hero.Pos.Y, hero.Pos.Z), hero.MoveDir);
 
                 hero.State = EObjectState.Idle;
@@ -72,11 +82,17 @@ namespace GameServer
 
         public void LeaveGame(int objectId, bool kick = false)
         {
+            if (MaxPlayerCount < 0)
+            {
+                Console.WriteLine($"MaxPlayerCount need to Check : {GameRoomId}");
+                return;
+            }
+
             EGameObjectType type = ObjectManager.GetObjectTypeFromId(objectId);
 
             Vector3 pos;
 
-            if(type == EGameObjectType.Hero)
+            if (type == EGameObjectType.Hero)
             {
                 if (_heroes.Remove(objectId, out Hero hero) == false)
                     return;
@@ -105,6 +121,8 @@ namespace GameServer
                 Broadcast(pos, despawnPacket);
             }
         }
+
+
 
         public void Broadcast(Vector3 pos, IMessage packet)
         {

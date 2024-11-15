@@ -8,7 +8,12 @@ import "Enum.proto";
 message RoomInfo 
 {
 	int32 roomId = 1;
-	int32 mapId = 2;
+	string roomName = 2;
+}
+
+message MyRoomInfo
+{
+	RoomInfo roomInfo = 1;
 }
 
 message StatInfo 
@@ -18,7 +23,6 @@ message StatInfo
 	int32 maxHp = 3;
 	float speed = 4;
 	int32 attack = 5;
-
 }
 
 message PositionInfo 

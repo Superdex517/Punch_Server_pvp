@@ -9,6 +9,28 @@ using System.Text;
 
 public class PacketHandler
 {
+    public static void C_MakeRoomHandler(PacketSession session, IMessage packet)
+    {
+        //TODO : announce room info
+        C_MakeRoom makeRoomPacket = (C_MakeRoom)packet;
+        ClientSession clientSession = (ClientSession)session;
+        clientSession.HandleMakeRoom(makeRoomPacket);
+    }
+
+    public static void C_EnterRoomHandler(PacketSession session, IMessage packet)
+    {
+        //TODO : announce room info
+        C_EnterRoom enterRoomPacket = (C_EnterRoom)packet;
+        ClientSession clientSession = (ClientSession)session;
+        clientSession.HandleEnterRoom(enterRoomPacket);
+    }
+
+    public static void C_DestroyRoomHandler(PacketSession session, IMessage packet)
+    {
+        C_DestroyRoom destroyRoom = (C_DestroyRoom)packet;
+        ClientSession clientSession = (ClientSession)session;
+        clientSession.HandleDestroyRoom(destroyRoom);
+    }
 
     public static void C_EnterGameHandler(PacketSession session, IMessage packet)
     {

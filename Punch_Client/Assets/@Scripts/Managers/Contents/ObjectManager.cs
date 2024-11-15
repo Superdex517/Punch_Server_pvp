@@ -8,6 +8,9 @@ using UnityEngine;
 public class ObjectManager : MonoBehaviour
 {
     public MyPlayer MyPlayer { get; set; }
+    public RoomObject RoomObject { get; set; }
+
+    Dictionary<int, GameObject> _waitingUI = new Dictionary<int, GameObject>();
     Dictionary<int, GameObject> _objects = new Dictionary<int, GameObject>();
 
     public Transform GetRootTransform(string name)
@@ -24,6 +27,7 @@ public class ObjectManager : MonoBehaviour
 
     }
 
+    public Transform RoomRoot { get { return GetRootTransform("@Rooms"); } }
     public Transform HeroRoot { get { return GetRootTransform("@Heroes"); } }
     public Transform MonsterRoot { get { return GetRootTransform("@Monsters"); } }
     public Transform ProjectileRoot { get { return GetRootTransform("@Projectiles"); } }
@@ -31,6 +35,25 @@ public class ObjectManager : MonoBehaviour
     public Transform EffectRoot { get { return GetRootTransform("@Effects"); } }
     public Transform NpcRoot { get { return GetRootTransform("@Npc"); } }
     public Transform ItemHolderRoot { get { return GetRootTransform("@ItemHolders"); } }
+
+    public RoomObject SpawnUI(MyRoomInfo myRoomInfo)
+    {
+        RoomInfo info = myRoomInfo.RoomInfo;
+        if (info == null)
+            return null;
+
+        GameObject go = Managers.Resource.Instantiate("Room");
+
+        go.name = "Room" + 1;
+        go.transform.parent = RoomRoot;
+        _waitingUI.Add(myRoomInfo.RoomInfo.RoomId, go);
+
+        RoomObject = Utils.GetOrAddComponent<RoomObject>(go);
+        RoomObject.RoomId = info.RoomId;
+        RoomObject.MaxPlayer = 1;
+
+        return RoomObject;
+    }
 
     public MyPlayer Spawn(MyHeroInfo myHeroInfo)
     {
@@ -46,7 +69,7 @@ public class ObjectManager : MonoBehaviour
         if (objectType != EGameObjectType.Hero)
             return null;
 
-        GameObject go = Managers.Resource.Instantiate("Player"); // TEMP		
+        GameObject go = Managers.Resource.Instantiate("FightPlayer"); // TEMP		
         go.name = info.Name;
         go.transform.parent = HeroRoot;
         _objects.Add(objectInfo.ObjectId, go);
@@ -55,7 +78,7 @@ public class ObjectManager : MonoBehaviour
         MyPlayer.ObjectId = objectInfo.ObjectId;
         MyPlayer.PosInfo = objectInfo.PosInfo;
         MyPlayer.freeLookCam = Utils.FindAndGetComponent<CinemachineFreeLook>("ThirdPersonCamera");
-        MyPlayer.cc = Utils.GetOrAddComponent<CharacterController>(go);
+        //MyPlayer.cc = Utils.GetOrAddComponent<CharacterController>(go);
         MyPlayer.cam = Camera.main.transform;
 
         //MyHero.SyncWorldPosWithCellPos();
@@ -76,13 +99,13 @@ public class ObjectManager : MonoBehaviour
         if (objectType != EGameObjectType.Hero)
             return null;
 
-        GameObject go = Managers.Resource.Instantiate("Player"); // TEMP
+        GameObject go = Managers.Resource.Instantiate("FightPlayer"); // TEMP
         go.name = info.Name;
         go.transform.parent = HeroRoot;
         _objects.Add(objectInfo.ObjectId, go);
 
         Player player = Utils.GetOrAddComponent<Player>(go);
-        player.cc = Utils.GetOrAddComponent<CharacterController>(go);
+        //player.cc = Utils.GetOrAddComponent<CharacterController>(go);
         player.ObjectId = objectInfo.ObjectId;
         player.PosInfo = objectInfo.PosInfo;
         player.SetInfo(1);

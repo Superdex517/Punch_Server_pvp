@@ -32,21 +32,24 @@ namespace Google.Protobuf.Protocol {
             "RE9XThACEhIKDkVNT1ZFX0RJUl9MRUZUEAMSEwoPRU1PVkVfRElSX1JJR0hU",
             "EAQSFQoRRU1PVkVfRElSX1VQX0xFRlQQBRIWChJFTU9WRV9ESVJfVVBfUklH",
             "SFQQBhIXChNFTU9WRV9ESVJfRE9XTl9MRUZUEAcSGAoURU1PVkVfRElSX0RP",
-            "V05fUklHSFQQCCqtAQoPRUdhbWVPYmplY3RUeXBlEhoKFkVHQU1FX09CSkVD",
-            "VF9UWVBFX05PTkUQABIaChZFR0FNRV9PQkpFQ1RfVFlQRV9IRVJPEAESHQoZ",
-            "RUdBTUVfT0JKRUNUX1RZUEVfTU9OU1RFUhACEiAKHEVHQU1FX09CSkVDVF9U",
-            "WVBFX1BST0pFQ1RJTEUQAxIhCh1FR0FNRV9PQkpFQ1RfVFlQRV9JVEVNX0hP",
-            "TERFUhAEKlIKEkVDZWxsQ29sbGlzaW9uVHlwZRIdChlFQ0VMTF9DT0xMSVNJ",
-            "T05fVFlQRV9OT05FEAASHQoZRUNFTExfQ09MTElTSU9OX1RZUEVfV0FMTBAB",
-            "KuMBCg9FRmluZFBhdGhSZXN1bHQSGgoWRUZJTkRfUEFUSF9SRVNVTFRfTk9O",
-            "RRAAEiMKH0VGSU5EX1BBVEhfUkVTVUxUX0ZBSUxfTEVSUENFTEwQARIiCh5F",
-            "RklORF9QQVRIX1JFU1VMVF9GQUlMX05PX1BBVEgQAhIiCh5FRklORF9QQVRI",
-            "X1JFU1VMVF9GQUlMX01PVkVfVE8QAxIoCiRFRklORF9QQVRIX1JFU1VMVF9G",
-            "QUlMX1NBTUVfUE9TSVRJT04QBBIdChlFRklORF9QQVRIX1JFU1VMVF9TVUND",
-            "RVNTEAVCG6oCGEdvb2dsZS5Qcm90b2J1Zi5Qcm90b2NvbGIGcHJvdG8z"));
+            "V05fUklHSFQQCCo9CgtFR2FtZVVJVHlwZRIWChJFR0FNRV9VSV9UWVBFX05P",
+            "TkUQABIWChJFR0FNRV9VSV9UWVBFX1JPT00QASqtAQoPRUdhbWVPYmplY3RU",
+            "eXBlEhoKFkVHQU1FX09CSkVDVF9UWVBFX05PTkUQABIaChZFR0FNRV9PQkpF",
+            "Q1RfVFlQRV9IRVJPEAESHQoZRUdBTUVfT0JKRUNUX1RZUEVfTU9OU1RFUhAC",
+            "EiAKHEVHQU1FX09CSkVDVF9UWVBFX1BST0pFQ1RJTEUQAxIhCh1FR0FNRV9P",
+            "QkpFQ1RfVFlQRV9JVEVNX0hPTERFUhAEKjMKDUVHYW1lVGVhbVR5cGUSEAoM",
+            "RUdBTUVfVEVBTV9BEAASEAoMRUdBTUVfVEVBTV9CEAEqUgoSRUNlbGxDb2xs",
+            "aXNpb25UeXBlEh0KGUVDRUxMX0NPTExJU0lPTl9UWVBFX05PTkUQABIdChlF",
+            "Q0VMTF9DT0xMSVNJT05fVFlQRV9XQUxMEAEq4wEKD0VGaW5kUGF0aFJlc3Vs",
+            "dBIaChZFRklORF9QQVRIX1JFU1VMVF9OT05FEAASIwofRUZJTkRfUEFUSF9S",
+            "RVNVTFRfRkFJTF9MRVJQQ0VMTBABEiIKHkVGSU5EX1BBVEhfUkVTVUxUX0ZB",
+            "SUxfTk9fUEFUSBACEiIKHkVGSU5EX1BBVEhfUkVTVUxUX0ZBSUxfTU9WRV9U",
+            "TxADEigKJEVGSU5EX1BBVEhfUkVTVUxUX0ZBSUxfU0FNRV9QT1NJVElPThAE",
+            "Eh0KGUVGSU5EX1BBVEhfUkVTVUxUX1NVQ0NFU1MQBUIbqgIYR29vZ2xlLlBy",
+            "b3RvYnVmLlByb3RvY29sYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.EObjectState), typeof(global::Google.Protobuf.Protocol.EMoveDir), typeof(global::Google.Protobuf.Protocol.EGameObjectType), typeof(global::Google.Protobuf.Protocol.ECellCollisionType), typeof(global::Google.Protobuf.Protocol.EFindPathResult), }, null, null));
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.EObjectState), typeof(global::Google.Protobuf.Protocol.EMoveDir), typeof(global::Google.Protobuf.Protocol.EGameUIType), typeof(global::Google.Protobuf.Protocol.EGameObjectType), typeof(global::Google.Protobuf.Protocol.EGameTeamType), typeof(global::Google.Protobuf.Protocol.ECellCollisionType), typeof(global::Google.Protobuf.Protocol.EFindPathResult), }, null, null));
     }
     #endregion
 
@@ -72,12 +75,22 @@ namespace Google.Protobuf.Protocol {
     [pbr::OriginalName("EMOVE_DIR_DOWN_RIGHT")] DownRight = 8,
   }
 
+  public enum EGameUIType {
+    [pbr::OriginalName("EGAME_UI_TYPE_NONE")] None = 0,
+    [pbr::OriginalName("EGAME_UI_TYPE_ROOM")] Room = 1,
+  }
+
   public enum EGameObjectType {
     [pbr::OriginalName("EGAME_OBJECT_TYPE_NONE")] None = 0,
     [pbr::OriginalName("EGAME_OBJECT_TYPE_HERO")] Hero = 1,
     [pbr::OriginalName("EGAME_OBJECT_TYPE_MONSTER")] Monster = 2,
     [pbr::OriginalName("EGAME_OBJECT_TYPE_PROJECTILE")] Projectile = 3,
     [pbr::OriginalName("EGAME_OBJECT_TYPE_ITEM_HOLDER")] ItemHolder = 4,
+  }
+
+  public enum EGameTeamType {
+    [pbr::OriginalName("EGAME_TEAM_A")] EgameTeamA = 0,
+    [pbr::OriginalName("EGAME_TEAM_B")] EgameTeamB = 1,
   }
 
   public enum ECellCollisionType {

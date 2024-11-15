@@ -18,7 +18,7 @@ namespace GameServer
         public long AccountDbId { get; set; }
         public int SessionId { get; set; }
 
-
+        public GameRoom Room { get; set; }
         public Hero MyHero { get; set; }
         object _lock = new object();
          

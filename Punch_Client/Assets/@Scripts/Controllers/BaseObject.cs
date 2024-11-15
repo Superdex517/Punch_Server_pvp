@@ -10,7 +10,7 @@ public class BaseObject : MonoBehaviour
     public virtual EGameObjectType ObjectType { get; protected set; } = EGameObjectType.None;
     public Animator Anim;
     private string currentAnimation = "";
-    public CharacterController cc;
+    //public CharacterController cc;
 
     public float MoveSpeed = 5.0f;
 
@@ -57,7 +57,7 @@ public class BaseObject : MonoBehaviour
 
     protected virtual void Start()
     {
-        Anim = GetComponent<Animator>();
+        Anim = GetComponentInChildren<Animator>();
     }
 
     protected virtual void Update()
@@ -162,8 +162,8 @@ public class BaseObject : MonoBehaviour
         if (MoveCompleted)
             return;
 
-        cc.transform.position = Position;
-        cc.transform.rotation = Quaternion.Euler(0f, Direction, 0f);
+        transform.position = Position;
+        transform.rotation = Quaternion.Euler(0f, Direction, 0f);
     }
 
     public void SyncPosition()

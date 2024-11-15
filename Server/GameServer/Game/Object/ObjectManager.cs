@@ -15,6 +15,8 @@ namespace GameServer
 
         int _counter = 0;
 
+        Dictionary<int, GameRoom> _rooms = new Dictionary<int, GameRoom> ();
+
         public T Spawn<T>(int templateId = 0) where T : BaseObject, new()
         {
             T obj = new T();
@@ -32,7 +34,32 @@ namespace GameServer
             return obj;
         }
 
+        public T SpawnUI<T>(int templateId = 0) where T : GameRoom, new()
+        {
+            T room = new T();
+
+            lock (_lock)
+            {
+                room.GameRoomId = GenerateRoomId(room.UIType, templateId);
+
+                if (room.UIType == EGameUIType.Room)
+                {
+                    _rooms.Add(room.GameRoomId, room as GameRoom);
+                }
+            }
+
+            return room;
+        }
+
         int GenerateId(EGameObjectType type, int templateId)
+        {
+            lock (_lock)
+            {
+                return ((int)type << 28) | (templateId << 20) | (_counter++);
+            }
+        }
+
+        int GenerateRoomId(EGameUIType type, int templateId)
         {
             lock (_lock)
             {

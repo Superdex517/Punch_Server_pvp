@@ -13,8 +13,10 @@ public class Managers : MonoBehaviour
 
     private ObjectManager _object = new ObjectManager(); 
     private MoveManager _move = new MoveManager();
+    private RoomManager _room = new RoomManager();
     public static ObjectManager Object { get { return Instance?._object; } }
     public static MoveManager Move { get { return Instance?._move; } }
+    public static RoomManager Room { get { return Instance?._room; } }
 
 
 

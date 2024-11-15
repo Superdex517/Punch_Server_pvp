@@ -29,6 +29,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 101f66bc0f0a67d4fa9ae05c4c2811b5
+    m_Address: FightPlayer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d804e43b0f33d4b42b22abf1ed5c62f6, type: 2}
   m_SchemaSet:

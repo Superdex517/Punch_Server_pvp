@@ -12,6 +12,25 @@ enum EObjectState
 	EOBJECT_STATE_DEAD = 4;
 }
 
+enum EMoveDir
+{
+	EMOVE_DIR_NONE = 0;
+	EMOVE_DIR_UP = 1;
+	EMOVE_DIR_DOWN = 2;
+	EMOVE_DIR_LEFT = 3;
+	EMOVE_DIR_RIGHT = 4;
+	EMOVE_DIR_UP_LEFT = 5;
+	EMOVE_DIR_UP_RIGHT = 6;
+	EMOVE_DIR_DOWN_LEFT = 7;
+	EMOVE_DIR_DOWN_RIGHT = 8;
+}
+
+enum EGameUIType
+{
+	EGAME_UI_TYPE_NONE = 0;
+	EGAME_UI_TYPE_ROOM = 1;
+}
+
 
 enum EGameObjectType 
 {
@@ -20,6 +39,12 @@ enum EGameObjectType
 	EGAME_OBJECT_TYPE_MONSTER = 2;
 	EGAME_OBJECT_TYPE_PROJECTILE = 3;
 	EGAME_OBJECT_TYPE_ITEM_HOLDER = 4;
+}
+
+enum EGameTeamType
+{
+	EGAME_TEAM_A = 0;
+	EGAME_TEAM_B = 1;
 }
 
 enum ECellCollisionType

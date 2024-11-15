@@ -68,8 +68,7 @@ public class UI_TitleScene : UI_Scene
 
         GetObject((int)GameObjects.StartButton).BindEvent((evt) =>
         {
-            Debug.Log("OnClick");
-            Managers.Scene.LoadScene(EScene.GameScene);
+            Managers.Scene.LoadScene(EScene.ScelectRoomScene);
         });
 
         GetObject((int)GameObjects.StartButton).gameObject.SetActive(false);
