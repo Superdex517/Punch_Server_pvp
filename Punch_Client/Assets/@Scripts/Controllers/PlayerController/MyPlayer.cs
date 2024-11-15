@@ -113,16 +113,6 @@ public class MyPlayer : Player
         punchInput.Player.Disable();
     }
 
-    private void OnEnable()
-    {
-        punchInput.Player.Enable();
-    }
-
-    private void OnDisable()
-    {
-        punchInput.Player.Disable();
-    }
-
     protected override void Start()
     {
         base.Start();
@@ -143,15 +133,15 @@ public class MyPlayer : Player
         MovementPackage();
 
         if (grounded)
+        {
             rb.drag = groundDrag;
-        else
-            rb.drag = 0;
-
         }
         else
         {
+            rb.drag = 0;
             ObjectState = EObjectState.Idle;
         }
+
         
         MovementPackage();
 
