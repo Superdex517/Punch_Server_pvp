@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Punch_Client/Assets/@Resources/Prefabs/Player/Player.prefab.meta
 guid: 101f66bc0f0a67d4fa9ae05c4c2811b5
+========
+guid: 7058663f70e34a44bbf366bf18affd71
+>>>>>>>> e3294e5565d43d15660dd6bf287e0a38e4567852:Punch_Client/Assets/@Resources/Prefabs/Player/Player_Chicken.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

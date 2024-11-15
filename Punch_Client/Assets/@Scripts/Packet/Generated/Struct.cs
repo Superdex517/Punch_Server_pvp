@@ -696,6 +696,17 @@ namespace Google.Protobuf.Protocol {
       }
     }
 
+    /// <summary>Field number for the "dir" field.</summary>
+    public const int DirFieldNumber = 6;
+    private float dir_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Dir {
+      get { return dir_; }
+      set {
+        dir_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PositionInfo);

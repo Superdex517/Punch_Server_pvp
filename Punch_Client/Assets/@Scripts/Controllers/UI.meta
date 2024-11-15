@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Punch_Client/Assets/@Scripts/Controllers/UI.meta
 guid: 399dba9afe3133446823ccb369ddfb0e
+========
+guid: 7a41cd5c41657104d83bc7d52e5ae064
+>>>>>>>> e3294e5565d43d15660dd6bf287e0a38e4567852:Punch_Client/Assets/BattleRoyaleHeroesPBR.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

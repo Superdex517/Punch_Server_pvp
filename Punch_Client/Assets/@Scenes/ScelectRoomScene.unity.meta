@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Punch_Client/Assets/@Scenes/ScelectRoomScene.unity.meta
 guid: 246f8d1682049a44b88fa4f31e2fe268
+========
+guid: 682aa30636b81714eb4cd7e6082ab87a
+>>>>>>>> e3294e5565d43d15660dd6bf287e0a38e4567852:Punch_Client/Assets/BattleRoyaleHeroesPBR/SRP/HDRP.zip.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

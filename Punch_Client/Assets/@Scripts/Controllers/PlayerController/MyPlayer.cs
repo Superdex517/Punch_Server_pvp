@@ -113,6 +113,16 @@ public class MyPlayer : Player
         punchInput.Player.Disable();
     }
 
+    private void OnEnable()
+    {
+        punchInput.Player.Enable();
+    }
+
+    private void OnDisable()
+    {
+        punchInput.Player.Disable();
+    }
+
     protected override void Start()
     {
         base.Start();
@@ -136,6 +146,14 @@ public class MyPlayer : Player
             rb.drag = groundDrag;
         else
             rb.drag = 0;
+
+        }
+        else
+        {
+            ObjectState = EObjectState.Idle;
+        }
+        
+        MovementPackage();
 
         UpdateAI();
 

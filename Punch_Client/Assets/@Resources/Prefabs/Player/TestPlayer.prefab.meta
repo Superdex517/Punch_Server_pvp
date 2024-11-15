@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Punch_Client/Assets/@Resources/Prefabs/Player/TestPlayer.prefab.meta
 guid: 65dbd71337f0ee74d95b0b93cc6c774b
+========
+guid: a2836f0676e46dc4685632e429aadbc8
+>>>>>>>> e3294e5565d43d15660dd6bf287e0a38e4567852:Punch_Client/Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/AlienDefault.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

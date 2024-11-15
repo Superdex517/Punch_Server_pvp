@@ -2,11 +2,12 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 8
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<<< HEAD:Punch_Client/Assets/LeanTween/Examples/Material/TrackLines.mat
   m_Name: TrackLines
   m_Shader: {fileID: 202, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
@@ -14,12 +15,17 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 5
+========
+  m_Name: BodiesPBRDefault
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _METALLICGLOSSMAP
+  m_LightmapFlags: 4
+>>>>>>>> e3294e5565d43d15660dd6bf287e0a38e4567852:Punch_Client/Assets/BattleRoyaleHeroesPBR/Material/PBRDefault/BodiesPBRDefault.mat
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -40,33 +46,42 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 80b0ab5a27710144fb112208e00c08fc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
+<<<<<<<< HEAD:Punch_Client/Assets/LeanTween/Examples/Material/TrackLines.mat
         m_Texture: {fileID: 2800000, guid: adb1725a8503349429bf8d113eadac67, type: 3}
+========
+        m_Texture: {fileID: 2800000, guid: 1fcddc08702c0894faa0d61c3e998cd0, type: 3}
+>>>>>>>> e3294e5565d43d15660dd6bf287e0a38e4567852:Punch_Client/Assets/BattleRoyaleHeroesPBR/Material/PBRDefault/BodiesPBRDefault.mat
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 46dc657276aa56b4887c7dc3f443cda9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 29eab378e43aada4e871bd72aeb6a545, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: []
     m_Floats:
-    - _BumpScale: 1
+    - _BumpScale: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+<<<<<<<< HEAD:Punch_Client/Assets/LeanTween/Examples/Material/TrackLines.mat
     - _Glossiness: 0.5
     - _InvFade: 1
+========
+    - _GlossMapScale: 1
+    - _Glossiness: 0
+    - _GlossyReflections: 1
+>>>>>>>> e3294e5565d43d15660dd6bf287e0a38e4567852:Punch_Client/Assets/BattleRoyaleHeroesPBR/Material/PBRDefault/BodiesPBRDefault.mat
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -76,5 +91,4 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-  m_BuildTextureStacks: []
+    - _EmissionColor: {r: 1, g: 0, b: 0, a: 1}

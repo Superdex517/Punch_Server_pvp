@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Punch_Client/Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/AlienDefault.prefab.meta
 guid: a2836f0676e46dc4685632e429aadbc8
+========
+guid: 9c86e41b5e19b7447aa5c4f94049889d
+>>>>>>>> e3294e5565d43d15660dd6bf287e0a38e4567852:Punch_Client/Assets/BattleRoyaleHeroesPBR/Prefab/Character/PBRDefault/BasicFemaleDefault.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

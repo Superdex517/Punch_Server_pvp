@@ -5313,8 +5313,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3307745664158626612}
   - component: {fileID: 1936723396067920017}
+<<<<<<< HEAD
   - component: {fileID: 1397377596940724069}
   - component: {fileID: -6878209481770238544}
+=======
+  - component: {fileID: 8424268816719008928}
+>>>>>>> e3294e5565d43d15660dd6bf287e0a38e4567852
   m_Layer: 0
   m_Name: Player_Chicken
   m_TagString: Untagged
@@ -5389,7 +5393,11 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 9f078227c6f09b54392514bfaa25c741, type: 3}
   m_Controller: {fileID: 9100000, guid: 5641793327b6888488fb29f5b408565c, type: 2}
+<<<<<<< HEAD
   m_CullingMode: 2
+=======
+  m_CullingMode: 1
+>>>>>>> e3294e5565d43d15660dd6bf287e0a38e4567852
   m_UpdateMode: 1
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
@@ -5399,6 +5407,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+<<<<<<< HEAD
 --- !u!54 &1397377596940724069
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5428,6 +5437,10 @@ Rigidbody:
   m_CollisionDetection: 1
 --- !u!136 &-6878209481770238544
 CapsuleCollider:
+=======
+--- !u!143 &8424268816719008928
+CharacterController:
+>>>>>>> e3294e5565d43d15660dd6bf287e0a38e4567852
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5444,10 +5457,20 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
+<<<<<<< HEAD
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
+=======
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0
+>>>>>>> e3294e5565d43d15660dd6bf287e0a38e4567852
   m_Center: {x: 0, y: 1.05, z: 0}
 --- !u!1 &8345231910263284862
 GameObject:
