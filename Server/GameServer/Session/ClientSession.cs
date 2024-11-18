@@ -56,7 +56,7 @@ namespace GameServer
                 if (MyHero == null)
                     return;
 
-                GameRoom room = GameLogic.Instance.Find(1);
+                GameRoom room = GameLogic.Instance.WaitingRoom.Find(1);
                 room.Push(room.LeaveGame, MyHero.ObjectId, false);
             });
 

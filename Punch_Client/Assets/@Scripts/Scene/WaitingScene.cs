@@ -18,6 +18,10 @@ public class WaitingScene : BaseScene
 
         Debug.Log("SelectRoom");
         SceneType = EScene.ScelectRoomScene;
+
+        C_EnterWaitingRoom enterWaitingRoom = new C_EnterWaitingRoom();
+
+        Managers.Network.Send(enterWaitingRoom);
     }
 
     protected override void Start()

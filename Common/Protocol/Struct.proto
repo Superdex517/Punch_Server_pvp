@@ -11,11 +11,6 @@ message RoomInfo
 	string roomName = 2;
 }
 
-message MyRoomInfo
-{
-	RoomInfo roomInfo = 1;
-}
-
 message StatInfo 
 {
 	int32 level = 1;

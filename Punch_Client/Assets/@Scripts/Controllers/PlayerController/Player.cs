@@ -28,6 +28,6 @@ public class Player : Creature
 
     public virtual void SetInfo(int templatedId)
     {
-
+        
     }
 }

@@ -17,16 +17,48 @@ class PacketHandler
         Debug.Log("S_Connected");
     }
 
+    public static void S_EnterWaitingRoomHandler(PacketSession session, IMessage packet)
+    {
+        Debug.Log("EnterWaitingRoom");
+
+        S_EnterWaitingRoom enterWaitingRoom = packet as S_EnterWaitingRoom;
+
+        enterWaitingRoom.PlayerCount++;
+    }
+
     public static void S_MakeRoomHandler(PacketSession session, IMessage packet)
     {
-        S_MakeRoom makeRoom = packet as S_MakeRoom;
+        Debug.Log("MakeRoomHandler");
 
-        RoomObject room = Managers.Object.SpawnUI(makeRoom.MyRoomInfo);
+        //S_MakeRoom makeRoom = packet as S_MakeRoom;
+
+        //RoomCard room = Managers.Object.SpawnUI(makeRoom.RoomInfo);
+        
+        //room.RoomId = 1;
     }
+
+    public static void S_SpawnUIHandler(PacketSession session, IMessage packet)
+    {        
+        S_SpawnUI spawnPacket = packet as S_SpawnUI;
+
+        foreach (RoomInfo room in spawnPacket.Rooms)
+        {
+            Managers.Object.SpawnUI(room);
+        }
+    }
+
 
     public static void S_EnterRoomHandler(PacketSession session, IMessage packet)
     {
         S_EnterRoom makeRoom = packet as S_EnterRoom;
+
+        //TODO : player id만 찾아서 2명만 입장
+
+    }    
+    
+    public static void S_LeaveRoomHandler(PacketSession session, IMessage packet)
+    {
+        S_LeaveRoom makeRoom = packet as S_LeaveRoom;
     }
 
     public static void S_DestroyRoomHandler(PacketSession session, IMessage packet)

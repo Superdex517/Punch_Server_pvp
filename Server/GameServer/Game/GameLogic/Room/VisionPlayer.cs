@@ -28,7 +28,7 @@ namespace GameServer
             
             Vector3 cellPos = Owner.Pos;
 
-            foreach (Hero hero in GameLogic.Instance.Find(1)._heroes.Values)
+            foreach (Hero hero in GameLogic.Instance.WaitingRoom.Find(1)._heroes.Values)
             {
                 objects.Add(hero);
             }

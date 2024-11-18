@@ -35,6 +35,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f433e3bccc00bf8468309e417b52d7bd
+    m_Address: RoomCard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d804e43b0f33d4b42b22abf1ed5c62f6, type: 2}
   m_SchemaSet:

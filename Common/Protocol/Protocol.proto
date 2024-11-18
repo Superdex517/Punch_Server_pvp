@@ -10,45 +10,69 @@ message S_Connected
 {
 }
 
+message C_EnterWaitingRoom
+{
+}
+
+message S_EnterWaitingRoom
+{
+	int32 playerCount = 1;
+}
+
 message C_MakeRoom
 {
-	MyRoomInfo myRoomInfo = 1;
+	RoomInfo roomInfo = 1;
 }
 
 message S_MakeRoom
 {
-	MyRoomInfo myRoomInfo = 1;
+	RoomInfo roomInfo = 1;
+}
+
+message S_SpawnUI
+{
+	repeated RoomInfo Rooms = 1;
 }
 
 message C_EnterRoom
 {
-	MyRoomInfo myRoomInfo = 1;
+	RoomInfo roomInfo = 1;
 }
 
 message S_EnterRoom
 {
-	MyRoomInfo myRoomInfo = 1;
+	RoomInfo roomInfo = 1;
+}
+
+message C_LeaveRoom
+{
+	RoomInfo roomInfo = 1;
+}
+
+message S_LeaveRoom
+{
+	RoomInfo roomInfo = 1;
 }
 
 message C_DestroyRoom
 {
-	MyRoomInfo myRoomInfo = 1;
+	RoomInfo roomInfo = 1;
 }
 
 message S_DestroyRoom
 {
-	MyRoomInfo myRoomInfo = 1;
+	RoomInfo roomInfo = 1;
 }
 
 message C_EnterGame 
 {
-	MyRoomInfo MyRoomInfo = 1;
+	RoomInfo roomInfo = 1;
 }
 
 message S_EnterGame 
 {
 	MyHeroInfo myHeroInfo = 1;
-	MyRoomInfo MyRoomInfo = 2;
+	RoomInfo roomInfo = 2;
 	bool respawn = 3;
 }
 

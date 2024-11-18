@@ -20,16 +20,26 @@ public class UI_WaitingRoom : UI_Scene
         NextButton,
     }
 
+    private enum GameTexts
+    {
+        PlayerCount,
+        RoomTitle,
+    }
+
+    #region UI
     public int MaxPage { get; set; } // (roomcount / 3) = maxpage
-    
     private int currentPage;
     private Vector3 targetPos;
     private float dragThreshould;
-
     [SerializeField] private Vector3 pageStep;
     [SerializeField] private RectTransform levelPagesRect;
     [SerializeField] private float tweenTime;
     [SerializeField] private LeanTweenType tweenType;
+    #endregion
+
+    public int RoomId = 1;
+
+    RoomInfo roomInfo = new RoomInfo();
 
     protected override void Awake()
     {
@@ -37,6 +47,7 @@ public class UI_WaitingRoom : UI_Scene
 
         BindObjects(typeof(GameObjects));
         BindButtons(typeof(GameButtons));
+        BindTexts(typeof(GameTexts));
 
         currentPage = 1;
         targetPos = levelPagesRect.localPosition;
@@ -47,20 +58,18 @@ public class UI_WaitingRoom : UI_Scene
 
         GetButton((int)GameButtons.MakeRoomButton).onClick.AddListener(() =>
         {
-            Debug.Log("MakeRoom");
             Managers.Room.IsRoomManager = true;
+            
             MakeRoom();
         });
 
         GetButton((int)GameButtons.PrevButton).onClick.AddListener(() =>
         {
-            Debug.Log("prev");
             Prev();
         });
 
         GetButton((int)GameButtons.NextButton).onClick.AddListener(() =>
         {
-            Debug.Log("next");
             Next();
         });
     }
@@ -71,6 +80,29 @@ public class UI_WaitingRoom : UI_Scene
 
     }
 
+    void MakeRoom()
+    {
+        GetObject((int)GameObjects.UI_WaitingPopup).gameObject.SetActive(true);
+
+        C_MakeRoom makeRoom = new C_MakeRoom();
+        
+        //GetText((int)GameTexts.RoomTitle).text = "Room " + makeRoom.RoomInfo.RoomId;
+        //makeRoom.RoomInfo.RoomId = RoomId;
+        
+        Managers.Network.Send(makeRoom);
+        
+        RoomId++;
+        //TODO : MaxPage count
+    }
+
+    public void UpdatePlayerCount()
+    {
+        S_EnterWaitingRoom enterWaitingRoom = new S_EnterWaitingRoom();
+
+        GetText((int)GameTexts.PlayerCount).text = enterWaitingRoom.PlayerCount.ToString();
+    }
+
+    #region UI
     public void Next()
     {
         if (currentPage < MaxPage)
@@ -104,14 +136,5 @@ public class UI_WaitingRoom : UI_Scene
         if (currentPage == 1) GetButton((int)GameButtons.PrevButton).interactable = false;
         else if (currentPage == MaxPage) GetButton((int)GameButtons.NextButton).interactable = false;
     }
-
-    void MakeRoom()
-    {
-        GetObject((int)GameObjects.UI_WaitingPopup).gameObject.SetActive(true);
-
-        C_MakeRoom makeRoom = new C_MakeRoom();
-        Managers.Network.Send(makeRoom);
-
-        //GetObject((int)GameObjects.WaitingPopup).gameObject.SetActive(false);
-    }
+    #endregion
 }

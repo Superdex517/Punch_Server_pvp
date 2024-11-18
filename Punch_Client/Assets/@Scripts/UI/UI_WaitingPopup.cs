@@ -1,3 +1,4 @@
+using Google.Protobuf.Protocol;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,7 @@ public class UI_WaitingPopup : UI_Base
 
     private enum Texts
     {
+        RoomTitle,
     }
 
     private enum Buttons
@@ -23,16 +25,21 @@ public class UI_WaitingPopup : UI_Base
         ReadyButton,
     }
 
+    private void OnEnable()
+    {
+
+    }
+
+    private void OnDisable()
+    {
+        
+    }
+
     protected override void Awake()
     {
         BindObjects(typeof(GameObjects));
         BindTexts(typeof(Texts));
         BindButtons(typeof(Buttons));
-
-        GetButton((int)Buttons.LeaveButton).onClick.AddListener(() =>
-        {
-            Debug.Log("Leave");
-        });
 
         if (Managers.Room.IsRoomManager)
         {
@@ -44,18 +51,16 @@ public class UI_WaitingPopup : UI_Base
                 GetButton((int)Buttons.StartButton).interactable = true;
                 GetButton((int)Buttons.StartButton).onClick.AddListener(() =>
                 {
-                    Debug.Log("next");
+                    Debug.Log("startbtn");
                 });
             }
- 
-
         }
         else
         {
             GetButton((int)Buttons.StartButton).gameObject.SetActive(false);
             GetButton((int)Buttons.ReadyButton).onClick.AddListener(() =>
             {
-                Debug.Log("next");
+                Debug.Log("readybtn");
             });
         }
 
@@ -63,9 +68,20 @@ public class UI_WaitingPopup : UI_Base
         {
             Managers.Room.IsRoomManager = false;
 
+            LeaveRoom();
+
             //TODO : LeaveRoomPacket
             this.gameObject.SetActive(false);
             
         });
+    }
+
+    private void LeaveRoom()
+    {
+        Debug.Log("Leave");
+
+        C_LeaveRoom leaveRoom = new C_LeaveRoom();
+
+        Managers.Network.Send(leaveRoom);
     }
 }

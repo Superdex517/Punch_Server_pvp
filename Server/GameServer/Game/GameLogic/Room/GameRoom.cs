@@ -11,23 +11,25 @@ namespace GameServer
 {
     public partial class GameRoom : JobSerializer
     {
-        public int GameRoomId
-        {
-            get { return RoomInfo.RoomId; }
-            set { RoomInfo.RoomId = value;}
-        }
-
+        public int GameRoomId { get; set; }
         public int TemplateId { get; set; }
-
         public int MaxPlayerCount { get; set; }
-
+        public ClientSession Session { get; set; }
         public EGameUIType UIType { get; protected set; } = EGameUIType.None;
-        public RoomInfo RoomInfo { get; set; } = new RoomInfo();
+        public RoomInfo RoomInfo { get; private set; } = new RoomInfo();
 
         public Dictionary<int, Hero> _heroes = new Dictionary<int, Hero>();
 
+        public GameRoom()
+        {
+            RoomInfo.RoomId = GameRoomId;
+
+            UIType = EGameUIType.Room;
+        }
+
         public void Init(int mapTemplateId, int zoneCells)
         {
+            //TODO : 맵 여러개 생기면 추가
 
         }
 
@@ -41,8 +43,8 @@ namespace GameServer
             if (obj == null)
                 return;
 
-            if (MaxPlayerCount == 2)
-                return;
+            //if (MaxPlayerCount == 2)
+            //    return;
 
             if (pos.HasValue)
                 obj.Pos = pos.Value;
@@ -78,13 +80,15 @@ namespace GameServer
                 spawnPacket.Heroes.Add(hero.HeroInfo);
                 Broadcast(obj.Pos, spawnPacket);
             }
+
+            Console.WriteLine($"EnterGame_{obj}");
         }
 
         public void LeaveGame(int objectId, bool kick = false)
         {
             if (MaxPlayerCount < 0)
             {
-                Console.WriteLine($"MaxPlayerCount need to Check : {GameRoomId}");
+                Console.WriteLine($"MaxPlayerCount need to Check : {RoomInfo.RoomId}");
                 return;
             }
 

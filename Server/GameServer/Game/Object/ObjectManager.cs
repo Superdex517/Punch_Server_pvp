@@ -14,6 +14,7 @@ namespace GameServer
         Dictionary<int, BaseObject> _gameobjects = new Dictionary<int, BaseObject> ();
 
         int _counter = 0;
+        int _roomCounter = 0;
 
         Dictionary<int, GameRoom> _rooms = new Dictionary<int, GameRoom> ();
 
@@ -40,12 +41,9 @@ namespace GameServer
 
             lock (_lock)
             {
-                room.GameRoomId = GenerateRoomId(room.UIType, templateId);
+                room.RoomInfo.RoomId = GenerateRoomId(room.UIType, templateId);
 
-                if (room.UIType == EGameUIType.Room)
-                {
-                    _rooms.Add(room.GameRoomId, room as GameRoom);
-                }
+                _rooms.Add(room.RoomInfo.RoomId, room);
             }
 
             return room;
@@ -63,7 +61,7 @@ namespace GameServer
         {
             lock (_lock)
             {
-                return ((int)type << 28) | (templateId << 20) | (_counter++);
+                return ((int)type << 28) | (templateId << 20) | (_roomCounter++);
             }
         }
 

@@ -7,19 +7,24 @@ using System.Collections.Generic;
 public enum MsgId
 {
 	S_Connected = 1,
-	C_MakeRoom = 2,
-	S_MakeRoom = 3,
-	C_EnterRoom = 4,
-	S_EnterRoom = 5,
-	C_DestroyRoom = 6,
-	S_DestroyRoom = 7,
-	C_EnterGame = 8,
-	S_EnterGame = 9,
-	S_LeaveGame = 10,
-	S_Spawn = 11,
-	S_Despawn = 12,
-	C_Move = 13,
-	S_Move = 14,
+	C_EnterWaitingRoom = 2,
+	S_EnterWaitingRoom = 3,
+	C_MakeRoom = 4,
+	S_MakeRoom = 5,
+	S_SpawnUI = 6,
+	C_EnterRoom = 7,
+	S_EnterRoom = 8,
+	C_LeaveRoom = 9,
+	S_LeaveRoom = 10,
+	C_DestroyRoom = 11,
+	S_DestroyRoom = 12,
+	C_EnterGame = 13,
+	S_EnterGame = 14,
+	S_LeaveGame = 15,
+	S_Spawn = 16,
+	S_Despawn = 17,
+	C_Move = 18,
+	S_Move = 19,
 }
 
 class PacketManager
@@ -43,10 +48,16 @@ class PacketManager
 	{		
 		_onRecv.Add((ushort)MsgId.S_Connected, MakePacket<S_Connected>);
 		_handler.Add((ushort)MsgId.S_Connected, PacketHandler.S_ConnectedHandler);		
+		_onRecv.Add((ushort)MsgId.S_EnterWaitingRoom, MakePacket<S_EnterWaitingRoom>);
+		_handler.Add((ushort)MsgId.S_EnterWaitingRoom, PacketHandler.S_EnterWaitingRoomHandler);		
 		_onRecv.Add((ushort)MsgId.S_MakeRoom, MakePacket<S_MakeRoom>);
 		_handler.Add((ushort)MsgId.S_MakeRoom, PacketHandler.S_MakeRoomHandler);		
+		_onRecv.Add((ushort)MsgId.S_SpawnUI, MakePacket<S_SpawnUI>);
+		_handler.Add((ushort)MsgId.S_SpawnUI, PacketHandler.S_SpawnUIHandler);		
 		_onRecv.Add((ushort)MsgId.S_EnterRoom, MakePacket<S_EnterRoom>);
 		_handler.Add((ushort)MsgId.S_EnterRoom, PacketHandler.S_EnterRoomHandler);		
+		_onRecv.Add((ushort)MsgId.S_LeaveRoom, MakePacket<S_LeaveRoom>);
+		_handler.Add((ushort)MsgId.S_LeaveRoom, PacketHandler.S_LeaveRoomHandler);		
 		_onRecv.Add((ushort)MsgId.S_DestroyRoom, MakePacket<S_DestroyRoom>);
 		_handler.Add((ushort)MsgId.S_DestroyRoom, PacketHandler.S_DestroyRoomHandler);		
 		_onRecv.Add((ushort)MsgId.S_EnterGame, MakePacket<S_EnterGame>);

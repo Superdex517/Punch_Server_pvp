@@ -46,6 +46,11 @@ namespace GameServer
             ConfigManager.LoadConfig();
             DataManager.LoadData();
 
+            //GameLogic.Instance.Push(() =>
+            //{
+            //    GameLogic.Instance.WaitingRoomAdd();
+            //});
+
             IPAddress ipAddr = IPAddress.Parse(ConfigManager.Config.ip);
             IPEndPoint endPoint = new IPEndPoint(ipAddr, ConfigManager.Config.port);
             _listener.Init(endPoint, () => { return SessionManager.Instance.Generate(); });
@@ -64,6 +69,7 @@ namespace GameServer
 
             // GameLogic
             Thread.CurrentThread.Name = "GameLogic";
+
             GameLogicTask();
         }
     }

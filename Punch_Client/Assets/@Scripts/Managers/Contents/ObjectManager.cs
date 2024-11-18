@@ -8,9 +8,9 @@ using UnityEngine;
 public class ObjectManager : MonoBehaviour
 {
     public MyPlayer MyPlayer { get; set; }
-    public RoomObject RoomObject { get; set; }
+    public RoomCard RoomObject { get; set; }
 
-    Dictionary<int, GameObject> _waitingUI = new Dictionary<int, GameObject>();
+    Dictionary<int, GameObject> _rooms = new Dictionary<int, GameObject>();
     Dictionary<int, GameObject> _objects = new Dictionary<int, GameObject>();
 
     public Transform GetRootTransform(string name)
@@ -36,20 +36,19 @@ public class ObjectManager : MonoBehaviour
     public Transform NpcRoot { get { return GetRootTransform("@Npc"); } }
     public Transform ItemHolderRoot { get { return GetRootTransform("@ItemHolders"); } }
 
-    public RoomObject SpawnUI(MyRoomInfo myRoomInfo)
+    public RoomCard SpawnUI(RoomInfo roomInfo)
     {
-        RoomInfo info = myRoomInfo.RoomInfo;
-        if (info == null)
+        if (roomInfo == null)
             return null;
 
-        GameObject go = Managers.Resource.Instantiate("Room");
+        GameObject go = Managers.Resource.Instantiate("RoomCard");
 
-        go.name = "Room" + 1;
+        go.name = "Room" + roomInfo.RoomId;
         go.transform.parent = RoomRoot;
-        _waitingUI.Add(myRoomInfo.RoomInfo.RoomId, go);
+        _rooms.Add(roomInfo.RoomId, go);
 
-        RoomObject = Utils.GetOrAddComponent<RoomObject>(go);
-        RoomObject.RoomId = info.RoomId;
+        RoomObject = Utils.GetOrAddComponent<RoomCard>(go);
+        RoomObject.RoomId = roomInfo.RoomId;
         RoomObject.MaxPlayer = 1;
 
         return RoomObject;
@@ -113,6 +112,28 @@ public class ObjectManager : MonoBehaviour
         //hero.SyncWorldPosWithCellPos();
 
         return player;
+    }
+
+    public void DespawnUI(int roomId)
+    {
+        if (RoomObject != null && RoomObject.RoomId == roomId)
+            return;
+
+        if (_rooms.ContainsKey(roomId) == false)
+            return;
+
+        GameObject go = FindById(roomId);
+        if (go == null)
+            return;
+
+        RoomCard room = go.GetComponent<RoomCard>();
+        if (room != null)
+        {
+
+        }
+
+        _rooms.Remove(roomId);
+        Managers.Resource.Destroy(go);
     }
 
     public void Despawn(int objectId)
