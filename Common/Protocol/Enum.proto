@@ -3,6 +3,19 @@ syntax = "proto3";
 package Protocol;
 option csharp_namespace = "Google.Protobuf.Protocol";
 
+enum EGameSceneType
+{
+	EGAME_SCENE_TYPE_LOBBY = 0;
+	EGAME_SCENE_TYPE_WAITING = 1;
+	EGAME_SCENE_TYPE_GAME = 2;
+}
+
+enum EGameUIType
+{
+	EGAME_UI_TYPE_NONE = 0;
+	EGAME_UI_TYPE_ROOM = 1;
+}
+
 enum EObjectState 
 {
 	EOBJECT_STATE_NONE = 0;
@@ -24,13 +37,6 @@ enum EMoveDir
 	EMOVE_DIR_DOWN_LEFT = 7;
 	EMOVE_DIR_DOWN_RIGHT = 8;
 }
-
-enum EGameUIType
-{
-	EGAME_UI_TYPE_NONE = 0;
-	EGAME_UI_TYPE_ROOM = 1;
-}
-
 
 enum EGameObjectType 
 {

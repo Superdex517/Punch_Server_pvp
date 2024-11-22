@@ -18,8 +18,11 @@ namespace GameServer
         public long AccountDbId { get; set; }
         public int SessionId { get; set; }
 
+        public Lobby Lobby { get; set; }
+        public WaitingRoom WaitingRoom { get; set; }
         public GameRoom Room { get; set; }
         public Hero MyHero { get; set; }
+
         object _lock = new object();
          
         #region Network
@@ -56,7 +59,10 @@ namespace GameServer
                 if (MyHero == null)
                     return;
 
-                GameRoom room = GameLogic.Instance.WaitingRoom.Find(1);
+                //만약 Lobby라면?
+                //만약 WaitingRoom이라면?
+                //만약 Game이라면?
+                GameRoom room = GameLogic.Instance.Lobby.FindWaitingRoom(1).GameRoom;
                 room.Push(room.LeaveGame, MyHero.ObjectId, false);
             });
 

@@ -3,66 +3,67 @@ using Google.Protobuf.Protocol;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Sockets;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
-using System.Threading.Tasks.Dataflow;
 
 namespace GameServer
 {
     public partial class WaitingRoom : JobSerializer
     {
-        public List<Hero> _playerList = new List<Hero>();
+        public int WaitingRoomId
+        {
+            get { return RoomInfo.WaitingRoomId; }
+            set { RoomInfo.WaitingRoomId = value; }
+        }
+        public string WaitingRoomTitle
+        {
+            get { return RoomInfo.WaitingRoomName; }
+            set { RoomInfo.WaitingRoomName = value; }
+        }
+        public ClientSession Session { get; set; }
+        public WaitingRoomInfo RoomInfo { get; private set; } = new WaitingRoomInfo();
+        public EGameUIType UIType { get; protected set; } = EGameUIType.None;
+
+        public int TemplateId { get; set; }
+        public int MaxPlayerCount { get; set; }
 
         Dictionary<int, Hero> _players = new Dictionary<int, Hero>();
-        Dictionary<int, GameRoom> _rooms = new Dictionary<int, GameRoom>();
+        public GameRoom GameRoom { get; set; }
 
-        int _roomId = 1;
+        public WaitingRoom()
+        {
+
+        }
+
+        public void Init(int maxPlayer, int mapTemplateId)
+        {
+            //TODO : 맵 여러개 생기면 추가
+
+        }
 
         public void Update()
         {
             Flush();
-
-            foreach (GameRoom room in _rooms.Values)
-            {
-                room.Update();
-            }
         }
 
-        public void EnterWaitingRoom(BaseObject player)
+        public void EnterWaitingRoom(BaseObject obj)
         {
-            _players.Add(player.ObjectId, (Hero)player);
-        }
-
-        public void MakeGameRoom(GameRoom room)
-        {
-            if (room == null)
+            if (obj == null)
                 return;
 
-            AddGameRoom(1);
-
+            if(obj.ObjectType == EGameObjectType.Hero)
             {
-                S_MakeRoom makeRoomPacket = new S_MakeRoom();
-                //makeRoomPacket.RoomInfo.RoomId = room.RoomInfo.RoomId;
-                room.Session?.Send(makeRoomPacket);
+                Hero hero = (Hero)obj;
+                hero.SceneType = EGameSceneType.Waiting;
+                _players.Add(hero.ObjectId, hero);
+
+                {
+                    S_EnterWaitingRoom enterPacket = new S_EnterWaitingRoom();
+                    enterPacket.RoomInfo = RoomInfo;
+                    hero.Session?.Send(enterPacket);
+                }
             }
-
-            S_SpawnUI spawnPacket = new S_SpawnUI();
-            spawnPacket.Rooms.Add(room.RoomInfo);
-            BroadcastMakeRoom(spawnPacket);
-
-            Console.WriteLine($"Add Room {room.RoomInfo.RoomId}");
-        }
-        public GameRoom AddGameRoom(int mapTemplateId)
-        {
-            GameRoom room = new GameRoom();
-            room.Push(room.Init, mapTemplateId, 10);
-            room.RoomInfo.RoomId = _roomId;
-            _rooms.Add(_roomId, room);
-            _roomId++;
-
-            return room;
         }
 
         public void BroadcastMakeRoom(IMessage packet)
@@ -76,23 +77,6 @@ namespace GameServer
             }
         }
 
-        public bool Remove(int roomId)
-        {
-            return _rooms.Remove(roomId);
-        }
 
-        public GameRoom Find(int roomId)
-        {
-            GameRoom room = null;
-            if (_rooms.TryGetValue(roomId, out room))
-                return room;
-
-            return null;
-        }
-
-        public List<GameRoom> GetRooms()
-        {
-            return _rooms.Values.ToList();
-        }
     }
 }

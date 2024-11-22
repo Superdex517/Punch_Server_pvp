@@ -8,11 +8,16 @@ using UnityEngine;
 public class ObjectManager : MonoBehaviour
 {
     public MyPlayer MyPlayer { get; set; }
-    public RoomCard RoomObject { get; set; }
+    public WaitingRoomCard RoomObject { get; set; }
 
-    Dictionary<int, GameObject> _rooms = new Dictionary<int, GameObject>();
+    Dictionary<int, GameObject> _waitingRooms = new Dictionary<int, GameObject>();
     Dictionary<int, GameObject> _objects = new Dictionary<int, GameObject>();
 
+    public ObjectManager()
+    {
+    }
+
+    #region root
     public Transform GetRootTransform(string name)
     {
         GameObject root = GameObject.Find(name);
@@ -20,11 +25,6 @@ public class ObjectManager : MonoBehaviour
             root = new GameObject { name = name };
 
         return root.transform;
-    }
-
-    public ObjectManager()
-    {
-
     }
 
     public Transform RoomRoot { get { return GetRootTransform("@Rooms"); } }
@@ -35,20 +35,22 @@ public class ObjectManager : MonoBehaviour
     public Transform EffectRoot { get { return GetRootTransform("@Effects"); } }
     public Transform NpcRoot { get { return GetRootTransform("@Npc"); } }
     public Transform ItemHolderRoot { get { return GetRootTransform("@ItemHolders"); } }
+    #endregion
 
-    public RoomCard SpawnUI(RoomInfo roomInfo)
+    public WaitingRoomCard SpawnUI(WaitingRoomInfo waitingRoomInfo)
     {
-        if (roomInfo == null)
+        if (waitingRoomInfo == null)
             return null;
 
         GameObject go = Managers.Resource.Instantiate("RoomCard");
 
-        go.name = "Room" + roomInfo.RoomId;
+        go.name = "Room" + waitingRoomInfo.WaitingRoomId;
         go.transform.parent = RoomRoot;
-        _rooms.Add(roomInfo.RoomId, go);
+        _waitingRooms.Add(waitingRoomInfo.WaitingRoomId, go);
 
-        RoomObject = Utils.GetOrAddComponent<RoomCard>(go);
-        RoomObject.RoomId = roomInfo.RoomId;
+        RoomObject = Utils.GetOrAddComponent<WaitingRoomCard>(go);
+        //RoomObject.RoomId = roomInfo.RoomId;
+        RoomObject.UpdateRoomTitle(waitingRoomInfo.WaitingRoomId.ToString());
         RoomObject.MaxPlayer = 1;
 
         return RoomObject;
@@ -119,20 +121,20 @@ public class ObjectManager : MonoBehaviour
         if (RoomObject != null && RoomObject.RoomId == roomId)
             return;
 
-        if (_rooms.ContainsKey(roomId) == false)
+        if (_waitingRooms.ContainsKey(roomId) == false)
             return;
 
         GameObject go = FindById(roomId);
         if (go == null)
             return;
 
-        RoomCard room = go.GetComponent<RoomCard>();
+        WaitingRoomCard room = go.GetComponent<WaitingRoomCard>();
         if (room != null)
         {
 
         }
 
-        _rooms.Remove(roomId);
+        _waitingRooms.Remove(roomId);
         Managers.Resource.Destroy(go);
     }
 

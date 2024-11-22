@@ -10,9 +10,81 @@ namespace GameServer
 {
     public partial class ClientSession : PacketSession
     {
-        public void HandleEnterWaitingRoom(C_EnterWaitingRoom waitigRoom)
+        public void HandleEnterLobby(C_EnterLobby enterLoby)
         {
-            Console.WriteLine("HandleWaitingRoom");
+
+            Lobby = GameLogic.Instance.Lobby;
+
+            MyHero = ObjectManager.Instance.Spawn<Hero>(1);
+            {
+                Console.WriteLine($"EnterLobby:{MyHero.ObjectId}");
+                
+                MyHero.Session = this;
+            }
+
+
+            GameLogic.Instance.Lobby.Push(() =>
+            {
+                Lobby.Push(() =>
+                {
+                    Lobby.EnterLoby(MyHero);
+                });
+            });
+        }
+
+
+
+        public void HandleMakeWaitingRoom(C_MakeWaitingRoom makeWaitingRoom)
+        {
+
+            GameLogic.Instance.Lobby.Push(() =>
+            {
+                WaitingRoom = ObjectManager.Instance.SpawnUI<WaitingRoom>(1);
+                {
+                    WaitingRoom.Session = this;
+                    WaitingRoom.RoomInfo.WaitingRoomName = makeWaitingRoom.RoomInfo.WaitingRoomName;
+                    Lobby.MakeWaitingRoom(WaitingRoom);
+                    
+                    Console.WriteLine($"Handle Make WaitingRoom: {WaitingRoom.RoomInfo.WaitingRoomId}");
+                }
+            });
+        }
+
+        public void HandleEnterWaitingRoom(C_EnterWaitingRoom makeRoom)
+        {
+            Console.WriteLine("EnterRoom");
+
+            GameLogic.Instance.Push(() =>
+            {
+                WaitingRoom room = GameLogic.Instance.Lobby.FindWaitingRoom(1);
+
+                room?.Push(() =>
+                {
+                    Hero hero = MyHero;
+                    
+                    room.EnterWaitingRoom(hero);
+                });
+            });
+
+            //TODO : player id만 찾아서 1명만 입장
+        }
+
+        public void HandleLeaveWaitingRoom(S_LeaveWaitingRoom leaveWaitingRoom)
+        {
+
+        }
+
+        public void HandleDestroyWaitingRoom(C_DestroyWaitingRoom destroyRoom)
+        {
+            GameLogic.Instance.Push(() =>
+            {
+                GameLogic.Instance.Lobby.Remove(destroyRoom.RoomInfo.WaitingRoomId);
+            });
+        }
+
+        public void HandleEnterGame(C_EnterGame enterGamePacket)
+        {
+            Console.WriteLine("HandleEnterGame");
 
             MyHero = ObjectManager.Instance.Spawn<Hero>(1);
             {
@@ -21,72 +93,17 @@ namespace GameServer
                 MyHero.ObjectInfo.PosInfo.PosY = 0;
                 MyHero.ObjectInfo.PosInfo.PosZ = 0;
                 MyHero.ObjectInfo.PosInfo.Dir = 0;
-                MyHero.Session = this;
             }
-
-            GameLogic.Instance.WaitingRoom.Push(() =>
-            {
-                WaitingRoom waitingRoom = GameLogic.Instance.WaitingRoom;
-
-                waitingRoom.Push(() =>
-                {
-                    waitingRoom.EnterWaitingRoom(MyHero);
-                });
-            });
-        }
-
-        public void HandleMakeRoom(C_MakeRoom makeRoom)
-        {
-            GameLogic.Instance.WaitingRoom.Push(() =>
-            {
-                WaitingRoom waitingRoom = GameLogic.Instance.WaitingRoom;
-
-                Room = ObjectManager.Instance.SpawnUI<GameRoom>(1);
-                {
-                    Room.Session = this;
-                    
-                    //Room.GameRoomId = /*makeRoom.RoomInfo.RoomId*/;
-                    //Room.GameRoomId = 1;
-                    
-                    waitingRoom.MakeGameRoom(Room);
-
-                }
-            });
-        }
-
-        public void HandleEnterRoom(C_EnterRoom makeRoom)
-        {
-            Console.WriteLine("EnterRoom");
-
-            //TODO : player id만 찾아서 2명만 입장
-        }
-
-        public void HandleLeaveRoom(C_LeaveRoom makeRoom)
-        {
-            Console.WriteLine("LeaveRoom");
-
-        }
-
-        public void HandleDestroyRoom(C_DestroyRoom destroyRoom)
-        {
-            GameLogic.Instance.Push(() =>
-            {
-                GameLogic.Instance.WaitingRoom.Remove(destroyRoom.RoomInfo.RoomId);
-            });
-        }
-
-        public void HandleEnterGame(C_EnterGame enterGamePacket)
-        {
-            Console.WriteLine("HandleEnterGame");
 
             // TODO : DB에서 마지막 좌표 등 갖고 와서 처리.
             GameLogic.Instance.Push(() =>
             {
-                GameRoom room = GameLogic.Instance.WaitingRoom.Find(1);
+                GameRoom room = GameLogic.Instance.Lobby.FindWaitingRoom(1).GameRoom;
 
                 room?.Push(() =>
                 {
                     Hero hero = MyHero;
+
                     room.EnterGame(hero, respawn: false, pos: null);
                 });
             });

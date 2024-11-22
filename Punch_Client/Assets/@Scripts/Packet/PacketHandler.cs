@@ -17,54 +17,70 @@ class PacketHandler
         Debug.Log("S_Connected");
     }
 
-    public static void S_EnterWaitingRoomHandler(PacketSession session, IMessage packet)
+    public static void S_EnterLobbyHandler(PacketSession session, IMessage packet)
     {
-        Debug.Log("EnterWaitingRoom");
+        Debug.Log("EnterLobby");
 
-        S_EnterWaitingRoom enterWaitingRoom = packet as S_EnterWaitingRoom;
-
-        enterWaitingRoom.PlayerCount++;
+        S_EnterLobby enterLobbyPacket = packet as S_EnterLobby;
+        Managers.Room.CountPlayer(enterLobbyPacket.PlayerCount.ToString());
     }
+    public static void S_LeaveLobbyHandler(PacketSession session, IMessage packet)
+    {
+        S_LeaveLobby leaveLobby = packet as S_LeaveLobby;
+
+    }
+
+    public static void S_MakeWaitingRoomHandler(PacketSession session, IMessage packet)
+    {
+        Debug.Log("S_MakeRoomHandler");
+    }
+
+
 
     public static void S_MakeRoomHandler(PacketSession session, IMessage packet)
     {
-        Debug.Log("MakeRoomHandler");
-
-        //S_MakeRoom makeRoom = packet as S_MakeRoom;
-
-        //RoomCard room = Managers.Object.SpawnUI(makeRoom.RoomInfo);
-        
-        //room.RoomId = 1;
+        Debug.Log("S_MakeRoomHandler");
     }
 
-    public static void S_SpawnUIHandler(PacketSession session, IMessage packet)
+    public static void S_SpawnWaitingRoomUIHandler(PacketSession session, IMessage packet)
     {        
-        S_SpawnUI spawnPacket = packet as S_SpawnUI;
+        S_SpawnWaitingRoomUI spawnPacket = packet as S_SpawnWaitingRoomUI;
 
-        foreach (RoomInfo room in spawnPacket.Rooms)
+        foreach (WaitingRoomInfo room in spawnPacket.Rooms)
         {
             Managers.Object.SpawnUI(room);
         }
     }
 
-
-    public static void S_EnterRoomHandler(PacketSession session, IMessage packet)
+    public static void S_DespawnWaitingRoomUIHandler(PacketSession session, IMessage packet)
     {
-        S_EnterRoom makeRoom = packet as S_EnterRoom;
+
+        S_DespawnWaitingRoomUI despawnUIPacket = packet as S_DespawnWaitingRoomUI;
+
+        foreach(int roomId in despawnUIPacket.WaitingRoomIds)
+        {
+            Managers.Object.DespawnUI(roomId);
+        }
+    }
+
+
+    public static void S_EnterWaitingRoomHandler(PacketSession session, IMessage packet)
+    {
+        S_EnterWaitingRoom makeRoom = packet as S_EnterWaitingRoom;
 
         //TODO : player id만 찾아서 2명만 입장
 
     }    
     
-    public static void S_LeaveRoomHandler(PacketSession session, IMessage packet)
+    public static void S_LeaveWaitingRoomHandler(PacketSession session, IMessage packet)
     {
-        S_LeaveRoom makeRoom = packet as S_LeaveRoom;
+        S_LeaveWaitingRoom leavRoomPacket = packet as S_LeaveWaitingRoom;
     }
 
-    public static void S_DestroyRoomHandler(PacketSession session, IMessage packet)
+    public static void S_DestroyWaitingRoomHandler(PacketSession session, IMessage packet)
     {
-        S_DestroyRoom destroyRoom = packet as S_DestroyRoom;
-
+        S_DestroyWaitingRoom destroyRoom = packet as S_DestroyWaitingRoom;
+        //TODO : destroy room
     }
 
     public static void S_EnterGameHandler(PacketSession session, IMessage packet)

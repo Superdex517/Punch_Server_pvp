@@ -10,69 +10,74 @@ message S_Connected
 {
 }
 
-message C_EnterWaitingRoom
+message C_EnterLobby
 {
 }
 
-message S_EnterWaitingRoom
+message S_EnterLobby
 {
 	int32 playerCount = 1;
 }
 
-message C_MakeRoom
+message S_LeaveLobby
 {
-	RoomInfo roomInfo = 1;
+	int32 playerCount = 1;
 }
 
-message S_MakeRoom
+message C_MakeWaitingRoom
 {
-	RoomInfo roomInfo = 1;
+	WaitingRoomInfo roomInfo = 1;
 }
 
-message S_SpawnUI
+message S_MakeWaitingRoom
 {
-	repeated RoomInfo Rooms = 1;
+	WaitingRoomInfo roomInfo = 1;
 }
 
-message C_EnterRoom
+message S_SpawnWaitingRoomUI
 {
-	RoomInfo roomInfo = 1;
+	repeated WaitingRoomInfo Rooms = 1;
 }
 
-message S_EnterRoom
+message S_DespawnWaitingRoomUI
 {
-	RoomInfo roomInfo = 1;
+	repeated int32 waitingRoomIds = 1;
 }
 
-message C_LeaveRoom
+message C_EnterWaitingRoom
 {
-	RoomInfo roomInfo = 1;
+	WaitingRoomInfo roomInfo = 1;
 }
 
-message S_LeaveRoom
+message S_EnterWaitingRoom
 {
-	RoomInfo roomInfo = 1;
+	WaitingRoomInfo roomInfo = 1;
 }
 
-message C_DestroyRoom
+message S_LeaveWaitingRoom
 {
-	RoomInfo roomInfo = 1;
+
 }
 
-message S_DestroyRoom
+message C_DestroyWaitingRoom
 {
-	RoomInfo roomInfo = 1;
+	WaitingRoomInfo roomInfo = 1;
+}
+
+message S_DestroyWaitingRoom
+{
+	WaitingRoomInfo roomInfo = 1;
 }
 
 message C_EnterGame 
 {
-	RoomInfo roomInfo = 1;
+	WaitingRoomInfo roomInfo = 1;
 }
 
 message S_EnterGame 
 {
 	MyHeroInfo myHeroInfo = 1;
-	RoomInfo roomInfo = 2;
+	WaitingRoomInfo roomInfo = 2;
 	bool respawn = 3;
 }
 

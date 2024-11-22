@@ -986,6 +986,8 @@ MonoBehaviour:
   levelPagesRect: {fileID: 2142008556}
   tweenTime: 0.3
   tweenType: 25
+  RoomId: 0
+  RoomName: 0
 --- !u!1 &703413533
 GameObject:
   m_ObjectHideFlags: 0

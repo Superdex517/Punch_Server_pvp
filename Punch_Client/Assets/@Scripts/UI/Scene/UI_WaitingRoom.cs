@@ -18,6 +18,10 @@ public class UI_WaitingRoom : UI_Scene
         MakeRoomButton,
         PrevButton,
         NextButton,
+
+        LeaveButton,
+        StartButton,
+        ReadyButton,
     }
 
     private enum GameTexts
@@ -37,9 +41,8 @@ public class UI_WaitingRoom : UI_Scene
     [SerializeField] private LeanTweenType tweenType;
     #endregion
 
-    public int RoomId = 1;
-
-    RoomInfo roomInfo = new RoomInfo();
+    public int RoomId;
+    public int RoomName;
 
     protected override void Awake()
     {
@@ -77,29 +80,26 @@ public class UI_WaitingRoom : UI_Scene
     protected override void Start()
     {
         base.Start();
-
     }
 
     void MakeRoom()
     {
         GetObject((int)GameObjects.UI_WaitingPopup).gameObject.SetActive(true);
 
-        C_MakeRoom makeRoom = new C_MakeRoom();
+        C_MakeWaitingRoom makeWaitingRoom = new C_MakeWaitingRoom();
         
-        //GetText((int)GameTexts.RoomTitle).text = "Room " + makeRoom.RoomInfo.RoomId;
-        //makeRoom.RoomInfo.RoomId = RoomId;
+        WaitingRoomInfo waitingRoomInfo = new WaitingRoomInfo();
         
-        Managers.Network.Send(makeRoom);
-        
-        RoomId++;
-        //TODO : MaxPage count
+        //TODO : 방제목 설정 UI 추가
+        waitingRoomInfo.WaitingRoomName = "asdasd";
+        makeWaitingRoom.RoomInfo = waitingRoomInfo;
+
+        Managers.Network.Send(makeWaitingRoom);
     }
 
-    public void UpdatePlayerCount()
+    public void CountPlayer(string count)
     {
-        S_EnterWaitingRoom enterWaitingRoom = new S_EnterWaitingRoom();
-
-        GetText((int)GameTexts.PlayerCount).text = enterWaitingRoom.PlayerCount.ToString();
+        GetText((int)GameTexts.PlayerCount).text = count;
     }
 
     #region UI

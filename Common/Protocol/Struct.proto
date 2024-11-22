@@ -5,10 +5,10 @@ option csharp_namespace = "Google.Protobuf.Protocol";
 
 import "Enum.proto";
 
-message RoomInfo 
+message WaitingRoomInfo 
 {
-	int32 roomId = 1;
-	string roomName = 2;
+	int32 waitingRoomId = 1;
+	string waitingRoomName = 2;
 }
 
 message StatInfo 

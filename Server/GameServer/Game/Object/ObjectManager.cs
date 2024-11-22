@@ -12,11 +12,10 @@ namespace GameServer
         object _lock = new object();
         Dictionary<int, Hero> _heroes = new Dictionary<int, Hero> ();
         Dictionary<int, BaseObject> _gameobjects = new Dictionary<int, BaseObject> ();
-
         int _counter = 0;
-        int _roomCounter = 0;
 
-        Dictionary<int, GameRoom> _rooms = new Dictionary<int, GameRoom> ();
+        Dictionary<int, WaitingRoom> _rooms = new Dictionary<int, WaitingRoom> ();
+        int _roomCounter = 0;
 
         public T Spawn<T>(int templateId = 0) where T : BaseObject, new()
         {
@@ -35,15 +34,15 @@ namespace GameServer
             return obj;
         }
 
-        public T SpawnUI<T>(int templateId = 0) where T : GameRoom, new()
+        public T SpawnUI<T>(int templateId = 0) where T : WaitingRoom, new()
         {
             T room = new T();
 
             lock (_lock)
             {
-                room.RoomInfo.RoomId = GenerateRoomId(room.UIType, templateId);
+                room.WaitingRoomId = GenerateRoomId(room.UIType, templateId);
 
-                _rooms.Add(room.RoomInfo.RoomId, room);
+                _rooms.Add(room.WaitingRoomId, room as WaitingRoom);
             }
 
             return room;

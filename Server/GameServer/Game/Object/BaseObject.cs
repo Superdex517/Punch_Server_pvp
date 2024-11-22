@@ -10,6 +10,7 @@ namespace GameServer
 {
     public class BaseObject
     {
+        public EGameSceneType SceneType { get; set; } = EGameSceneType.Lobby;
         public EGameObjectType ObjectType { get; protected set; } = EGameObjectType.None;
         public int ObjectId
         {

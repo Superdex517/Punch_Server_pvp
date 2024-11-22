@@ -9,41 +9,31 @@ using System.Text;
 
 public class PacketHandler
 {
+    public static void C_EnterLobbyHandler(PacketSession session, IMessage packet)
+    {
+        C_EnterLobby enterLobyPacket = (C_EnterLobby)packet;
+        ClientSession clientSession = (ClientSession)session;
+        clientSession.HandleEnterLobby(enterLobyPacket);
+    }
+    public static void C_MakeWaitingRoomHandler(PacketSession session, IMessage packet)
+    {
+        C_MakeWaitingRoom makeWaitingRoomPacket = (C_MakeWaitingRoom)packet;
+        ClientSession clientSession = (ClientSession)session;
+        clientSession.HandleMakeWaitingRoom(makeWaitingRoomPacket);
+    }
+
     public static void C_EnterWaitingRoomHandler(PacketSession session, IMessage packet)
     {
         C_EnterWaitingRoom enterWaitingRoomPacket = (C_EnterWaitingRoom)packet;
         ClientSession clientSession = (ClientSession)session;
         clientSession.HandleEnterWaitingRoom(enterWaitingRoomPacket);
-    }
+    }    
 
-    public static void C_MakeRoomHandler(PacketSession session, IMessage packet)
+    public static void C_DestroyWaitingRoomHandler(PacketSession session, IMessage packet)
     {
-        //TODO : announce room info
-        C_MakeRoom makeRoomPacket = (C_MakeRoom)packet;
+        C_DestroyWaitingRoom destroyWaitingRoomPacket = (C_DestroyWaitingRoom)packet;
         ClientSession clientSession = (ClientSession)session;
-        clientSession.HandleMakeRoom(makeRoomPacket);
-    }
-
-    public static void C_EnterRoomHandler(PacketSession session, IMessage packet)
-    {
-        //TODO : announce room info
-        C_EnterRoom enterRoomPacket = (C_EnterRoom)packet;
-        ClientSession clientSession = (ClientSession)session;
-        clientSession.HandleEnterRoom(enterRoomPacket);
-    }
-
-    public static void C_LeaveRoomHandler(PacketSession session, IMessage packet)
-    {
-        C_LeaveRoom enterRoomPacket = (C_LeaveRoom)packet;
-        ClientSession clientSession = (ClientSession)session;
-        clientSession.HandleLeaveRoom(enterRoomPacket);
-    }
-
-    public static void C_DestroyRoomHandler(PacketSession session, IMessage packet)
-    {
-        C_DestroyRoom destroyRoom = (C_DestroyRoom)packet;
-        ClientSession clientSession = (ClientSession)session;
-        clientSession.HandleDestroyRoom(destroyRoom);
+        clientSession.HandleDestroyWaitingRoom(destroyWaitingRoomPacket);
     }
 
     public static void C_EnterGameHandler(PacketSession session, IMessage packet)

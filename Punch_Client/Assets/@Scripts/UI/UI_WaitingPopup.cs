@@ -6,9 +6,8 @@ using UnityEngine.UI;
 using static Define;
 using Object = UnityEngine.Object;
 
-public class UI_WaitingPopup : UI_Base
+public class UI_WaitingPopup : UI_Scene
 {
-    
     private enum GameObjects
     {
     }
@@ -80,8 +79,8 @@ public class UI_WaitingPopup : UI_Base
     {
         Debug.Log("Leave");
 
-        C_LeaveRoom leaveRoom = new C_LeaveRoom();
+        S_LeaveWaitingRoom leaveWaitingRoom = new S_LeaveWaitingRoom();
 
-        Managers.Network.Send(leaveRoom);
+        Managers.Network.Send(leaveWaitingRoom);
     }
 }

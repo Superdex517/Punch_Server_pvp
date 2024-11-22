@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 1404097819003034530}
   - component: {fileID: 5312822056144537462}
   - component: {fileID: 147161867908487064}
+  - component: {fileID: -8992784889064106052}
   - component: {fileID: 8355060492975799039}
   m_Layer: 5
   m_Name: UI_RoomCard
@@ -393,6 +394,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-8992784889064106052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4268911752342928774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d770a38d988af43afadb6efeefaa8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _uiType: 1
 --- !u!114 &8355060492975799039
 MonoBehaviour:
   m_ObjectHideFlags: 0

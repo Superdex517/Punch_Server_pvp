@@ -10,11 +10,11 @@ namespace GameServer
     {
         public static GameLogic Instance { get; } = new GameLogic();
 
-        public WaitingRoom WaitingRoom = new WaitingRoom();
+        public Lobby Lobby = new Lobby();
 
         public GameLogic()
         {
-            if(WaitingRoom == null)
+            if(Lobby == null)
                 Console.WriteLine("There is no WaitingRoom");
 
             Console.WriteLine("WaitingRoom Init");
@@ -24,7 +24,7 @@ namespace GameServer
         {
             Flush();
 
-            WaitingRoom.Update();
+            Lobby.Update();
         }
     }
 }

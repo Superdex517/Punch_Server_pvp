@@ -24,37 +24,50 @@ namespace Google.Protobuf.Protocol {
     static EnumReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgpFbnVtLnByb3RvEghQcm90b2NvbCqHAQoMRU9iamVjdFN0YXRlEhYKEkVP",
-            "QkpFQ1RfU1RBVEVfTk9ORRAAEhYKEkVPQkpFQ1RfU1RBVEVfSURMRRABEhYK",
-            "EkVPQkpFQ1RfU1RBVEVfTU9WRRACEhcKE0VPQkpFQ1RfU1RBVEVfU0tJTEwQ",
-            "AxIWChJFT0JKRUNUX1NUQVRFX0RFQUQQBCrPAQoIRU1vdmVEaXISEgoORU1P",
-            "VkVfRElSX05PTkUQABIQCgxFTU9WRV9ESVJfVVAQARISCg5FTU9WRV9ESVJf",
-            "RE9XThACEhIKDkVNT1ZFX0RJUl9MRUZUEAMSEwoPRU1PVkVfRElSX1JJR0hU",
-            "EAQSFQoRRU1PVkVfRElSX1VQX0xFRlQQBRIWChJFTU9WRV9ESVJfVVBfUklH",
-            "SFQQBhIXChNFTU9WRV9ESVJfRE9XTl9MRUZUEAcSGAoURU1PVkVfRElSX0RP",
-            "V05fUklHSFQQCCo9CgtFR2FtZVVJVHlwZRIWChJFR0FNRV9VSV9UWVBFX05P",
-            "TkUQABIWChJFR0FNRV9VSV9UWVBFX1JPT00QASqtAQoPRUdhbWVPYmplY3RU",
-            "eXBlEhoKFkVHQU1FX09CSkVDVF9UWVBFX05PTkUQABIaChZFR0FNRV9PQkpF",
-            "Q1RfVFlQRV9IRVJPEAESHQoZRUdBTUVfT0JKRUNUX1RZUEVfTU9OU1RFUhAC",
-            "EiAKHEVHQU1FX09CSkVDVF9UWVBFX1BST0pFQ1RJTEUQAxIhCh1FR0FNRV9P",
-            "QkpFQ1RfVFlQRV9JVEVNX0hPTERFUhAEKjMKDUVHYW1lVGVhbVR5cGUSEAoM",
-            "RUdBTUVfVEVBTV9BEAASEAoMRUdBTUVfVEVBTV9CEAEqUgoSRUNlbGxDb2xs",
-            "aXNpb25UeXBlEh0KGUVDRUxMX0NPTExJU0lPTl9UWVBFX05PTkUQABIdChlF",
-            "Q0VMTF9DT0xMSVNJT05fVFlQRV9XQUxMEAEq4wEKD0VGaW5kUGF0aFJlc3Vs",
-            "dBIaChZFRklORF9QQVRIX1JFU1VMVF9OT05FEAASIwofRUZJTkRfUEFUSF9S",
-            "RVNVTFRfRkFJTF9MRVJQQ0VMTBABEiIKHkVGSU5EX1BBVEhfUkVTVUxUX0ZB",
-            "SUxfTk9fUEFUSBACEiIKHkVGSU5EX1BBVEhfUkVTVUxUX0ZBSUxfTU9WRV9U",
-            "TxADEigKJEVGSU5EX1BBVEhfUkVTVUxUX0ZBSUxfU0FNRV9QT1NJVElPThAE",
-            "Eh0KGUVGSU5EX1BBVEhfUkVTVUxUX1NVQ0NFU1MQBUIbqgIYR29vZ2xlLlBy",
-            "b3RvYnVmLlByb3RvY29sYgZwcm90bzM="));
+            "CgpFbnVtLnByb3RvEghQcm90b2NvbCplCg5FR2FtZVNjZW5lVHlwZRIaChZF",
+            "R0FNRV9TQ0VORV9UWVBFX0xPQkJZEAASHAoYRUdBTUVfU0NFTkVfVFlQRV9X",
+            "QUlUSU5HEAESGQoVRUdBTUVfU0NFTkVfVFlQRV9HQU1FEAIqPQoLRUdhbWVV",
+            "SVR5cGUSFgoSRUdBTUVfVUlfVFlQRV9OT05FEAASFgoSRUdBTUVfVUlfVFlQ",
+            "RV9ST09NEAEqhwEKDEVPYmplY3RTdGF0ZRIWChJFT0JKRUNUX1NUQVRFX05P",
+            "TkUQABIWChJFT0JKRUNUX1NUQVRFX0lETEUQARIWChJFT0JKRUNUX1NUQVRF",
+            "X01PVkUQAhIXChNFT0JKRUNUX1NUQVRFX1NLSUxMEAMSFgoSRU9CSkVDVF9T",
+            "VEFURV9ERUFEEAQqzwEKCEVNb3ZlRGlyEhIKDkVNT1ZFX0RJUl9OT05FEAAS",
+            "EAoMRU1PVkVfRElSX1VQEAESEgoORU1PVkVfRElSX0RPV04QAhISCg5FTU9W",
+            "RV9ESVJfTEVGVBADEhMKD0VNT1ZFX0RJUl9SSUdIVBAEEhUKEUVNT1ZFX0RJ",
+            "Ul9VUF9MRUZUEAUSFgoSRU1PVkVfRElSX1VQX1JJR0hUEAYSFwoTRU1PVkVf",
+            "RElSX0RPV05fTEVGVBAHEhgKFEVNT1ZFX0RJUl9ET1dOX1JJR0hUEAgqrQEK",
+            "D0VHYW1lT2JqZWN0VHlwZRIaChZFR0FNRV9PQkpFQ1RfVFlQRV9OT05FEAAS",
+            "GgoWRUdBTUVfT0JKRUNUX1RZUEVfSEVSTxABEh0KGUVHQU1FX09CSkVDVF9U",
+            "WVBFX01PTlNURVIQAhIgChxFR0FNRV9PQkpFQ1RfVFlQRV9QUk9KRUNUSUxF",
+            "EAMSIQodRUdBTUVfT0JKRUNUX1RZUEVfSVRFTV9IT0xERVIQBCozCg1FR2Ft",
+            "ZVRlYW1UeXBlEhAKDEVHQU1FX1RFQU1fQRAAEhAKDEVHQU1FX1RFQU1fQhAB",
+            "KlIKEkVDZWxsQ29sbGlzaW9uVHlwZRIdChlFQ0VMTF9DT0xMSVNJT05fVFlQ",
+            "RV9OT05FEAASHQoZRUNFTExfQ09MTElTSU9OX1RZUEVfV0FMTBABKuMBCg9F",
+            "RmluZFBhdGhSZXN1bHQSGgoWRUZJTkRfUEFUSF9SRVNVTFRfTk9ORRAAEiMK",
+            "H0VGSU5EX1BBVEhfUkVTVUxUX0ZBSUxfTEVSUENFTEwQARIiCh5FRklORF9Q",
+            "QVRIX1JFU1VMVF9GQUlMX05PX1BBVEgQAhIiCh5FRklORF9QQVRIX1JFU1VM",
+            "VF9GQUlMX01PVkVfVE8QAxIoCiRFRklORF9QQVRIX1JFU1VMVF9GQUlMX1NB",
+            "TUVfUE9TSVRJT04QBBIdChlFRklORF9QQVRIX1JFU1VMVF9TVUNDRVNTEAVC",
+            "G6oCGEdvb2dsZS5Qcm90b2J1Zi5Qcm90b2NvbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.EObjectState), typeof(global::Google.Protobuf.Protocol.EMoveDir), typeof(global::Google.Protobuf.Protocol.EGameUIType), typeof(global::Google.Protobuf.Protocol.EGameObjectType), typeof(global::Google.Protobuf.Protocol.EGameTeamType), typeof(global::Google.Protobuf.Protocol.ECellCollisionType), typeof(global::Google.Protobuf.Protocol.EFindPathResult), }, null, null));
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.EGameSceneType), typeof(global::Google.Protobuf.Protocol.EGameUIType), typeof(global::Google.Protobuf.Protocol.EObjectState), typeof(global::Google.Protobuf.Protocol.EMoveDir), typeof(global::Google.Protobuf.Protocol.EGameObjectType), typeof(global::Google.Protobuf.Protocol.EGameTeamType), typeof(global::Google.Protobuf.Protocol.ECellCollisionType), typeof(global::Google.Protobuf.Protocol.EFindPathResult), }, null, null));
     }
     #endregion
 
   }
   #region Enums
+  public enum EGameSceneType {
+    [pbr::OriginalName("EGAME_SCENE_TYPE_LOBBY")] Lobby = 0,
+    [pbr::OriginalName("EGAME_SCENE_TYPE_WAITING")] Waiting = 1,
+    [pbr::OriginalName("EGAME_SCENE_TYPE_GAME")] Game = 2,
+  }
+
+  public enum EGameUIType {
+    [pbr::OriginalName("EGAME_UI_TYPE_NONE")] None = 0,
+    [pbr::OriginalName("EGAME_UI_TYPE_ROOM")] Room = 1,
+  }
+
   public enum EObjectState {
     [pbr::OriginalName("EOBJECT_STATE_NONE")] None = 0,
     [pbr::OriginalName("EOBJECT_STATE_IDLE")] Idle = 1,
@@ -73,11 +86,6 @@ namespace Google.Protobuf.Protocol {
     [pbr::OriginalName("EMOVE_DIR_UP_RIGHT")] UpRight = 6,
     [pbr::OriginalName("EMOVE_DIR_DOWN_LEFT")] DownLeft = 7,
     [pbr::OriginalName("EMOVE_DIR_DOWN_RIGHT")] DownRight = 8,
-  }
-
-  public enum EGameUIType {
-    [pbr::OriginalName("EGAME_UI_TYPE_NONE")] None = 0,
-    [pbr::OriginalName("EGAME_UI_TYPE_ROOM")] Room = 1,
   }
 
   public enum EGameObjectType {

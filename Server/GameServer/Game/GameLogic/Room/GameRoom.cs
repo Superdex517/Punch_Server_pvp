@@ -1,5 +1,6 @@
 ﻿using Google.Protobuf;
 using Google.Protobuf.Protocol;
+using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,19 +12,22 @@ namespace GameServer
 {
     public partial class GameRoom : JobSerializer
     {
-        public int GameRoomId { get; set; }
+        public int GameRoomId
+        {
+            get { return RoomInfo.WaitingRoomId; }
+            set { RoomInfo.WaitingRoomId = value; }
+        }
+
         public int TemplateId { get; set; }
         public int MaxPlayerCount { get; set; }
         public ClientSession Session { get; set; }
         public EGameUIType UIType { get; protected set; } = EGameUIType.None;
-        public RoomInfo RoomInfo { get; private set; } = new RoomInfo();
+        public WaitingRoomInfo RoomInfo { get; private set; } = new WaitingRoomInfo();
 
         public Dictionary<int, Hero> _heroes = new Dictionary<int, Hero>();
 
         public GameRoom()
         {
-            RoomInfo.RoomId = GameRoomId;
-
             UIType = EGameUIType.Room;
         }
 
@@ -36,6 +40,13 @@ namespace GameServer
         public void Update()
         {
             Flush();
+        }
+
+        public void EnterWaitingList(BaseObject obj)
+        {
+            if (obj == null)
+                return;
+
         }
 
         public void EnterGame(BaseObject obj, bool respawn = false, Vector3? pos = null)
@@ -86,12 +97,6 @@ namespace GameServer
 
         public void LeaveGame(int objectId, bool kick = false)
         {
-            if (MaxPlayerCount < 0)
-            {
-                Console.WriteLine($"MaxPlayerCount need to Check : {RoomInfo.RoomId}");
-                return;
-            }
-
             EGameObjectType type = ObjectManager.GetObjectTypeFromId(objectId);
 
             Vector3 pos;

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static Define;
 
-public class WaitingScene : BaseScene
+public class LobbyScene : BaseScene
 {
 
 
@@ -16,19 +16,18 @@ public class WaitingScene : BaseScene
         //gameObject.AddComponent<CaptureScreenShot>();
 #endif
 
-        Debug.Log("SelectRoom");
-        SceneType = EScene.ScelectRoomScene;
 
-        C_EnterWaitingRoom enterWaitingRoom = new C_EnterWaitingRoom();
-
-        Managers.Network.Send(enterWaitingRoom);
     }
 
     protected override void Start()
     {
         base.Start();
 
+        Debug.Log("SelectRoom");
+        SceneType = EScene.ScelectRoomScene;
 
+        C_EnterLobby enterLobby = new C_EnterLobby();
+        Managers.Network.Send(enterLobby);
     }
 
     public override void Clear()
