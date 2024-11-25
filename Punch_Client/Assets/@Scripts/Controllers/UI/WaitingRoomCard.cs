@@ -2,12 +2,13 @@ using Google.Protobuf.Protocol;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaitingRoomCard : UI_Base
 {
-    public int RoomId { get; set; }
-    public string RoomName { get; set; }
+    public RoomInfo RoomInfo { get; set; }
     public int MaxPlayer { get; set; } = 1;
+    private UI_WaitingRoom _waitingRoom;
 
     [SerializeField]
     private EGameUIType _uiType = EGameUIType.Room;
@@ -16,6 +17,8 @@ public class WaitingRoomCard : UI_Base
     {
         RoomTitle,
         Room_NumberText,
+        HostId,
+        QuestId,
     }
 
     private enum GameButton
@@ -30,7 +33,9 @@ public class WaitingRoomCard : UI_Base
         BindTexts(typeof(GameTexts));
         BindButtons(typeof(GameButton));
 
-        GetButton((int)GameButton.UI_RoomCard).onClick.AddListener(() =>
+        _waitingRoom = FindObjectOfType<UI_WaitingRoom>();
+
+        this.gameObject.GetComponent<Button>().onClick.AddListener(() =>
         {
             EnterRoom();
         });
@@ -50,8 +55,21 @@ public class WaitingRoomCard : UI_Base
 
     public void EnterRoom()
     {
-        C_EnterWaitingRoom enterWaitingRoom = new C_EnterWaitingRoom();
+        _waitingRoom.ShowPopup();
 
+        C_EnterWaitingRoom enterWaitingRoom = new C_EnterWaitingRoom();
+        enterWaitingRoom.RoomInfo = RoomInfo;
         Managers.Network.Send(enterWaitingRoom);
+
+        //여기서 내 룸에 있는 인원 보여주고
+        //상대방에게 나 보여주고 하면 됨
+        if (Managers.Room.IsHost)
+        {
+            GetText((int)GameTexts.HostId).text = "Host Id 가져오기";
+        }
+        else
+        {
+            GetText((int)GameTexts.QuestId).text = "Quest Id 가져오기";
+        }
     }
 }

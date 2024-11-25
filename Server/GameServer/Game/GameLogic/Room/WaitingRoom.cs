@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,16 +14,16 @@ namespace GameServer
     {
         public int WaitingRoomId
         {
-            get { return RoomInfo.WaitingRoomId; }
-            set { RoomInfo.WaitingRoomId = value; }
+            get { return RoomInfo.RoomId; }
+            set { RoomInfo.RoomId = value; }
         }
         public string WaitingRoomTitle
         {
-            get { return RoomInfo.WaitingRoomName; }
-            set { RoomInfo.WaitingRoomName = value; }
+            get { return RoomInfo.RoomName; }
+            set { RoomInfo.RoomName = value; }
         }
         public ClientSession Session { get; set; }
-        public WaitingRoomInfo RoomInfo { get; private set; } = new WaitingRoomInfo();
+        public RoomInfo RoomInfo { get; private set; } = new RoomInfo();
         public EGameUIType UIType { get; protected set; } = EGameUIType.None;
 
         public int TemplateId { get; set; }
@@ -55,15 +56,56 @@ namespace GameServer
             if(obj.ObjectType == EGameObjectType.Hero)
             {
                 Hero hero = (Hero)obj;
-                hero.SceneType = EGameSceneType.Waiting;
+                hero.MyHeroInfo.Scene = EGameSceneType.Waiting;
+                hero.WaitingRoom = this;
                 _players.Add(hero.ObjectId, hero);
+                MaxPlayerCount++;
+                
+                Console.WriteLine($"EnterWaitingRoom : {obj.ObjectId}, {_players.Count}");
 
                 {
                     S_EnterWaitingRoom enterPacket = new S_EnterWaitingRoom();
-                    enterPacket.RoomInfo = RoomInfo;
+                    enterPacket.MyHeroInfo = hero.MyHeroInfo;
+                    enterPacket.RoomInfo = hero.WaitingRoom.RoomInfo;
                     hero.Session?.Send(enterPacket);
                 }
             }
+        }
+
+        public void Ready(BaseObject obj)
+        {
+            if (obj == null)
+                return;
+
+            Hero hero = (Hero)obj;
+            hero.IsReady = true;
+
+            {
+
+            }
+        }
+
+        public void LeaveWaitingRoom(int objectId, bool kick = false)
+        {
+            if (_players.Remove(objectId, out Hero hero) == false)
+                return;
+
+            hero.WaitingRoom = null;
+
+            {
+                S_LeaveWaitingRoom leavePacket = new S_LeaveWaitingRoom();
+                hero.Session?.Send(leavePacket);
+            }
+
+            if (kick) 
+            {
+                
+            }
+            else
+            {
+                return;
+            }
+            
         }
 
         public void BroadcastMakeRoom(IMessage packet)

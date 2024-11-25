@@ -14,10 +14,12 @@ public class Managers : MonoBehaviour
     private ObjectManager _object = new ObjectManager(); 
     private MoveManager _move = new MoveManager();
     private RoomManager _room = new RoomManager();
+    private MyPlayerManager _myPlayter = new MyPlayerManager();
+    
     public static ObjectManager Object { get { return Instance?._object; } }
     public static MoveManager Move { get { return Instance?._move; } }
     public static RoomManager Room { get { return Instance?._room; } }
-
+    public static MyPlayerManager MyPlayer { get { return Instance?._myPlayter; } }
 
 
     private PoolManager _pool = new PoolManager();

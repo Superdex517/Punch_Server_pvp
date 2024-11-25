@@ -46,7 +46,9 @@ namespace GameServer
 
                 {
                     S_EnterLobby enterPacket = new S_EnterLobby();
-                    enterPacket.PlayerCount = playerCount;
+                    enterPacket.MyHeroInfo = hero.MyHeroInfo;
+                    enterPacket.MyHeroInfo.Scene = EGameSceneType.Lobby;
+
                     hero.Session?.Send(enterPacket);
 
                     //기존의 방이 있다면 기존의 방 생성 시켜준다

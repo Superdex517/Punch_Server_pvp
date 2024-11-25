@@ -16,7 +16,8 @@ message C_EnterLobby
 
 message S_EnterLobby
 {
-	int32 playerCount = 1;
+	MyHeroInfo myHeroInfo = 1;
+	RoomInfo roomInfo = 2;
 }
 
 message S_LeaveLobby
@@ -26,17 +27,17 @@ message S_LeaveLobby
 
 message C_MakeWaitingRoom
 {
-	WaitingRoomInfo roomInfo = 1;
+	RoomInfo roomInfo = 1;
 }
 
 message S_MakeWaitingRoom
 {
-	WaitingRoomInfo roomInfo = 1;
+	RoomInfo roomInfo = 1;
 }
 
 message S_SpawnWaitingRoomUI
 {
-	repeated WaitingRoomInfo Rooms = 1;
+	repeated RoomInfo Rooms = 1;
 }
 
 message S_DespawnWaitingRoomUI
@@ -46,12 +47,23 @@ message S_DespawnWaitingRoomUI
 
 message C_EnterWaitingRoom
 {
-	WaitingRoomInfo roomInfo = 1;
+	RoomInfo roomInfo = 2;
 }
 
 message S_EnterWaitingRoom
 {
-	WaitingRoomInfo roomInfo = 1;
+	MyHeroInfo myHeroInfo = 1;
+	RoomInfo roomInfo = 2;
+}
+
+message C_Ready
+{
+	bool isReady = 1;
+}
+
+message S_Ready
+{
+	bool isReady = 1;
 }
 
 message S_LeaveWaitingRoom
@@ -61,23 +73,23 @@ message S_LeaveWaitingRoom
 
 message C_DestroyWaitingRoom
 {
-	WaitingRoomInfo roomInfo = 1;
+	RoomInfo roomInfo = 1;
 }
 
 message S_DestroyWaitingRoom
 {
-	WaitingRoomInfo roomInfo = 1;
+	RoomInfo roomInfo = 1;
 }
 
 message C_EnterGame 
 {
-	WaitingRoomInfo roomInfo = 1;
+	RoomInfo roomInfo = 1;
 }
 
 message S_EnterGame 
 {
 	MyHeroInfo myHeroInfo = 1;
-	WaitingRoomInfo roomInfo = 2;
+	RoomInfo roomInfo = 2;
 	bool respawn = 3;
 }
 

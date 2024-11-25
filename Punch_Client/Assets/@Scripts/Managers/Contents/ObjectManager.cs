@@ -10,6 +10,7 @@ public class ObjectManager : MonoBehaviour
     public MyPlayer MyPlayer { get; set; }
     public WaitingRoomCard RoomObject { get; set; }
 
+    List<int> _players = new List<int>();
     Dictionary<int, GameObject> _waitingRooms = new Dictionary<int, GameObject>();
     Dictionary<int, GameObject> _objects = new Dictionary<int, GameObject>();
 
@@ -37,25 +38,65 @@ public class ObjectManager : MonoBehaviour
     public Transform ItemHolderRoot { get { return GetRootTransform("@ItemHolders"); } }
     #endregion
 
-    public WaitingRoomCard SpawnUI(WaitingRoomInfo waitingRoomInfo)
+    public WaitingRoomCard SpawnUI(RoomInfo roomInfo)
     {
-        if (waitingRoomInfo == null)
+        if (roomInfo == null)
             return null;
 
         GameObject go = Managers.Resource.Instantiate("RoomCard");
 
-        go.name = "Room" + waitingRoomInfo.WaitingRoomId;
+        go.name = "Room" + roomInfo.RoomId;
         go.transform.parent = RoomRoot;
-        _waitingRooms.Add(waitingRoomInfo.WaitingRoomId, go);
+        _waitingRooms.Add(roomInfo.RoomId, go);
 
         RoomObject = Utils.GetOrAddComponent<WaitingRoomCard>(go);
-        //RoomObject.RoomId = roomInfo.RoomId;
-        RoomObject.UpdateRoomTitle(waitingRoomInfo.WaitingRoomId.ToString());
+        RoomObject.RoomInfo = roomInfo;
+        RoomObject.UpdateRoomTitle(roomInfo.RoomId.ToString());
         RoomObject.MaxPlayer = 1;
 
         return RoomObject;
     }
 
+    public void EnterLobby(MyHeroInfo myHeroInfo)
+    {
+        HeroInfo info = myHeroInfo.HeroInfo;
+        if (info == null || info.CreatureInfo == null || info.CreatureInfo.ObjectInfo == null)
+            return;
+
+        ObjectInfo objectInfo = info.CreatureInfo.ObjectInfo;
+
+        _players.Add(objectInfo.ObjectId);
+        Managers.MyPlayer.MyHeroInfo = myHeroInfo;
+
+        Debug.Log($"{Managers.MyPlayer.MyHeroInfo.HeroInfo.CreatureInfo.ObjectInfo}");
+
+        return;
+    }
+
+    public void AddPlayer(S_EnterWaitingRoom myHeroInfo)
+    {
+        HeroInfo info = myHeroInfo.MyHeroInfo.HeroInfo;
+        if (info == null || info.CreatureInfo == null || info.CreatureInfo.ObjectInfo == null)
+            return;
+        
+        ObjectInfo objectInfo = info.CreatureInfo.ObjectInfo;
+
+        Managers.MyPlayer.RoomInfo = myHeroInfo.RoomInfo;
+        Managers.MyPlayer.MyHeroInfo = myHeroInfo.MyHeroInfo;
+
+        Debug.Log($"{Managers.MyPlayer.MyHeroInfo.Scene}, {Managers.MyPlayer.RoomInfo.RoomId}, {Managers.MyPlayer.RoomInfo.RoomName}");
+
+        return;
+    }
+
+    public void readyPlayer(bool isReady)
+    {
+        S_Ready readyPacket = new S_Ready();
+        //readyPacket.MyHeroInfo.IsReady = true;
+    }
+
+
+    // spawn은 내 아이디값을 find해서 가져오는걸로 수정
     public MyPlayer Spawn(MyHeroInfo myHeroInfo)
     {
         HeroInfo info = myHeroInfo.HeroInfo;
@@ -74,6 +115,8 @@ public class ObjectManager : MonoBehaviour
         go.name = info.Name;
         go.transform.parent = HeroRoot;
         _objects.Add(objectInfo.ObjectId, go);
+
+        Debug.Log(MyPlayer.SceneType);
 
         MyPlayer = Utils.GetOrAddComponent<MyPlayer>(go);
         MyPlayer.ObjectId = objectInfo.ObjectId;
@@ -118,7 +161,7 @@ public class ObjectManager : MonoBehaviour
 
     public void DespawnUI(int roomId)
     {
-        if (RoomObject != null && RoomObject.RoomId == roomId)
+        if (RoomObject != null && RoomObject.RoomInfo.RoomId == roomId)
             return;
 
         if (_waitingRooms.ContainsKey(roomId) == false)

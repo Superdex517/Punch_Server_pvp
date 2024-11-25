@@ -9,6 +9,8 @@ using UnityEngine.EventSystems;
 
 public class MyPlayer : Player
 {
+    public EGameSceneType SceneType { get; set; } = EGameSceneType.Lobby;
+
     protected bool _sendMovePacket = false;
 
     private Vector3 _destPos;

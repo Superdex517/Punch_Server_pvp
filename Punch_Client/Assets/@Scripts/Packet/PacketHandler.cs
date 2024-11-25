@@ -22,8 +22,10 @@ class PacketHandler
         Debug.Log("EnterLobby");
 
         S_EnterLobby enterLobbyPacket = packet as S_EnterLobby;
-        Managers.Room.CountPlayer(enterLobbyPacket.PlayerCount.ToString());
+
+        Managers.Object.EnterLobby(enterLobbyPacket.MyHeroInfo);
     }
+
     public static void S_LeaveLobbyHandler(PacketSession session, IMessage packet)
     {
         S_LeaveLobby leaveLobby = packet as S_LeaveLobby;
@@ -33,20 +35,14 @@ class PacketHandler
     public static void S_MakeWaitingRoomHandler(PacketSession session, IMessage packet)
     {
         Debug.Log("S_MakeRoomHandler");
-    }
-
-
-
-    public static void S_MakeRoomHandler(PacketSession session, IMessage packet)
-    {
-        Debug.Log("S_MakeRoomHandler");
+        S_MakeWaitingRoom makeWaitingRoomPacket = packet as S_MakeWaitingRoom;
     }
 
     public static void S_SpawnWaitingRoomUIHandler(PacketSession session, IMessage packet)
     {        
         S_SpawnWaitingRoomUI spawnPacket = packet as S_SpawnWaitingRoomUI;
 
-        foreach (WaitingRoomInfo room in spawnPacket.Rooms)
+        foreach (RoomInfo room in spawnPacket.Rooms)
         {
             Managers.Object.SpawnUI(room);
         }
@@ -63,13 +59,18 @@ class PacketHandler
         }
     }
 
-
     public static void S_EnterWaitingRoomHandler(PacketSession session, IMessage packet)
     {
-        S_EnterWaitingRoom makeRoom = packet as S_EnterWaitingRoom;
+        S_EnterWaitingRoom enterWaitingRoomPakcet = packet as S_EnterWaitingRoom;
+        
+        Managers.Object.AddPlayer(enterWaitingRoomPakcet);
+    }    
 
-        //TODO : player id만 찾아서 2명만 입장
-
+    public static void S_ReadyHandler(PacketSession session, IMessage packet)
+    {
+        S_Ready readyPacket = packet as S_Ready;
+        
+        //Managers.Object.readyPlayer();
     }    
     
     public static void S_LeaveWaitingRoomHandler(PacketSession session, IMessage packet)
@@ -92,6 +93,10 @@ class PacketHandler
 
         myPlayer.SetInfo(1);
         myPlayer.ObjectState = EObjectState.Idle;
+        myPlayer.SceneType = EGameSceneType.Game;
+
+        Debug.Log($"{myPlayer.ObjectId}, {myPlayer.SceneType}");
+
     }
 
     public static void S_LeaveGameHandler(PacketSession session, IMessage packet)

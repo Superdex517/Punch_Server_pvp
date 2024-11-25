@@ -28,6 +28,8 @@ namespace GameServer
                 if (obj.ObjectType == EGameObjectType.Hero)
                 {
                     _heroes.Add(obj.ObjectId, obj as Hero);
+
+                    Console.WriteLine($"spawn {_heroes.Count}, {obj.ObjectId}");
                 }
             }
 

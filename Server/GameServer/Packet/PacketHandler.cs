@@ -27,6 +27,13 @@ public class PacketHandler
         C_EnterWaitingRoom enterWaitingRoomPacket = (C_EnterWaitingRoom)packet;
         ClientSession clientSession = (ClientSession)session;
         clientSession.HandleEnterWaitingRoom(enterWaitingRoomPacket);
+    }   
+
+    public static void C_ReadyHandler(PacketSession session, IMessage packet)
+    {
+        C_Ready readyPacket = (C_Ready)packet;
+        ClientSession clientSession = (ClientSession)session;
+        clientSession.HandleReady(readyPacket);
     }    
 
     public static void C_DestroyWaitingRoomHandler(PacketSession session, IMessage packet)

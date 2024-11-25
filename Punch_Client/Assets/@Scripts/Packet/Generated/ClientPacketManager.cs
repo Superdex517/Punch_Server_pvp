@@ -16,16 +16,18 @@ public enum MsgId
 	S_DespawnWaitingRoomUI = 8,
 	C_EnterWaitingRoom = 9,
 	S_EnterWaitingRoom = 10,
-	S_LeaveWaitingRoom = 11,
-	C_DestroyWaitingRoom = 12,
-	S_DestroyWaitingRoom = 13,
-	C_EnterGame = 14,
-	S_EnterGame = 15,
-	S_LeaveGame = 16,
-	S_Spawn = 17,
-	S_Despawn = 18,
-	C_Move = 19,
-	S_Move = 20,
+	C_Ready = 11,
+	S_Ready = 12,
+	S_LeaveWaitingRoom = 13,
+	C_DestroyWaitingRoom = 14,
+	S_DestroyWaitingRoom = 15,
+	C_EnterGame = 16,
+	S_EnterGame = 17,
+	S_LeaveGame = 18,
+	S_Spawn = 19,
+	S_Despawn = 20,
+	C_Move = 21,
+	S_Move = 22,
 }
 
 class PacketManager
@@ -61,6 +63,8 @@ class PacketManager
 		_handler.Add((ushort)MsgId.S_DespawnWaitingRoomUI, PacketHandler.S_DespawnWaitingRoomUIHandler);		
 		_onRecv.Add((ushort)MsgId.S_EnterWaitingRoom, MakePacket<S_EnterWaitingRoom>);
 		_handler.Add((ushort)MsgId.S_EnterWaitingRoom, PacketHandler.S_EnterWaitingRoomHandler);		
+		_onRecv.Add((ushort)MsgId.S_Ready, MakePacket<S_Ready>);
+		_handler.Add((ushort)MsgId.S_Ready, PacketHandler.S_ReadyHandler);		
 		_onRecv.Add((ushort)MsgId.S_LeaveWaitingRoom, MakePacket<S_LeaveWaitingRoom>);
 		_handler.Add((ushort)MsgId.S_LeaveWaitingRoom, PacketHandler.S_LeaveWaitingRoomHandler);		
 		_onRecv.Add((ushort)MsgId.S_DestroyWaitingRoom, MakePacket<S_DestroyWaitingRoom>);

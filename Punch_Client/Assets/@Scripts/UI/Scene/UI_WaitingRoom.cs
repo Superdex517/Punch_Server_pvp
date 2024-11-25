@@ -61,7 +61,7 @@ public class UI_WaitingRoom : UI_Scene
 
         GetButton((int)GameButtons.MakeRoomButton).onClick.AddListener(() =>
         {
-            Managers.Room.IsRoomManager = true;
+            Managers.Room.IsHost = true;
             
             MakeRoom();
         });
@@ -84,15 +84,15 @@ public class UI_WaitingRoom : UI_Scene
 
     void MakeRoom()
     {
-        GetObject((int)GameObjects.UI_WaitingPopup).gameObject.SetActive(true);
+        ShowPopup();
 
         C_MakeWaitingRoom makeWaitingRoom = new C_MakeWaitingRoom();
         
-        WaitingRoomInfo waitingRoomInfo = new WaitingRoomInfo();
+        RoomInfo roomInfo = new RoomInfo();
         
         //TODO : 방제목 설정 UI 추가
-        waitingRoomInfo.WaitingRoomName = "asdasd";
-        makeWaitingRoom.RoomInfo = waitingRoomInfo;
+        roomInfo.RoomName = "asdasd";
+        makeWaitingRoom.RoomInfo = roomInfo;
 
         Managers.Network.Send(makeWaitingRoom);
     }
@@ -100,6 +100,11 @@ public class UI_WaitingRoom : UI_Scene
     public void CountPlayer(string count)
     {
         GetText((int)GameTexts.PlayerCount).text = count;
+    }
+
+    public void ShowPopup()
+    {
+        GetObject((int)GameObjects.UI_WaitingPopup).gameObject.SetActive(true);
     }
 
     #region UI

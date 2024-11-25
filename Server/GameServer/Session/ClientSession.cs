@@ -9,7 +9,7 @@ using System.Net;
 using Google.Protobuf;
 using GameServer;
 using GameServer.Data;
-
+using Google.Protobuf.Protocol;
 
 namespace GameServer
 {
@@ -59,11 +59,23 @@ namespace GameServer
                 if (MyHero == null)
                     return;
 
-                //만약 Lobby라면?
-                //만약 WaitingRoom이라면?
-                //만약 Game이라면?
-                GameRoom room = GameLogic.Instance.Lobby.FindWaitingRoom(1).GameRoom;
-                room.Push(room.LeaveGame, MyHero.ObjectId, false);
+                switch (MyHero.SceneType)
+                {
+                    case EGameSceneType.Lobby:
+                        Lobby lobby = GameLogic.Instance.Lobby;
+                        lobby.Push(lobby.LeaveLoby, MyHero.ObjectId, false);
+                        break;
+                    case EGameSceneType.Waiting:
+                        WaitingRoom waitingRoom = GameLogic.Instance.Lobby.FindWaitingRoom(1);
+                        waitingRoom.Push(waitingRoom.LeaveWaitingRoom, MyHero.ObjectId, false);
+                        break;
+                    case EGameSceneType.Game:
+                        GameRoom room = GameLogic.Instance.Lobby.FindWaitingRoom(1).GameRoom;
+                        room.Push(room.LeaveGame, MyHero.ObjectId, false);
+                        break;
+                    default:
+                        break;
+                }
             });
 
             SessionManager.Instance.Remove(this);

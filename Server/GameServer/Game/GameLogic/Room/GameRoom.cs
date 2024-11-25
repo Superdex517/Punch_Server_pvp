@@ -14,15 +14,15 @@ namespace GameServer
     {
         public int GameRoomId
         {
-            get { return RoomInfo.WaitingRoomId; }
-            set { RoomInfo.WaitingRoomId = value; }
+            get { return RoomInfo.RoomId; }
+            set { RoomInfo.RoomId = value; }
         }
 
         public int TemplateId { get; set; }
         public int MaxPlayerCount { get; set; }
         public ClientSession Session { get; set; }
         public EGameUIType UIType { get; protected set; } = EGameUIType.None;
-        public WaitingRoomInfo RoomInfo { get; private set; } = new WaitingRoomInfo();
+        public RoomInfo RoomInfo { get; private set; } = new RoomInfo();
 
         public Dictionary<int, Hero> _heroes = new Dictionary<int, Hero>();
 

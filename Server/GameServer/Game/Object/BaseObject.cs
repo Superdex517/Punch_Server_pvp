@@ -19,7 +19,7 @@ namespace GameServer
         }
 
         public GameRoom Room { get; set; }
-
+        public WaitingRoom WaitingRoom { get; set; }
         public ObjectInfo ObjectInfo { get; set; } = new ObjectInfo();
         public PositionInfo PosInfo { get; private set; } = new PositionInfo();
 
