@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
-    public bool IsHost { get; set; }
+    public bool IsHost { get; set; } = false;
     public bool IsPlayerReady { get; set; }
 
     public int WaitingPlayerCount;

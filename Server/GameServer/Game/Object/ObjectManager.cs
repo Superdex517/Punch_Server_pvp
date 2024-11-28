@@ -10,6 +10,8 @@ namespace GameServer
     public class ObjectManager : Singleton<ObjectManager>
     {
         object _lock = new object();
+        Dictionary<int, Hero> _player = new Dictionary<int, Hero>();
+
         Dictionary<int, Hero> _heroes = new Dictionary<int, Hero> ();
         Dictionary<int, BaseObject> _gameobjects = new Dictionary<int, BaseObject> ();
         int _counter = 0;
@@ -17,7 +19,7 @@ namespace GameServer
         Dictionary<int, WaitingRoom> _rooms = new Dictionary<int, WaitingRoom> ();
         int _roomCounter = 0;
 
-        public T Spawn<T>(int templateId = 0) where T : BaseObject, new()
+        public T SpawnPlayer<T>(int templateId = 0) where T : BaseObject, new()
         {
             T obj = new T();
 
@@ -27,16 +29,16 @@ namespace GameServer
 
                 if (obj.ObjectType == EGameObjectType.Hero)
                 {
-                    _heroes.Add(obj.ObjectId, obj as Hero);
+                    _player.Add(obj.ObjectId, obj as Hero);
 
-                    Console.WriteLine($"spawn {_heroes.Count}, {obj.ObjectId}");
+                    Console.WriteLine($"Lobby Player : {_player.Count}, {obj.ObjectId}");
                 }
             }
 
             return obj;
         }
 
-        public T SpawnUI<T>(int templateId = 0) where T : WaitingRoom, new()
+        public T SpawnRoom<T>(int templateId = 0) where T : WaitingRoom, new()
         {
             T room = new T();
 
@@ -45,9 +47,35 @@ namespace GameServer
                 room.WaitingRoomId = GenerateRoomId(room.UIType, templateId);
 
                 _rooms.Add(room.WaitingRoomId, room as WaitingRoom);
+
+                Console.WriteLine($"Room Spawn : {_rooms.Count}, {room.WaitingRoomId}");
             }
 
             return room;
+        }
+
+        public T Spawn<T>(int id, int templateId = 0) where T : BaseObject, new()
+        {
+            T obj = new T();
+
+            lock (_lock)
+            {
+                obj.ObjectId = id;
+
+                _heroes.Add(obj.ObjectId, obj as Hero);
+
+                Console.WriteLine($"spawn heros ++ : {_heroes.Count}, {obj.ObjectId}");
+
+                //obj.ObjectId = GenerateId(obj.ObjectType, templateId);
+
+                //if (obj.ObjectType == EGameObjectType.Hero)
+                //{
+                //    _heroes.Add(obj.ObjectId, obj as Hero);
+
+                //}
+            }
+
+            return obj;
         }
 
         int GenerateId(EGameObjectType type, int templateId)
@@ -100,6 +128,22 @@ namespace GameServer
                 if (objectType == EGameObjectType.Hero)
                 {
                     if (_heroes.TryGetValue(objectId, out Hero hero))
+                        return hero;
+                }
+            }
+
+            return null;
+        }
+
+        public Hero FindInLobby(int objectId)
+        {
+            EGameObjectType objectType = GetObjectTypeFromId(objectId);
+
+            lock (_lock)
+            {
+                if (objectType == EGameObjectType.Hero)
+                {
+                    if (_player.TryGetValue(objectId, out Hero hero))
                         return hero;
                 }
             }

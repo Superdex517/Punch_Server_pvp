@@ -15,9 +15,9 @@ namespace GameServer
         public GameLogic()
         {
             if(Lobby == null)
-                Console.WriteLine("There is no WaitingRoom");
+                Console.WriteLine("There is no Lobby");
 
-            Console.WriteLine("WaitingRoom Init");
+            Console.WriteLine("Lobby Init");
         }
 
         public void Update()

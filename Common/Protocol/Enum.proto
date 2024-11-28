@@ -13,7 +13,8 @@ enum EGameSceneType
 enum EGameUIType
 {
 	EGAME_UI_TYPE_NONE = 0;
-	EGAME_UI_TYPE_ROOM = 1;
+	EGAME_UI_TYPE_WAITINGROOM = 1;
+	EGAME_UI_TYPE_GAMEROOM = 2;
 }
 
 enum EObjectState 

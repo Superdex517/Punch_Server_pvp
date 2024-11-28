@@ -66,6 +66,20 @@ message S_Ready
 	bool isReady = 1;
 }
 
+message C_GameStart 
+{
+	RoomInfo roomInfo = 1;
+	bool isStart = 2;
+}
+
+message S_GameStart 
+{
+	MyHeroInfo myHeroInfo = 1;
+	RoomInfo roomInfo = 2;
+	bool respawn = 3;
+	bool isStart = 4;
+}
+
 message S_LeaveWaitingRoom
 {
 
@@ -83,7 +97,8 @@ message S_DestroyWaitingRoom
 
 message C_EnterGame 
 {
-	RoomInfo roomInfo = 1;
+	MyHeroInfo myHeroInfo = 1;
+	RoomInfo roomInfo = 2;
 }
 
 message S_EnterGame 

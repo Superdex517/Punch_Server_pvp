@@ -13,6 +13,9 @@ namespace GameServer
 {
     public partial class Lobby : JobSerializer
     {
+        public WaitingRoom WaitingRoom { get; set; }
+        public GameRoom Room { get; set; }
+
         Dictionary<int, Hero> _players = new Dictionary<int, Hero>();
         Dictionary<int, WaitingRoom> _waitingRooms = new Dictionary<int, WaitingRoom>();
         public ClientSession Session { get; set; }
@@ -40,7 +43,6 @@ namespace GameServer
             if (type == EGameObjectType.Hero)
             {
                 Hero hero = (Hero)player;
-                hero.SceneType = EGameSceneType.Lobby;
                 _players.Add(hero.ObjectId, hero);
                 playerCount++;
 
@@ -95,37 +97,47 @@ namespace GameServer
             }
         }
 
-        public void MakeWaitingRoom(WaitingRoom room)
+        public void MakeWaitingRoom(WaitingRoom room, BaseObject obj)
         {
             if (room == null)
                 return;
 
-            AddGameRoom(1, room);
+            if (obj == null)
+                return;
+
+            AddWaitingRoom(room, 1);
+
+            GameLogic.Instance.Lobby.FindWaitingRoom(room.RoomInfo.RoomId).EnterWaitingRoom(obj);
 
             {
                 S_MakeWaitingRoom makeRoomPacket = new S_MakeWaitingRoom();
+                makeRoomPacket.RoomInfo = room.RoomInfo;
                 room.Session?.Send(makeRoomPacket);
             }
 
+            BroadcastRoom(room);
+        }
+
+        public WaitingRoom AddWaitingRoom(WaitingRoom waitingRoom, int mapTemplateId)
+        {
+            waitingRoom.Push(waitingRoom.Init, mapTemplateId, 10);
+
+            //room.WaitingRoomId = _waitingRoomId;
+            //_waitingRoomId++;
+            _waitingRooms.Add(waitingRoom.WaitingRoomId, waitingRoom);
+
+            return waitingRoom;
+        }
+
+        public void BroadcastRoom(WaitingRoom room)
+        {
             //방 만들었다는걸 다른 대기자에게 알림
             S_SpawnWaitingRoomUI spawnPacket = new S_SpawnWaitingRoomUI();
             spawnPacket.Rooms.Add(room.RoomInfo);
-            BroadcastMakeRoom(spawnPacket);
+            Broadcast(spawnPacket);
         }
 
-        public WaitingRoom AddGameRoom(int mapTemplateId, WaitingRoom room)
-        {
-            //GameRoom myRoom = new GameRoom();
-            room.Push(room.Init, mapTemplateId, 10);
-
-            room.WaitingRoomId = _waitingRoomId;
-            _waitingRooms.Add(_waitingRoomId, room);
-            _waitingRoomId++;
-
-            return room;
-        }
-
-        public void BroadcastMakeRoom(IMessage packet)
+        public void Broadcast(IMessage packet)
         {
             byte[] packetBuffer = ClientSession.MakeSendBuffer(packet);
 
@@ -145,10 +157,13 @@ namespace GameServer
         {
             WaitingRoom room = null;
             if (_waitingRooms.TryGetValue(waitingRoomId, out room))
+            {
+                Console.WriteLine("room is");
                 return room;
-
+            }
             return null;
         }
+
 
         public List<WaitingRoom> GetWaitingRooms()
         {

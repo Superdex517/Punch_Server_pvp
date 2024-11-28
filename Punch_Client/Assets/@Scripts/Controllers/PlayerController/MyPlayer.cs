@@ -327,8 +327,6 @@ public class MyPlayer : Player
 
         Managers.Network.GameServer.Send(movePacket);
         _sendMovePacket = false;
-
-        //Debug.Log($"{DestPos.x}, {DestPos.y}, {DestPos.z}, {PlayerDir}");
     }
 
 

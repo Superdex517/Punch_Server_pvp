@@ -12,23 +12,23 @@ namespace GameServer
 {
     public partial class GameRoom : JobSerializer
     {
-        public int GameRoomId
-        {
-            get { return RoomInfo.RoomId; }
-            set { RoomInfo.RoomId = value; }
-        }
+        //public int GameRoomId
+        //{
+        //    get { return RoomInfo.RoomId; }
+        //    set { RoomInfo.RoomId = value; }
+        //}
+        //public RoomInfo RoomInfo { get; set; } = new RoomInfo();
 
         public int TemplateId { get; set; }
         public int MaxPlayerCount { get; set; }
         public ClientSession Session { get; set; }
         public EGameUIType UIType { get; protected set; } = EGameUIType.None;
-        public RoomInfo RoomInfo { get; private set; } = new RoomInfo();
 
         public Dictionary<int, Hero> _heroes = new Dictionary<int, Hero>();
-
+        public int MotherId { get; set; }
         public GameRoom()
         {
-            UIType = EGameUIType.Room;
+
         }
 
         public void Init(int mapTemplateId, int zoneCells)
@@ -53,9 +53,6 @@ namespace GameServer
         {
             if (obj == null)
                 return;
-
-            //if (MaxPlayerCount == 2)
-            //    return;
 
             if (pos.HasValue)
                 obj.Pos = pos.Value;

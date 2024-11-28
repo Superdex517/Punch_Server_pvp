@@ -34,6 +34,13 @@ public class PacketHandler
         C_Ready readyPacket = (C_Ready)packet;
         ClientSession clientSession = (ClientSession)session;
         clientSession.HandleReady(readyPacket);
+    }  
+
+    public static void C_GameStartHandler(PacketSession session, IMessage packet)
+    {
+        C_GameStart startPacket = (C_GameStart)packet;
+        ClientSession clientSession = (ClientSession)session;
+        clientSession.HandleStartGame(startPacket);
     }    
 
     public static void C_DestroyWaitingRoomHandler(PacketSession session, IMessage packet)

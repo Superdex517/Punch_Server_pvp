@@ -72,6 +72,17 @@ class PacketHandler
         
         //Managers.Object.readyPlayer();
     }    
+
+    public static void S_GameStartHandler(PacketSession session, IMessage packet)
+    {
+        S_GameStart readyPacket = packet as S_GameStart;
+
+        if (readyPacket.IsStart)
+        {
+            Managers.Scene.LoadGameScene();
+        }
+        //Managers.Object.readyPlayer();
+    }    
     
     public static void S_LeaveWaitingRoomHandler(PacketSession session, IMessage packet)
     {

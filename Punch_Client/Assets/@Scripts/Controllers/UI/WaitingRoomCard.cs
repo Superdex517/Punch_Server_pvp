@@ -6,12 +6,13 @@ using UnityEngine.UI;
 
 public class WaitingRoomCard : UI_Base
 {
+    [SerializeField]
     public RoomInfo RoomInfo { get; set; }
     public int MaxPlayer { get; set; } = 1;
     private UI_WaitingRoom _waitingRoom;
 
     [SerializeField]
-    private EGameUIType _uiType = EGameUIType.Room;
+    private EGameUIType _uiType = EGameUIType.Waitingroom;
 
     private enum GameTexts
     {
@@ -37,7 +38,7 @@ public class WaitingRoomCard : UI_Base
 
         this.gameObject.GetComponent<Button>().onClick.AddListener(() =>
         {
-            EnterRoom();
+            EnterRoom(RoomInfo);
         });
     }
 
@@ -45,6 +46,7 @@ public class WaitingRoomCard : UI_Base
     {
         base.Start();
 
+        Debug.Log($"{RoomInfo.RoomId}, {RoomInfo.RoomName}"); 
     }
 
     public void UpdateRoomTitle(string id)
@@ -53,23 +55,16 @@ public class WaitingRoomCard : UI_Base
 
     }
 
-    public void EnterRoom()
+    public void EnterRoom(RoomInfo info)
     {
         _waitingRoom.ShowPopup();
 
         C_EnterWaitingRoom enterWaitingRoom = new C_EnterWaitingRoom();
-        enterWaitingRoom.RoomInfo = RoomInfo;
+        
+        enterWaitingRoom.RoomInfo = info;
+        
+        Managers.MyPlayer.RoomInfo = info;
+        
         Managers.Network.Send(enterWaitingRoom);
-
-        //여기서 내 룸에 있는 인원 보여주고
-        //상대방에게 나 보여주고 하면 됨
-        if (Managers.Room.IsHost)
-        {
-            GetText((int)GameTexts.HostId).text = "Host Id 가져오기";
-        }
-        else
-        {
-            GetText((int)GameTexts.QuestId).text = "Quest Id 가져오기";
-        }
     }
 }

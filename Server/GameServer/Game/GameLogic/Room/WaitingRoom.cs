@@ -23,18 +23,18 @@ namespace GameServer
             set { RoomInfo.RoomName = value; }
         }
         public ClientSession Session { get; set; }
-        public RoomInfo RoomInfo { get; private set; } = new RoomInfo();
-        public EGameUIType UIType { get; protected set; } = EGameUIType.None;
+        public RoomInfo RoomInfo { get; set; } = new RoomInfo();
+        public EGameUIType UIType { get; set; } = EGameUIType.Waitingroom;
 
         public int TemplateId { get; set; }
         public int MaxPlayerCount { get; set; }
 
         Dictionary<int, Hero> _players = new Dictionary<int, Hero>();
         public GameRoom GameRoom { get; set; }
+        //Dictionary<int, GameRoom> _gameRooms = new Dictionary<int, GameRoom>();
 
         public WaitingRoom()
         {
-
         }
 
         public void Init(int maxPlayer, int mapTemplateId)
@@ -61,7 +61,7 @@ namespace GameServer
                 _players.Add(hero.ObjectId, hero);
                 MaxPlayerCount++;
                 
-                Console.WriteLine($"EnterWaitingRoom : {obj.ObjectId}, {_players.Count}");
+                Console.WriteLine($"Room{WaitingRoomId} : {obj.ObjectId}, {_players.Count}");
 
                 {
                     S_EnterWaitingRoom enterPacket = new S_EnterWaitingRoom();
@@ -83,6 +83,19 @@ namespace GameServer
             {
 
             }
+        }
+
+        public void StartGame()
+        {
+            S_GameStart startPacket = new S_GameStart();
+            startPacket.IsStart = true;
+
+            BroadcastMakeRoom(startPacket);
+            //if (obj.ObjectType == EGameObjectType.Hero)
+            //{
+            //    //Hero hero = (Hero)obj;
+            //    //hero.Session?.Send(startPacket);
+            //}
         }
 
         public void LeaveWaitingRoom(int objectId, bool kick = false)
@@ -112,13 +125,24 @@ namespace GameServer
         {
             byte[] packetBuffer = ClientSession.MakeSendBuffer(packet);
 
-            //TODO : 현재 만들어진 룸 리스트 보여주기
             foreach (Hero player in _players.Values)
             {
                 player.Session?.Send(packetBuffer);
             }
         }
 
+        public void Remove()
+        {
+            GameRoom = null;
+        }
+
+        public GameRoom AddRoom(int mapTemplateId)
+        {
+            GameRoom = new GameRoom();
+            GameRoom.Push(GameRoom.Init, mapTemplateId, 10);
+            GameRoom.MotherId = WaitingRoomId;
+            return GameRoom;
+        }
 
     }
 }

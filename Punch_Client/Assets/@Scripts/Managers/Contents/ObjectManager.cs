@@ -38,6 +38,35 @@ public class ObjectManager : MonoBehaviour
     public Transform ItemHolderRoot { get { return GetRootTransform("@ItemHolders"); } }
     #endregion
 
+    public void EnterLobby(MyHeroInfo myHeroInfo)
+    {
+        HeroInfo info = myHeroInfo.HeroInfo;
+        if (info == null || info.CreatureInfo == null || info.CreatureInfo.ObjectInfo == null)
+            return;
+
+        ObjectInfo objectInfo = info.CreatureInfo.ObjectInfo;
+
+        Managers.MyPlayer.MyHeroInfo = myHeroInfo;
+
+        return;
+    }
+
+    public void AddPlayer(S_EnterWaitingRoom myHeroInfo)
+    {
+        HeroInfo info = myHeroInfo.MyHeroInfo.HeroInfo;
+        if (info == null || info.CreatureInfo == null || info.CreatureInfo.ObjectInfo == null)
+            return;
+
+        ObjectInfo objectInfo = info.CreatureInfo.ObjectInfo;
+
+        Managers.MyPlayer.RoomInfo = myHeroInfo.RoomInfo;
+        Managers.MyPlayer.MyHeroInfo = myHeroInfo.MyHeroInfo;
+
+        Debug.Log($"{Managers.MyPlayer.MyHeroInfo.Scene}, {Managers.MyPlayer.RoomInfo.RoomId}, {Managers.MyPlayer.RoomInfo.RoomName}");
+
+        return;
+    }
+
     public WaitingRoomCard SpawnUI(RoomInfo roomInfo)
     {
         if (roomInfo == null)
@@ -51,48 +80,16 @@ public class ObjectManager : MonoBehaviour
 
         RoomObject = Utils.GetOrAddComponent<WaitingRoomCard>(go);
         RoomObject.RoomInfo = roomInfo;
-        RoomObject.UpdateRoomTitle(roomInfo.RoomId.ToString());
+        RoomObject.UpdateRoomTitle(roomInfo.RoomName.ToString());
         RoomObject.MaxPlayer = 1;
 
         return RoomObject;
     }
 
-    public void EnterLobby(MyHeroInfo myHeroInfo)
-    {
-        HeroInfo info = myHeroInfo.HeroInfo;
-        if (info == null || info.CreatureInfo == null || info.CreatureInfo.ObjectInfo == null)
-            return;
-
-        ObjectInfo objectInfo = info.CreatureInfo.ObjectInfo;
-
-        _players.Add(objectInfo.ObjectId);
-        Managers.MyPlayer.MyHeroInfo = myHeroInfo;
-
-        Debug.Log($"{Managers.MyPlayer.MyHeroInfo.HeroInfo.CreatureInfo.ObjectInfo}");
-
-        return;
-    }
-
-    public void AddPlayer(S_EnterWaitingRoom myHeroInfo)
-    {
-        HeroInfo info = myHeroInfo.MyHeroInfo.HeroInfo;
-        if (info == null || info.CreatureInfo == null || info.CreatureInfo.ObjectInfo == null)
-            return;
-        
-        ObjectInfo objectInfo = info.CreatureInfo.ObjectInfo;
-
-        Managers.MyPlayer.RoomInfo = myHeroInfo.RoomInfo;
-        Managers.MyPlayer.MyHeroInfo = myHeroInfo.MyHeroInfo;
-
-        Debug.Log($"{Managers.MyPlayer.MyHeroInfo.Scene}, {Managers.MyPlayer.RoomInfo.RoomId}, {Managers.MyPlayer.RoomInfo.RoomName}");
-
-        return;
-    }
 
     public void readyPlayer(bool isReady)
     {
         S_Ready readyPacket = new S_Ready();
-        //readyPacket.MyHeroInfo.IsReady = true;
     }
 
 
@@ -115,8 +112,6 @@ public class ObjectManager : MonoBehaviour
         go.name = info.Name;
         go.transform.parent = HeroRoot;
         _objects.Add(objectInfo.ObjectId, go);
-
-        Debug.Log(MyPlayer.SceneType);
 
         MyPlayer = Utils.GetOrAddComponent<MyPlayer>(go);
         MyPlayer.ObjectId = objectInfo.ObjectId;

@@ -43,6 +43,7 @@ public class UI_WaitingRoom : UI_Scene
 
     public int RoomId;
     public int RoomName;
+    public bool isHost;
 
     protected override void Awake()
     {
@@ -61,8 +62,6 @@ public class UI_WaitingRoom : UI_Scene
 
         GetButton((int)GameButtons.MakeRoomButton).onClick.AddListener(() =>
         {
-            Managers.Room.IsHost = true;
-            
             MakeRoom();
         });
 
@@ -82,19 +81,23 @@ public class UI_WaitingRoom : UI_Scene
         base.Start();
     }
 
+    //TODO : 방제목 설정 UI 추가
     void MakeRoom()
     {
+        Managers.Room.IsHost = true;
+        
+        {
+            C_MakeWaitingRoom makeWaitingRoom = new C_MakeWaitingRoom();
+            RoomInfo roomInfo = new RoomInfo();
+            roomInfo.RoomName = "asdasd";
+            makeWaitingRoom.RoomInfo = roomInfo;
+            Managers.MyPlayer.RoomInfo = roomInfo;
+            Managers.Network.Send(makeWaitingRoom);
+        }
+
         ShowPopup();
 
-        C_MakeWaitingRoom makeWaitingRoom = new C_MakeWaitingRoom();
-        
-        RoomInfo roomInfo = new RoomInfo();
-        
-        //TODO : 방제목 설정 UI 추가
-        roomInfo.RoomName = "asdasd";
-        makeWaitingRoom.RoomInfo = roomInfo;
-
-        Managers.Network.Send(makeWaitingRoom);
+        //EnterRoom(Managers.MyPlayer.RoomInfo);
     }
 
     public void CountPlayer(string count)

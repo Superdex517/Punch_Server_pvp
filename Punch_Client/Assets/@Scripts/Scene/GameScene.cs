@@ -19,6 +19,8 @@ public class GameScene : BaseScene
         SceneType = EScene.GameScene;
 
         C_EnterGame enterGame = new C_EnterGame();
+        //enterGame.MyHeroInfo = Managers.MyPlayer.MyHeroInfo;
+        enterGame.RoomInfo = Managers.MyPlayer.RoomInfo;
         Managers.Network.Send(enterGame);
     }
 

@@ -28,7 +28,41 @@ public class UI_WaitingPopup : UI_Popup
 
     private void OnEnable()
     {
+        if (Managers.Room.IsHost)
+        {
+            GetButton((int)Buttons.ReadyButton).gameObject.SetActive(false);
+            GetButton((int)Buttons.StartButton).gameObject.SetActive(true);
 
+            //GetButton((int)Buttons.StartButton).interactable = false;
+        }
+        else
+        {
+            GetButton((int)Buttons.ReadyButton).gameObject.SetActive(true);
+            GetButton((int)Buttons.StartButton).gameObject.SetActive(false);
+        }
+
+        if (Managers.Room.IsHost)
+        {
+            GetButton((int)Buttons.StartButton).onClick.AddListener(() =>
+            {
+                Debug.Log("startbtn");
+
+                GameStart();
+            });
+        }
+        else
+        {
+            GetButton((int)Buttons.ReadyButton).onClick.AddListener(() =>
+            {
+                Debug.Log("readybtn");
+                Managers.Object.readyPlayer(true);
+            });
+        }
+
+        GetButton((int)Buttons.LeaveButton).onClick.AddListener(() =>
+        {
+            LeaveRoom();
+        });
     }
 
     private void OnDisable()
@@ -41,35 +75,6 @@ public class UI_WaitingPopup : UI_Popup
         BindObjects(typeof(GameObjects));
         BindTexts(typeof(Texts));
         BindButtons(typeof(Buttons));
-
-        if (Managers.Room.IsHost)
-        {
-            GetButton((int)Buttons.ReadyButton).gameObject.SetActive(false);
-
-            //GetButton((int)Buttons.StartButton).interactable = false;
-        }
-        else
-        {
-            GetButton((int)Buttons.StartButton).gameObject.SetActive(false);
-
-            GetButton((int)Buttons.ReadyButton).onClick.AddListener(() =>
-            {
-                Debug.Log("readybtn");
-                Managers.Object.readyPlayer(true);
-            });
-        }
-
-        GetButton((int)Buttons.StartButton).onClick.AddListener(() =>
-        {
-            Debug.Log("startbtn");
-        });
-
-        GetButton((int)Buttons.LeaveButton).onClick.AddListener(() =>
-        {
-            Managers.Room.IsHost = false;
-
-            LeaveRoom();
-        });
     }
 
     private void LeaveRoom()
@@ -81,21 +86,24 @@ public class UI_WaitingPopup : UI_Popup
         Managers.Network.Send(leaveWaitingRoom);
 
         ClosePopupUI();
+
+        Managers.Room.IsHost = false;
     }
 
     public void RoomIsReady()
     {
-        GetButton((int)Buttons.StartButton).interactable = true;
+        if (Managers.Room.IsHost)
+        {
+            GetButton((int)Buttons.StartButton).interactable = true;
+        }
     }
 
     public void GameStart()
     {
-        GetButton((int)Buttons.StartButton).onClick.AddListener(() =>
         {
-            Debug.Log("readybtn");
-            Managers.Object.readyPlayer(true);
-
-            //룸안에 있는 플레이어들 scene 전환
-        });
+            C_GameStart startGame = new C_GameStart();
+            startGame.RoomInfo = Managers.MyPlayer.RoomInfo;
+            Managers.Network.Send(startGame);
+        }
     }
 }
