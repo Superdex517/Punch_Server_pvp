@@ -167,21 +167,10 @@ public class MyPlayer : Player
     void MovementPackage()
     {
         PlayerRotation();
-        PlayerGravity();
+        //PlayerGravity();
     }
 
-    private void PlayerGravity()
-    {
-        //if (IsGrounded() && velocity < 0.0f)
-        //{
-        //    velocity = -1.0f;
-        //}
-        //else
-        //{
-        //    velocity += gravity * gravityMultiplier * Time.deltaTime;
-        //}
-        //direction.y = velocity;
-    }
+
 
     public float turns;
 
@@ -201,6 +190,7 @@ public class MyPlayer : Player
 
         Quaternion targetRot = Quaternion.LookRotation(currentLookDir);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * turns);
+        
         //rotation°ª packet Àü´Þ
         PlayerDir = transform.localEulerAngles.y;
     }
@@ -218,7 +208,7 @@ public class MyPlayer : Player
         }
         else if (!grounded)
         {
-            Debug.Log("not grounded");
+            //Debug.Log("not grounded");
             rb.AddForce(newMoveDir.normalized * newMoveSpeed * 10f * airMultiplier, ForceMode.Force);
         }
 
@@ -323,15 +313,29 @@ public class MyPlayer : Player
         movePacket.PosInfo.PosX = DestPos.x;
         movePacket.PosInfo.PosY = DestPos.y;
         movePacket.PosInfo.PosZ = DestPos.z;
-
         movePacket.PosInfo.Dir = PlayerDir;
-
         Managers.Network.GameServer.Send(movePacket);
         _sendMovePacket = false;
     }
 
 
+
+    private void PlayerGravity()
+    {
+        //if (IsGrounded() && velocity < 0.0f)
+        //{
+        //    velocity = -1.0f;
+        //}
+        //else
+        //{
+        //    velocity += gravity * gravityMultiplier * Time.deltaTime;
+        //}
+        //direction.y = velocity;
+    }
+
 }
+
+
 
 [Serializable]
 public struct Movement

@@ -66,7 +66,7 @@ public class PacketHandler
         if (hero == null)
             return;
 
-        GameRoom room = hero.Room;
+        GameRoom room = hero.WaitingRoom.GameRoom;
         if (room == null)
             return;
 

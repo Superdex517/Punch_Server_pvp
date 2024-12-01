@@ -61,14 +61,6 @@ namespace GameServer
                 _heroes.Add(obj.ObjectId, obj as Hero);
 
                 Console.WriteLine($"spawn heros ++ : {_heroes.Count}, {obj.ObjectId}");
-
-                //obj.ObjectId = GenerateId(obj.ObjectType, templateId);
-
-                //if (obj.ObjectType == EGameObjectType.Hero)
-                //{
-                //    _heroes.Add(obj.ObjectId, obj as Hero);
-
-                //}
             }
 
             return obj;

@@ -18,7 +18,6 @@ namespace GameServer
             set { ObjectInfo.ObjectId = value; }
         }
 
-        public GameRoom Room { get; set; }
         public WaitingRoom WaitingRoom { get; set; }
         public ObjectInfo ObjectInfo { get; set; } = new ObjectInfo();
         public PositionInfo PosInfo { get; private set; } = new PositionInfo();
@@ -71,7 +70,7 @@ namespace GameServer
             S_Move movePacket = new S_Move();
             movePacket.ObjectId = ObjectId;
             movePacket.PosInfo = PosInfo;
-            Room?.Broadcast(Pos, movePacket);
+            WaitingRoom.GameRoom?.Broadcast(Pos, movePacket);
         }
     }
 }

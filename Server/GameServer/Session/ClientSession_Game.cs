@@ -29,7 +29,7 @@ namespace GameServer
             MyHero.Session.WaitingRoom = ObjectManager.Instance.SpawnRoom<WaitingRoom>();
             {
                 MyHero.Session.WaitingRoom.RoomInfo.RoomName = makeWaitingRoom.RoomInfo.RoomName;
-                MyHero.Session.WaitingRoom.AddRoom(1);
+                MyHero.Session.WaitingRoom.AddGameRoom(1);
                 MyHero.Session = this;
 
                 Console.WriteLine($"{MyHero.ObjectId} Make WaitingRoom: {MyHero.Session.WaitingRoom.RoomInfo.RoomId}");

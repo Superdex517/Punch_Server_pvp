@@ -66,11 +66,11 @@ namespace GameServer
                         lobby.Push(lobby.LeaveLoby, MyHero.ObjectId, false);
                         break;
                     case EGameSceneType.Waiting:
-                        WaitingRoom waitingRoom = GameLogic.Instance.Lobby.FindWaitingRoom(1);
+                        WaitingRoom waitingRoom = GameLogic.Instance.Lobby.FindWaitingRoom(MyHero.WaitingRoom.WaitingRoomId);
                         waitingRoom.Push(waitingRoom.LeaveWaitingRoom, MyHero.ObjectId, false);
                         break;
                     case EGameSceneType.Game:
-                        GameRoom room = GameLogic.Instance.Lobby.FindWaitingRoom(1).GameRoom;
+                        GameRoom room = GameLogic.Instance.Lobby.FindWaitingRoom(MyHero.WaitingRoom.WaitingRoomId).GameRoom;
                         room.Push(room.LeaveGame, MyHero.ObjectId, false);
                         break;
                     default:

@@ -31,7 +31,7 @@ namespace GameServer
         {
             if (obj == null)
                 return false;
-            if (obj.Room == null)
+            if (obj.WaitingRoom.GameRoom == null)
                 return false;
 
             PositionInfo posInfo = obj.PosInfo;

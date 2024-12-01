@@ -21,14 +21,14 @@ namespace GameServer
 
         public HashSet<BaseObject> GatherObjects()
         {
-            if (Owner == null || Owner.Room == null)
+            if (Owner == null || Owner.WaitingRoom.GameRoom == null)
                 return null;
 
             HashSet<BaseObject> objects = new HashSet<BaseObject>();
             
             Vector3 cellPos = Owner.Pos;
 
-            foreach (Hero hero in Owner.Room._heroes.Values)
+            foreach (Hero hero in Owner.WaitingRoom.GameRoom._heroes.Values)
             {
                 objects.Add(hero);
             }
@@ -38,7 +38,7 @@ namespace GameServer
 
         public void Update()
         {
-            if (Owner == null || Owner.Room == null)
+            if (Owner == null || Owner.WaitingRoom.GameRoom == null)
                 return;
 
             HashSet<BaseObject> currentObjects = GatherObjects();
@@ -80,7 +80,7 @@ namespace GameServer
             // 교체
             PreviousObjects = currentObjects;
 
-            UpdateJob = Owner.Room.PushAfter(100, Update);
+            UpdateJob = Owner.WaitingRoom.GameRoom.PushAfter(100, Update);
         }
 
         public void Clear()

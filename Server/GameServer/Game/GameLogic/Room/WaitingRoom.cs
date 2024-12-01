@@ -70,6 +70,14 @@ namespace GameServer
             }
         }
 
+        public GameRoom AddGameRoom(int mapTemplateId)
+        {
+            GameRoom = new GameRoom();
+            GameRoom.Push(GameRoom.Init, mapTemplateId, 10);
+            GameRoom.GameRoomId = WaitingRoomId;
+            return GameRoom;
+        }
+
         public void Ready(BaseObject obj)
         {
             if (obj == null)
@@ -88,12 +96,7 @@ namespace GameServer
             S_GameStart startPacket = new S_GameStart();
             startPacket.IsStart = true;
 
-            BroadcastMakeRoom(startPacket);
-            //if (obj.ObjectType == EGameObjectType.Hero)
-            //{
-            //    //Hero hero = (Hero)obj;
-            //    //hero.Session?.Send(startPacket);
-            //}
+            BroadcastStartGame(startPacket);
         }
 
         public void LeaveWaitingRoom(int objectId, bool kick = false)
@@ -119,7 +122,12 @@ namespace GameServer
             
         }
 
-        public void BroadcastMakeRoom(IMessage packet)
+        public void Remove()
+        {
+            GameRoom = null;
+        }
+
+        public void BroadcastStartGame(IMessage packet)
         {
             byte[] packetBuffer = ClientSession.MakeSendBuffer(packet);
 
@@ -128,19 +136,5 @@ namespace GameServer
                 player.Session?.Send(packetBuffer);
             }
         }
-
-        public void Remove()
-        {
-            GameRoom = null;
-        }
-
-        public GameRoom AddRoom(int mapTemplateId)
-        {
-            GameRoom = new GameRoom();
-            GameRoom.Push(GameRoom.Init, mapTemplateId, 10);
-            GameRoom.MotherId = WaitingRoomId;
-            return GameRoom;
-        }
-
     }
 }

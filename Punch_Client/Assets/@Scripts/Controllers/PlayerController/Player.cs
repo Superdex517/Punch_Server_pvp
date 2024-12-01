@@ -22,8 +22,8 @@ public class Player : Creature
     protected override void UpdateMove()
     {
         base.UpdateMove();
-
-        UpdateLerpToPos(MoveSpeed);
+        
+        //UpdateLerpToPos(MoveSpeed);
     }
 
     public virtual void SetInfo(int templatedId)

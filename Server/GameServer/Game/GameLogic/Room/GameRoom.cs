@@ -12,20 +12,13 @@ namespace GameServer
 {
     public partial class GameRoom : JobSerializer
     {
-        //public int GameRoomId
-        //{
-        //    get { return RoomInfo.RoomId; }
-        //    set { RoomInfo.RoomId = value; }
-        //}
-        //public RoomInfo RoomInfo { get; set; } = new RoomInfo();
-
+        public int GameRoomId { get; set; }
         public int TemplateId { get; set; }
         public int MaxPlayerCount { get; set; }
         public ClientSession Session { get; set; }
         public EGameUIType UIType { get; protected set; } = EGameUIType.None;
 
         public Dictionary<int, Hero> _heroes = new Dictionary<int, Hero>();
-        public int MotherId { get; set; }
         public GameRoom()
         {
 
@@ -34,7 +27,7 @@ namespace GameServer
         public void Init(int mapTemplateId, int zoneCells)
         {
             //TODO : 맵 여러개 생기면 추가
-
+            TemplateId = mapTemplateId;
         }
 
         public void Update()
@@ -65,7 +58,7 @@ namespace GameServer
             {
                 Hero hero = (Hero)obj;
                 _heroes.Add(obj.ObjectId, hero);
-                hero.Room = this;
+                hero.WaitingRoom.GameRoom = this;
                 
                 ApplyMove(hero, new Vector3(hero.Pos.X, hero.Pos.Y, hero.Pos.Z), hero.MoveDir);
 
@@ -104,7 +97,7 @@ namespace GameServer
                     return;
 
                 pos = hero.Pos;
-                hero.Room = null;
+                hero.WaitingRoom.GameRoom = null;
 
                 {
                     S_LeaveGame leavePacket = new S_LeaveGame();

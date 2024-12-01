@@ -22,6 +22,7 @@ public class MoveManager
     public bool MoveTo(BaseObject obj, Vector3 pos, bool forceMove = false)
     {
         obj.SetPosition(pos, forceMove);
+
         return true;
     }
 

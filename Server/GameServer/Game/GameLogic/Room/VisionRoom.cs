@@ -17,7 +17,7 @@ namespace GameServer
         }
         public HashSet<BaseObject> GatherObjects()
         {
-            if (Owner == null || Owner.Room == null)
+            if (Owner == null || Owner.WaitingRoom.GameRoom == null)
                 return null;
 
             HashSet<BaseObject> objects = new HashSet<BaseObject>();

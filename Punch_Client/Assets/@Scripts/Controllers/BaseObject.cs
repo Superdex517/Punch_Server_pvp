@@ -62,7 +62,7 @@ public class BaseObject : MonoBehaviour
 
     protected virtual void Update()
     {
-        UpdateLerpToPos(MoveSpeed);
+
     }
 
     #region AI (FSM)
@@ -161,6 +161,8 @@ public class BaseObject : MonoBehaviour
     {
         if (MoveCompleted)
             return;
+
+        SyncPosition();
 
         transform.position = Position;
         transform.rotation = Quaternion.Euler(0f, Direction, 0f);
