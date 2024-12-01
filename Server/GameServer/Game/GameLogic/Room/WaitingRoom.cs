@@ -60,8 +60,6 @@ namespace GameServer
                 hero.WaitingRoom = this;
                 _players.Add(hero.ObjectId, hero);
                 MaxPlayerCount++;
-                
-                Console.WriteLine($"Room{WaitingRoomId} : {obj.ObjectId}, {_players.Count}");
 
                 {
                     S_EnterWaitingRoom enterPacket = new S_EnterWaitingRoom();

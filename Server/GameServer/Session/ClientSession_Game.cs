@@ -47,7 +47,7 @@ namespace GameServer
 
         public void HandleEnterWaitingRoom(C_EnterWaitingRoom enterRoom)
         {
-            Console.WriteLine("EnterRoom");
+            Console.WriteLine("Handle_EnterWaitingRoom");
             
             MyHero.SceneType = EGameSceneType.Waiting;
 
@@ -67,7 +67,7 @@ namespace GameServer
 
         public void HandleStartGame(C_GameStart gameStartPacket)
         {
-            Console.WriteLine("HandleStartGame");
+            Console.WriteLine("Handle_StartGame");
             
             GameLogic.Instance.Lobby.Push(() =>
             {

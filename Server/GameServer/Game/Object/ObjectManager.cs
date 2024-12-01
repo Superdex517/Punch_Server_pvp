@@ -30,8 +30,6 @@ namespace GameServer
                 if (obj.ObjectType == EGameObjectType.Hero)
                 {
                     _player.Add(obj.ObjectId, obj as Hero);
-
-                    Console.WriteLine($"Lobby Player : {_player.Count}, {obj.ObjectId}");
                 }
             }
 
@@ -47,8 +45,6 @@ namespace GameServer
                 room.WaitingRoomId = GenerateRoomId(room.UIType, templateId);
 
                 _rooms.Add(room.WaitingRoomId, room as WaitingRoom);
-
-                Console.WriteLine($"Room Spawn : {_rooms.Count}, {room.WaitingRoomId}");
             }
 
             return room;

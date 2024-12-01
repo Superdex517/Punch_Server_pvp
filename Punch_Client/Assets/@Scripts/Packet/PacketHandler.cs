@@ -63,7 +63,7 @@ class PacketHandler
     {
         S_EnterWaitingRoom enterWaitingRoomPakcet = packet as S_EnterWaitingRoom;
         
-        Managers.Object.AddPlayer(enterWaitingRoomPakcet);
+        Managers.Object.AddWaitingRoom(enterWaitingRoomPakcet);
     }    
 
     public static void S_ReadyHandler(PacketSession session, IMessage packet)

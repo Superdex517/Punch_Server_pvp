@@ -13,6 +13,7 @@ public class MyPlayer : Player
 
     protected bool _sendMovePacket = false;
 
+    [SerializeField]
     private Vector3 _destPos;
     public Vector3 DestPos
     {

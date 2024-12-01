@@ -158,7 +158,6 @@ namespace GameServer
             WaitingRoom room = null;
             if (_waitingRooms.TryGetValue(waitingRoomId, out room))
             {
-                Console.WriteLine("room is");
                 return room;
             }
             return null;

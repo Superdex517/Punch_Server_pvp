@@ -45,13 +45,15 @@ public class ObjectManager : MonoBehaviour
             return;
 
         ObjectInfo objectInfo = info.CreatureInfo.ObjectInfo;
+        if (MyPlayer != null && MyPlayer.ObjectId == objectInfo.ObjectId)
+            return;
 
         Managers.MyPlayer.MyHeroInfo = myHeroInfo;
 
         return;
     }
 
-    public void AddPlayer(S_EnterWaitingRoom myHeroInfo)
+    public void AddWaitingRoom(S_EnterWaitingRoom myHeroInfo)
     {
         HeroInfo info = myHeroInfo.MyHeroInfo.HeroInfo;
         if (info == null || info.CreatureInfo == null || info.CreatureInfo.ObjectInfo == null)
