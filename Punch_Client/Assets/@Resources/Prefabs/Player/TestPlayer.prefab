@@ -4724,7 +4724,7 @@ Animator:
   m_GameObject: {fileID: 6677266712713839123}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 9f078227c6f09b54392514bfaa25c741, type: 3}
-  m_Controller: {fileID: 9100000, guid: 5641793327b6888488fb29f5b408565c, type: 2}
+  m_Controller: {fileID: 9100000, guid: d0ec51b8aa1e3b746bf686eb5f5102bd, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
   m_ApplyRootMotion: 1
@@ -4863,11 +4863,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85af343820c725642a2f0bc701a74e77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cc: {fileID: 0}
   cam: {fileID: 0}
   freeLookCam: {fileID: 0}
   gravityMultiplier: 1
-  jumpPower: 4
+  movement:
+    speed: 0
+    multiplier: 0
+    acceleration: 0
+    isSprinting: 0
+    currentSpeed: 0
+  cc: {fileID: 0}
 --- !u!1 &6877269554693670683
 GameObject:
   m_ObjectHideFlags: 0

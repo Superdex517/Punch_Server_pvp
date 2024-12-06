@@ -17,13 +17,14 @@ public class Player : Creature
     protected override void Update()
     {
         UpdateAI();
+     
+        UpdateLerpToPos(MoveSpeed);
     }
 
     protected override void UpdateMove()
     {
         base.UpdateMove();
         
-        //UpdateLerpToPos(MoveSpeed);
     }
 
     public virtual void SetInfo(int templatedId)

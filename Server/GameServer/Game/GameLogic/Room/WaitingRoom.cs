@@ -30,6 +30,7 @@ namespace GameServer
         public int MaxPlayerCount { get; set; }
 
         Dictionary<int, Hero> _players = new Dictionary<int, Hero>();
+
         public GameRoom GameRoom { get; set; }
         //Dictionary<int, GameRoom> _gameRooms = new Dictionary<int, GameRoom>();
 
@@ -46,6 +47,8 @@ namespace GameServer
         public void Update()
         {
             Flush();
+
+            GameRoom.Update();
         }
 
         public void EnterWaitingRoom(BaseObject obj)

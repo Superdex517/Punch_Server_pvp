@@ -10,7 +10,7 @@ public class BaseObject : MonoBehaviour
     public virtual EGameObjectType ObjectType { get; protected set; } = EGameObjectType.None;
     public Animator Anim;
     private string currentAnimation = "";
-    //public CharacterController cc;
+    public CharacterController cc;
 
     public float MoveSpeed = 5.0f;
 
@@ -132,6 +132,7 @@ public class BaseObject : MonoBehaviour
         protected set
         {
             _position = value;
+            //MoveCompleted = false;
         }
     }
 
@@ -148,21 +149,21 @@ public class BaseObject : MonoBehaviour
     public void SetPosition(Vector3 pos, bool forceMove = false)
     {
         Position = pos;
-        MoveCompleted = false;
+        //MoveCompleted = false;
 
         if (forceMove)
         {
             transform.position = Position;
-            MoveCompleted = true;
+            //MoveCompleted = true;
         }
     }
 
     public void UpdateLerpToPos(float moveSpeed, bool canFlip = true)
     {
-        if (MoveCompleted)
-            return;
+        //if (MoveCompleted)
+        //    return;
 
-        SyncPosition();
+        //SyncPosition();
 
         transform.position = Position;
         transform.rotation = Quaternion.Euler(0f, Direction, 0f);

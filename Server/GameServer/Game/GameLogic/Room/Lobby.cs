@@ -13,11 +13,10 @@ namespace GameServer
 {
     public partial class Lobby : JobSerializer
     {
-        public WaitingRoom WaitingRoom { get; set; }
-        public GameRoom Room { get; set; }
-
         Dictionary<int, Hero> _players = new Dictionary<int, Hero>();
         Dictionary<int, WaitingRoom> _waitingRooms = new Dictionary<int, WaitingRoom>();
+
+        Dictionary<int, GameRoom> _rooms = new Dictionary<int, GameRoom>();
         public ClientSession Session { get; set; }
 
         int _waitingRoomId = 1;
