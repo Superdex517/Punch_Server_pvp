@@ -3,81 +3,94 @@ using Google.Protobuf.Protocol;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class TestPlayerCtr : MonoBehaviour
 {
-
     public PunchInputAction punchInput;
+    private CharacterController _cc;
+    private Animator _animator;
     public Transform cam;
     public CinemachineFreeLook freeLookCam;
+    public EObjectState ObjectState = EObjectState.None;
 
+    private Vector2 _currentMovementInput;
+    private Vector3 _currentMovement;
+    private Vector3 _appliedMovement;
+    private Vector3 currentRunMovement;
+    private float _runMultiplier = 3.0f;
 
-    private float turnSmoothTime = 700;
+    private float _gravity = -9.8f;
+    private float _groundedGravity = -0.05f;
+    private string currentAnimation = "";
 
-    private Vector3 direction;
-    private Vector2 input;
-    private float smoothTime = 0.05f;
-    private float currentVelocity;
+    private bool isRun;
+    private bool isSprint;
 
-    public float gravityMultiplier = 1.0f;
-    private float gravity = -9.81f;
-    private float velocity;
+    private float initalJumpVelocity;
+    private float maxJumpHeight = 2.0f;
+    private float maxJumpTime = 0.75f;
 
-    private float jumpPower = 4;
+    private bool _isJumpPressed = false;
+    private bool _isJumping = false;
+    private bool _isMovementPressed = false;
 
-    [SerializeField] private Movementa movement;
+    private bool isPunch;
 
-    public CharacterController cc;
+    PlayerBaseState _currentState;
+    PlayerStateFactory _states;
 
-    PositionInfo _positionInfo = new PositionInfo();
-    public PositionInfo PosInfo
-    {
-        get { return _positionInfo; }
-        set
-        {
-            if (_positionInfo.Equals(value))
-                return;
-        }
-    }
-
-    [SerializeField]
-    protected EObjectState _objectState = EObjectState.None;
-    public virtual EObjectState ObjectState
-    {
-        get { return PosInfo.State; }
-        set
-        {
-            if (_objectState == value)
-                return;
-
-            _objectState = value;
-            PosInfo.State = value;
-            UpdateAnimation();
-        }
-    }
-
+    public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
+    public Animator Animator { get { return _animator; } }
+    public CharacterController CC { get { return _cc; } }
+    public bool IsMovementPressed { get; set; }
+    public bool IsRunPressed { get; set; }
+    public bool IsJumping { get { return _isJumping; } set { _isJumping = value; } }
+    public bool IsJumpPressed { get { return _isJumpPressed; } set { _isJumpPressed = value; } }
+    public float InitalJumpVelocity { get { return initalJumpVelocity; } set { initalJumpVelocity = value; } }
+    public float GroundedGravity { get { return _groundedGravity; } }
+    public float Gravity { get { return _gravity; } }
+    public float CurrentMovementY { get { return _currentMovement.y; } set { _currentMovement.y = value; } }
+    public float AppliedMovementY { get { return _appliedMovement.y; } set { _appliedMovement.y = value; } }
+    public float AppliedMovementX { get { return _appliedMovement.x; } set { _appliedMovement.x = value; } }
+    public float AppliedMovementZ { get { return _appliedMovement.z; } set { _appliedMovement.z = value; } }
+    public float RunMultiplier { get { return _runMultiplier; } }
+    public Vector2 CurrentMovementInput { get { return _currentMovementInput; } }
 
     protected void Awake()
     {
         punchInput = new PunchInputAction();
+        _cc = GetComponent<CharacterController>();
+
+        _states = new PlayerStateFactory(this);
+        _currentState = _states.Grounded();
+        _currentState.EnterState();
+
         punchInput.Player.Move.started += Move;
         punchInput.Player.Move.performed += Move;
         punchInput.Player.Move.canceled += Move;
+            
+        punchInput.Player.Sprint.started += Sprint;
+        punchInput.Player.Sprint.canceled += Sprint;
 
         punchInput.Player.Jump.started += Jump;
-        punchInput.Player.Jump.performed += Jump;
         punchInput.Player.Jump.canceled += Jump;
-
-        punchInput.Player.Sprint.started += Sprint;
-        punchInput.Player.Sprint.performed += Sprint;
-        punchInput.Player.Sprint.canceled += Sprint;
 
         punchInput.Player.Punch.started += Punch;
         punchInput.Player.Punch.performed += Punch;
         punchInput.Player.Punch.canceled += Punch;
+
+        SetJumpVariables();
+    }
+
+    private void SetJumpVariables()
+    {
+        float timeToApex = maxJumpTime / 2;
+        _gravity = (-2 * maxJumpHeight) / Mathf.Pow(timeToApex, 2);
+        initalJumpVelocity = (2 * maxJumpHeight) / timeToApex;
     }
 
     private void OnEnable()
@@ -94,83 +107,136 @@ public class TestPlayerCtr : MonoBehaviour
     {
         freeLookCam.Follow = this.gameObject.transform;
         freeLookCam.LookAt = this.gameObject.transform;
-    }
 
+        ObjectState = EObjectState.Idle;
+    }
     private void Update()
     {
-        //PlayerRotation();
-        //PlayerGravity();
-        //PlayerMovement();
+        if (!isRun && !isPunch)
+            ObjectState = EObjectState.Idle;
 
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        cc.Move(move * Time.deltaTime * 5);
+        HandleRotation();
+        _currentState.UpdateStates();
+        _cc.Move(_appliedMovement * Time.deltaTime * 2);
     }
-    private void PlayerGravity()
+
+    //private void Update()
+    //{
+    //    if (!isRun && !isPunch)
+    //        ObjectState = EObjectState.Idle;
+
+    //    HandleRotation();
+    //    _currentState.UpdateState();
+    //    UpdateAnimation();
+
+    //    if (isSprint)
+    //    {
+    //        _appliedMovement.x = currentRunMovement.x;
+    //        _appliedMovement.z = currentRunMovement.z;
+    //    }
+    //    else
+    //    {
+    //        _appliedMovement.x = _currentMovement.x;
+    //        _appliedMovement.z = _currentMovement.z;
+    //    }
+
+    //    _cc.Move(_appliedMovement * Time.deltaTime * 2);
+
+    //    HandleGravity();
+    //    HandleJump();
+    //}
+
+    void HandleRotation()
     {
-        if (IsGrounded() && velocity < 0.0f)
+        Vector3 positionToLookAt;
+        positionToLookAt.x = _currentMovement.x;
+        positionToLookAt.y = 0.0f;
+        positionToLookAt.z = _currentMovement.z;
+
+        //Quaternion currentRotation = transform.rotation;
+
+        if (isRun)
         {
-            velocity = -1.0f;
+            //Quaternion targetRotation = Quaternion.LookRotation(positionToLookAt);
+            //transform.rotation = Quaternion.Slerp(currentRotation, targetRotation, rotationFactorPerFrame * Time.deltaTime);
+        }
+    }
+
+    private void HandleGravity()
+    {
+        bool isFalling = _currentMovement.y <= 0.0f || !_isJumpPressed;
+        float fallMultiplier = 2.0f;
+        if (IsGrounded())
+        {
+            _currentMovement.y = _groundedGravity;
+            _appliedMovement.y = _groundedGravity;
+        }
+        else if (isFalling)
+        {
+            float previousYVelocity = _currentMovement.y;
+            _currentMovement.y =  _currentMovement.y + (_gravity * fallMultiplier * Time.deltaTime);
+            _appliedMovement.y = Mathf.Max((previousYVelocity + _currentMovement.y) * 0.5f, -20.0f);
         }
         else
         {
-            velocity += gravity * gravityMultiplier * Time.deltaTime;
+            float previousYVelocity = _currentMovement.y;
+            _currentMovement.y = _currentMovement.y + (_gravity *  Time.deltaTime);
+            _appliedMovement.y = (previousYVelocity + _currentMovement.y) * 0.5f;
         }
-        direction.y = velocity;
     }
 
-    private void PlayerRotation()
+    private void HandleJump()
     {
-        if (input.sqrMagnitude == 0)
-            return;
-
-        direction = Quaternion.Euler(0.0f, cam.eulerAngles.y, 0.0f) * new Vector3(input.x, 0f, input.y);
-        var targetRotation = Quaternion.LookRotation(direction, Vector3.up);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSmoothTime * Time.deltaTime);
+        if (!_isJumping && IsGrounded() && _isJumpPressed)
+        {
+            _isJumping = true;
+            _currentMovement.y = initalJumpVelocity * 0.5f;
+            _appliedMovement.y = initalJumpVelocity * 0.5f;
+        }
+        else if (!_isJumpPressed && _isJumping && IsGrounded())
+        {
+            _isJumping = false;
+        }
     }
 
-    private void PlayerMovement()
-    {
-        float targetSpeed = movement.isSprinting ? movement.speed * movement.multiplier : movement.speed;
-        movement.currentSpeed = Mathf.MoveTowards(movement.currentSpeed, targetSpeed, movement.acceleration * Time.deltaTime);
-
-        cc.Move(direction * movement.currentSpeed * Time.deltaTime);
-    }
-
-
-
+    #region Input
     public void Move(InputAction.CallbackContext context)
     {
-        input = context.ReadValue<Vector2>();
+        ObjectState = EObjectState.Move;
 
-        direction = new Vector3(input.x, 0f, input.y).normalized;
+        _currentMovementInput = context.ReadValue<Vector2>();
+        _currentMovement.x = _currentMovementInput.x;
+        _currentMovement.z = _currentMovementInput.y;
+        currentRunMovement.x = _currentMovementInput.x * _runMultiplier;
+        currentRunMovement.z = _currentMovementInput.y * _runMultiplier;
 
-        cc.Move(direction * movement.currentSpeed * Time.deltaTime);
+        isRun = _currentMovementInput.x != 0 || _currentMovementInput.y != 0;
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (!context.started)
-            return;
-
-        if (!IsGrounded())
-            return;
-
-        velocity += jumpPower;
+        _isJumpPressed = context.ReadValueAsButton();
     }
 
     public void Punch(InputAction.CallbackContext context)
     {
-        Debug.Log(context);
+        isPunch = context.ReadValueAsButton(); ;
+
+        ObjectState = EObjectState.Skill;
     }
 
     public void Sprint(InputAction.CallbackContext context)
     {
-        //movement.isSprinting = context.started || context.performed;
+        isSprint = context.ReadValueAsButton();
     }
 
-    private bool IsGrounded() => cc.isGrounded;
+    public bool IsGrounded()
+    {
+        return _cc.isGrounded;
+    } 
+    #endregion
 
-    protected virtual void UpdateAnimation()
+    public void UpdateAnimation()
     {
         switch (ObjectState)
         {
@@ -191,24 +257,12 @@ public class TestPlayerCtr : MonoBehaviour
 
     public void ChangeAnimation(string anim, float crossfade = 0.01f)
     {
-        //if (Anim == null) return;
+        if (_animator == null) return;
 
-        //if (currentAnimation != anim)
-        //{
-        //    currentAnimation = anim;
-        //    Anim.CrossFade(anim, crossfade);
-        //}
+        if (currentAnimation != anim)
+        {
+            currentAnimation = anim;
+            _animator.CrossFade(anim, crossfade);
+        }
     }
-
-}
-
-[Serializable]
-public struct Movementa
-{
-    public float speed;
-    public float multiplier;
-    public float acceleration;
-
-    [HideInInspector] public bool isSprinting;
-    [HideInInspector] public float currentSpeed;
 }
