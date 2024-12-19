@@ -32,7 +32,7 @@ namespace GameServer
                 MyHero.Session.WaitingRoom.AddGameRoom(1);
                 MyHero.Session = this;
 
-                Console.WriteLine($"{MyHero.ObjectId} Make WaitingRoom: {MyHero.Session.WaitingRoom.RoomInfo.RoomId}");
+                //Console.WriteLine($"{MyHero.ObjectId} Make WaitingRoom: {MyHero.Session.WaitingRoom.RoomInfo.RoomId}");
             }
 
             GameLogic.Instance.Lobby.Push(() =>
@@ -47,8 +47,6 @@ namespace GameServer
 
         public void HandleEnterWaitingRoom(C_EnterWaitingRoom enterRoom)
         {
-            Console.WriteLine("Handle_EnterWaitingRoom");
-            
             MyHero.SceneType = EGameSceneType.Waiting;
 
             GameLogic.Instance.Lobby.Push(() =>
@@ -67,8 +65,6 @@ namespace GameServer
 
         public void HandleStartGame(C_GameStart gameStartPacket)
         {
-            Console.WriteLine("Handle_StartGame");
-            
             GameLogic.Instance.Lobby.Push(() =>
             {
                 GameLogic.Instance.Lobby.FindWaitingRoom(gameStartPacket.RoomInfo.RoomId).StartGame();
@@ -86,11 +82,11 @@ namespace GameServer
         public void HandleEnterGame(C_EnterGame enterGamePacket)
         {
             Console.WriteLine("HandleEnterGame");
-            //spawn안해서 안움직이는지 체크
+
             MyHero.ObjectInfo.PosInfo.State = EObjectState.Idle;
             MyHero.SceneType = EGameSceneType.Game;
             MyHero.ObjectInfo.PosInfo.PosX = 0;
-            MyHero.ObjectInfo.PosInfo.PosY = 0;
+            MyHero.ObjectInfo.PosInfo.PosY = 1;
             MyHero.ObjectInfo.PosInfo.PosZ = 0;
             MyHero.ObjectInfo.PosInfo.Dir = 0;
             MyHero.Session = this;
@@ -100,6 +96,22 @@ namespace GameServer
                 Hero hero = MyHero;
 
                 GameLogic.Instance.Lobby.FindWaitingRoom(enterGamePacket.RoomInfo.RoomId).GameRoom.EnterGame(hero, respawn: false, pos: null);
+            });
+        }        
+        
+        public void HandleLeaveGame(C_LeaveGame enterGamePacket)
+        {
+
+        }
+
+        public void HandleGameResult(C_GameResult resultPacket)
+        {
+            //Console.WriteLine("Gameover");
+            GameLogic.Instance.Lobby.Push(() =>
+            {
+                Hero hero = MyHero;
+
+                GameLogic.Instance.Lobby.FindWaitingRoom(MyHero.WaitingRoom.WaitingRoomId).GameRoom.Gameover();
             });
         }
     }

@@ -3,16 +3,19 @@ using Google.Protobuf.Protocol;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class TestPlayerCtr : MonoBehaviour
 {
-    public PunchInputAction punchInput;
+    public bool SendMovePacket = false;
+
+    public PunchInputAction _punchInput;
     private CharacterController _cc;
     private Animator _animator;
+    private string currentAnimation = "";
+
     public Transform cam;
     public CinemachineFreeLook freeLookCam;
     public EObjectState ObjectState = EObjectState.None;
@@ -20,37 +23,41 @@ public class TestPlayerCtr : MonoBehaviour
     private Vector2 _currentMovementInput;
     private Vector3 _currentMovement;
     private Vector3 _appliedMovement;
-    private Vector3 currentRunMovement;
-    private float _runMultiplier = 3.0f;
+    private Vector3 _cameraRelativeMovement;
+    private bool _isMovementPressed;
+    private bool _isRunPressed;
 
+    private float _runMultiplier = 3.0f;
+    private float _rotationFactorPerFrame = 15.0f;
     private float _gravity = -9.8f;
     private float _groundedGravity = -0.05f;
-    private string currentAnimation = "";
-
-    private bool isRun;
-    private bool isSprint;
-
-    private float initalJumpVelocity;
-    private float maxJumpHeight = 2.0f;
-    private float maxJumpTime = 0.75f;
 
     private bool _isJumpPressed = false;
     private bool _isJumping = false;
-    private bool _isMovementPressed = false;
+    private bool _requireNewJumpPress = false;
+    private float _initalJumpVelocity;
+    private float maxJumpHeight = 3.0f;
+    private float maxJumpTime = 0.75f;
 
-    private bool isPunch;
+    [SerializeField]
+    private bool _isPunchPress = false;
+    private bool _requireNewPunchPress = false;
 
-    PlayerBaseState _currentState;
-    PlayerStateFactory _states;
+    private PlayerBaseState _currentState;
+    private PlayerStateFactory _states;
 
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
     public Animator Animator { get { return _animator; } }
     public CharacterController CC { get { return _cc; } }
-    public bool IsMovementPressed { get; set; }
-    public bool IsRunPressed { get; set; }
-    public bool IsJumping { get { return _isJumping; } set { _isJumping = value; } }
-    public bool IsJumpPressed { get { return _isJumpPressed; } set { _isJumpPressed = value; } }
-    public float InitalJumpVelocity { get { return initalJumpVelocity; } set { initalJumpVelocity = value; } }
+    public bool IsMovementPressed { get { return _isMovementPressed; } }
+    public bool IsRunPressed { get { return _isRunPressed; } }
+    public bool IsJumping { set { _isJumping = value; } }
+    public bool IsJumpPressed { get { return _isJumpPressed; } }
+    public bool RequireNewJumpPress { get { return _requireNewJumpPress; } set { _requireNewJumpPress = value; } }
+    public bool IsPunchPressed { get { return _isPunchPress; } }
+    public bool RequireNewPunchPress { get { return _requireNewPunchPress; } set { _requireNewPunchPress = value; } }
+
+    public float InitalJumpVelocity { get { return _initalJumpVelocity; } set { _initalJumpVelocity = value; } }
     public float GroundedGravity { get { return _groundedGravity; } }
     public float Gravity { get { return _gravity; } }
     public float CurrentMovementY { get { return _currentMovement.y; } set { _currentMovement.y = value; } }
@@ -62,26 +69,27 @@ public class TestPlayerCtr : MonoBehaviour
 
     protected void Awake()
     {
-        punchInput = new PunchInputAction();
+        _punchInput = new PunchInputAction();
         _cc = GetComponent<CharacterController>();
+        _animator = GetComponentInChildren<Animator>();
 
         _states = new PlayerStateFactory(this);
         _currentState = _states.Grounded();
         _currentState.EnterState();
 
-        punchInput.Player.Move.started += Move;
-        punchInput.Player.Move.performed += Move;
-        punchInput.Player.Move.canceled += Move;
+        _punchInput.Player.Move.started += Move;
+        _punchInput.Player.Move.performed += Move;
+        _punchInput.Player.Move.canceled += Move;
             
-        punchInput.Player.Sprint.started += Sprint;
-        punchInput.Player.Sprint.canceled += Sprint;
+        _punchInput.Player.Run.started += Run;
+        _punchInput.Player.Run.canceled += Run;
 
-        punchInput.Player.Jump.started += Jump;
-        punchInput.Player.Jump.canceled += Jump;
+        _punchInput.Player.Jump.started += Jump;
+        _punchInput.Player.Jump.canceled += Jump;
 
-        punchInput.Player.Punch.started += Punch;
-        punchInput.Player.Punch.performed += Punch;
-        punchInput.Player.Punch.canceled += Punch;
+        _punchInput.Player.Punch.started += Punch;
+        _punchInput.Player.Punch.performed += Punch;
+        _punchInput.Player.Punch.canceled += Punch;
 
         SetJumpVariables();
     }
@@ -90,17 +98,7 @@ public class TestPlayerCtr : MonoBehaviour
     {
         float timeToApex = maxJumpTime / 2;
         _gravity = (-2 * maxJumpHeight) / Mathf.Pow(timeToApex, 2);
-        initalJumpVelocity = (2 * maxJumpHeight) / timeToApex;
-    }
-
-    private void OnEnable()
-    {
-        punchInput.Player.Enable();
-    }
-
-    private void OnDisable()
-    {
-        punchInput.Player.Disable();
+        _initalJumpVelocity = (2 * maxJumpHeight) / timeToApex;
     }
 
     private void Start()
@@ -108,126 +106,58 @@ public class TestPlayerCtr : MonoBehaviour
         freeLookCam.Follow = this.gameObject.transform;
         freeLookCam.LookAt = this.gameObject.transform;
 
-        ObjectState = EObjectState.Idle;
-    }
-    private void Update()
-    {
-        if (!isRun && !isPunch)
-            ObjectState = EObjectState.Idle;
-
-        HandleRotation();
-        _currentState.UpdateStates();
         _cc.Move(_appliedMovement * Time.deltaTime * 2);
     }
 
-    //private void Update()
-    //{
-    //    if (!isRun && !isPunch)
-    //        ObjectState = EObjectState.Idle;
+    private void Update()
+    {
+        UpdateAnimation();
 
-    //    HandleRotation();
-    //    _currentState.UpdateState();
-    //    UpdateAnimation();
+        HandleRotation();
+        _currentState.UpdateStates();
 
-    //    if (isSprint)
-    //    {
-    //        _appliedMovement.x = currentRunMovement.x;
-    //        _appliedMovement.z = currentRunMovement.z;
-    //    }
-    //    else
-    //    {
-    //        _appliedMovement.x = _currentMovement.x;
-    //        _appliedMovement.z = _currentMovement.z;
-    //    }
-
-    //    _cc.Move(_appliedMovement * Time.deltaTime * 2);
-
-    //    HandleGravity();
-    //    HandleJump();
-    //}
+        _cameraRelativeMovement = ConvertToCameraSpace(_appliedMovement);
+        _cc.Move(_cameraRelativeMovement * Time.deltaTime * 2);
+    }
 
     void HandleRotation()
     {
         Vector3 positionToLookAt;
-        positionToLookAt.x = _currentMovement.x;
+        positionToLookAt.x = _cameraRelativeMovement.x;
         positionToLookAt.y = 0.0f;
-        positionToLookAt.z = _currentMovement.z;
+        positionToLookAt.z = _cameraRelativeMovement.z;
 
-        //Quaternion currentRotation = transform.rotation;
+        Quaternion currentRotation = transform.rotation;
 
-        if (isRun)
+        if (_isMovementPressed)
         {
-            //Quaternion targetRotation = Quaternion.LookRotation(positionToLookAt);
-            //transform.rotation = Quaternion.Slerp(currentRotation, targetRotation, rotationFactorPerFrame * Time.deltaTime);
-        }
-    }
-
-    private void HandleGravity()
-    {
-        bool isFalling = _currentMovement.y <= 0.0f || !_isJumpPressed;
-        float fallMultiplier = 2.0f;
-        if (IsGrounded())
-        {
-            _currentMovement.y = _groundedGravity;
-            _appliedMovement.y = _groundedGravity;
-        }
-        else if (isFalling)
-        {
-            float previousYVelocity = _currentMovement.y;
-            _currentMovement.y =  _currentMovement.y + (_gravity * fallMultiplier * Time.deltaTime);
-            _appliedMovement.y = Mathf.Max((previousYVelocity + _currentMovement.y) * 0.5f, -20.0f);
-        }
-        else
-        {
-            float previousYVelocity = _currentMovement.y;
-            _currentMovement.y = _currentMovement.y + (_gravity *  Time.deltaTime);
-            _appliedMovement.y = (previousYVelocity + _currentMovement.y) * 0.5f;
-        }
-    }
-
-    private void HandleJump()
-    {
-        if (!_isJumping && IsGrounded() && _isJumpPressed)
-        {
-            _isJumping = true;
-            _currentMovement.y = initalJumpVelocity * 0.5f;
-            _appliedMovement.y = initalJumpVelocity * 0.5f;
-        }
-        else if (!_isJumpPressed && _isJumping && IsGrounded())
-        {
-            _isJumping = false;
+            Quaternion targetRotation = Quaternion.LookRotation(positionToLookAt);
+            transform.rotation = Quaternion.Slerp(currentRotation, targetRotation, _rotationFactorPerFrame * Time.deltaTime);
         }
     }
 
     #region Input
     public void Move(InputAction.CallbackContext context)
     {
-        ObjectState = EObjectState.Move;
-
         _currentMovementInput = context.ReadValue<Vector2>();
-        _currentMovement.x = _currentMovementInput.x;
-        _currentMovement.z = _currentMovementInput.y;
-        currentRunMovement.x = _currentMovementInput.x * _runMultiplier;
-        currentRunMovement.z = _currentMovementInput.y * _runMultiplier;
 
-        isRun = _currentMovementInput.x != 0 || _currentMovementInput.y != 0;
+        _isMovementPressed = _currentMovementInput.x != 0 || _currentMovementInput.y != 0;
+    }
+    public void Run(InputAction.CallbackContext context)
+    {
+        _isRunPressed = context.ReadValueAsButton();
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
         _isJumpPressed = context.ReadValueAsButton();
+        _requireNewJumpPress = false;
     }
 
     public void Punch(InputAction.CallbackContext context)
     {
-        isPunch = context.ReadValueAsButton(); ;
-
-        ObjectState = EObjectState.Skill;
-    }
-
-    public void Sprint(InputAction.CallbackContext context)
-    {
-        isSprint = context.ReadValueAsButton();
+        _isPunchPress = context.ReadValueAsButton();
+        _requireNewPunchPress = false;
     }
 
     public bool IsGrounded()
@@ -235,6 +165,27 @@ public class TestPlayerCtr : MonoBehaviour
         return _cc.isGrounded;
     } 
     #endregion
+
+    Vector3 ConvertToCameraSpace(Vector3 vectorToRotate)
+    {
+        float currentYValue = vectorToRotate.y;
+
+        Vector3 cameraForward = cam.transform.forward;
+        Vector3 cameraRight = cam.transform.right;
+
+        cameraForward.y = 0;
+        cameraRight.y = 0;
+
+        cameraForward = cameraForward.normalized;
+        cameraRight = cameraRight.normalized;
+
+        Vector3 cameraForwardZProduct = vectorToRotate.z * cameraForward;
+        Vector3 cameraRightXProduct = vectorToRotate.x * cameraRight;
+
+        Vector3 vectorRotatedToCameraSpace = cameraForwardZProduct + cameraRightXProduct;
+        vectorRotatedToCameraSpace.y = currentYValue;
+        return vectorRotatedToCameraSpace;
+    }
 
     public void UpdateAnimation()
     {
@@ -252,6 +203,9 @@ public class TestPlayerCtr : MonoBehaviour
             case EObjectState.Dead:
                 ChangeAnimation("Dead");
                 break;
+            case EObjectState.Victory:
+                ChangeAnimation("Victory");
+                break;
         }
     }
 
@@ -263,6 +217,24 @@ public class TestPlayerCtr : MonoBehaviour
         {
             currentAnimation = anim;
             _animator.CrossFade(anim, crossfade);
+        }
+    }
+
+    private void OnEnable()
+    {
+        _punchInput.Player.Enable();
+    }
+
+    private void OnDisable()
+    {
+        _punchInput.Player.Disable();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "EnemyWapeon")
+        {
+            Debug.Log("damaged");
         }
     }
 }

@@ -14,13 +14,10 @@ class PacketHandler
     ///////////////////////////////////// GameServer - Client /////////////////////////////////////
     public static void S_ConnectedHandler(PacketSession session, IMessage packet)
     {
-        Debug.Log("S_Connected");
     }
 
     public static void S_EnterLobbyHandler(PacketSession session, IMessage packet)
     {
-        Debug.Log("EnterLobby");
-
         S_EnterLobby enterLobbyPacket = packet as S_EnterLobby;
 
         Managers.Object.EnterLobby(enterLobbyPacket.MyHeroInfo);
@@ -34,7 +31,6 @@ class PacketHandler
 
     public static void S_MakeWaitingRoomHandler(PacketSession session, IMessage packet)
     {
-        Debug.Log("S_MakeRoomHandler");
         S_MakeWaitingRoom makeWaitingRoomPacket = packet as S_MakeWaitingRoom;
     }
 
@@ -97,8 +93,6 @@ class PacketHandler
 
     public static void S_EnterGameHandler(PacketSession session, IMessage packet)
     {
-        Debug.Log("EnterGame");
-
         S_EnterGame enterGamePacket = packet as S_EnterGame;
         MyPlayer myPlayer = Managers.Object.Spawn(enterGamePacket.MyHeroInfo);
 
@@ -117,6 +111,14 @@ class PacketHandler
         Managers.Object.Clear();
     }
 
+    public static void S_GameResultHandler(PacketSession session, IMessage packet)
+    {
+        Debug.Log("Game Result");
+        S_GameResult resultPacket = packet as S_GameResult;
+        Managers.Room.IsResult = resultPacket.IsGameOver;
+        Managers.Room.GameResult();
+    }
+
     public static void S_DespawnHandler(PacketSession session, IMessage packet)
     {
         Debug.Log("S_DespawnHandler");
@@ -130,8 +132,6 @@ class PacketHandler
 
     public static void S_SpawnHandler(PacketSession session, IMessage packet)
     {
-        Debug.Log("S_SpawnHandler");
-
         S_Spawn spawnPacket = packet as S_Spawn;
 
         foreach (HeroInfo obj in spawnPacket.Heroes)

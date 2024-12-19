@@ -56,6 +56,19 @@ public class PacketHandler
         ClientSession clientSession = (ClientSession)session;
         clientSession.HandleEnterGame(enterGamePacket);
     }
+    public static void C_LeaveGameHandler(PacketSession session, IMessage packet)
+    {
+        C_LeaveGame leavePacket = (C_LeaveGame)packet;
+        ClientSession clientSession = (ClientSession)session;
+        clientSession.HandleLeaveGame(leavePacket);
+    }
+
+    public static void C_GameResultHandler(PacketSession session, IMessage packet)
+    {
+        C_GameResult resultPacket = (C_GameResult)packet;
+        ClientSession clientSession = (ClientSession)session;
+        clientSession.HandleGameResult(resultPacket);
+    }
 
     public static void C_MoveHandler(PacketSession session, IMessage packet)
     {

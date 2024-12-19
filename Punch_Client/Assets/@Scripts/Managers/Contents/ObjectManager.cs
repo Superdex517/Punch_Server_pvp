@@ -3,6 +3,7 @@ using Google.Protobuf.Protocol;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ObjectManager : MonoBehaviour
@@ -64,7 +65,7 @@ public class ObjectManager : MonoBehaviour
         Managers.MyPlayer.RoomInfo = myHeroInfo.RoomInfo;
         Managers.MyPlayer.MyHeroInfo = myHeroInfo.MyHeroInfo;
 
-        Debug.Log($"{Managers.MyPlayer.MyHeroInfo.Scene}, {Managers.MyPlayer.RoomInfo.RoomId}, {Managers.MyPlayer.RoomInfo.RoomName}");
+        //Debug.Log($"{Managers.MyPlayer.MyHeroInfo.Scene}, {Managers.MyPlayer.RoomInfo.RoomId}, {Managers.MyPlayer.RoomInfo.RoomName}");
 
         return;
     }
@@ -72,6 +73,9 @@ public class ObjectManager : MonoBehaviour
     public WaitingRoomCard SpawnUI(RoomInfo roomInfo)
     {
         if (roomInfo == null)
+            return null;
+
+        if (_waitingRooms.ContainsKey(roomInfo.RoomId))
             return null;
 
         GameObject go = Managers.Resource.Instantiate("RoomCard");
@@ -119,7 +123,7 @@ public class ObjectManager : MonoBehaviour
         MyPlayer.ObjectId = objectInfo.ObjectId;
         MyPlayer.PosInfo = objectInfo.PosInfo;
         MyPlayer.freeLookCam = Utils.FindAndGetComponent<CinemachineFreeLook>("ThirdPersonCamera");
-        MyPlayer.cc = Utils.GetOrAddComponent<CharacterController>(go);
+        MyPlayer._cc = Utils.GetOrAddComponent<CharacterController>(go);
         MyPlayer.cam = Camera.main.transform;
 
         //MyHero.SyncWorldPosWithCellPos();
@@ -146,7 +150,7 @@ public class ObjectManager : MonoBehaviour
         _objects.Add(objectInfo.ObjectId, go);
 
         Player player = Utils.GetOrAddComponent<Player>(go);
-        player.cc = Utils.GetOrAddComponent<CharacterController>(go);
+        player._cc = Utils.GetOrAddComponent<CharacterController>(go);
         player.ObjectId = objectInfo.ObjectId;
         player.PosInfo = objectInfo.PosInfo;
         player.SetInfo(1);

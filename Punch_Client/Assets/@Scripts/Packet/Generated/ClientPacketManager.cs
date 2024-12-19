@@ -25,11 +25,14 @@ public enum MsgId
 	S_DestroyWaitingRoom = 17,
 	C_EnterGame = 18,
 	S_EnterGame = 19,
-	S_LeaveGame = 20,
-	S_Spawn = 21,
-	S_Despawn = 22,
-	C_Move = 23,
-	S_Move = 24,
+	C_GameResult = 20,
+	S_GameResult = 21,
+	C_LeaveGame = 22,
+	S_LeaveGame = 23,
+	S_Spawn = 24,
+	S_Despawn = 25,
+	C_Move = 26,
+	S_Move = 27,
 }
 
 class PacketManager
@@ -75,6 +78,8 @@ class PacketManager
 		_handler.Add((ushort)MsgId.S_DestroyWaitingRoom, PacketHandler.S_DestroyWaitingRoomHandler);		
 		_onRecv.Add((ushort)MsgId.S_EnterGame, MakePacket<S_EnterGame>);
 		_handler.Add((ushort)MsgId.S_EnterGame, PacketHandler.S_EnterGameHandler);		
+		_onRecv.Add((ushort)MsgId.S_GameResult, MakePacket<S_GameResult>);
+		_handler.Add((ushort)MsgId.S_GameResult, PacketHandler.S_GameResultHandler);		
 		_onRecv.Add((ushort)MsgId.S_LeaveGame, MakePacket<S_LeaveGame>);
 		_handler.Add((ushort)MsgId.S_LeaveGame, PacketHandler.S_LeaveGameHandler);		
 		_onRecv.Add((ushort)MsgId.S_Spawn, MakePacket<S_Spawn>);

@@ -1,6 +1,8 @@
+using Google.Protobuf.Protocol;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 
 public class PlayerGroundState : PlayerBaseState, IRootState
 {
@@ -29,21 +31,21 @@ public class PlayerGroundState : PlayerBaseState, IRootState
 
     public override void ExitState() { }
 
+    public override void InitializeSubState()
+    {
+        if (!Ctx.IsMovementPressed && !Ctx.IsRunPressed)
+            SetSubState(Factory.Idle());
+        else if (Ctx.IsMovementPressed && !Ctx.IsRunPressed)
+            SetSubState(Factory.Walk());
+        else
+            SetSubState(Factory.Run());
+    }
+
     public override void CheckSwitchStates() 
     {
         if (Ctx.IsJumpPressed)
             SwitchState(Factory.Jump());
         else if(!Ctx.IsGrounded())
             SwitchState(Factory.Fall());
-    }
-
-    public override void InitializeSubState() 
-    {
-        if(!Ctx.IsMovementPressed && !Ctx.IsRunPressed)
-            SetSubState(Factory.Idle());
-        else if(Ctx.IsMovementPressed && !Ctx.IsRunPressed)
-            SetSubState(Factory.Run());
-        else
-            SetSubState(Factory.Run());
     }
 }

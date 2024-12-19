@@ -60,7 +60,7 @@ namespace GameServer
 
                 _heroes.Add(obj.ObjectId, obj as Hero);
 
-                Console.WriteLine($"spawn heros ++ : {_heroes.Count}, {obj.ObjectId}");
+                //Console.WriteLine($"spawn heros ++ : {_heroes.Count}, {obj.ObjectId}");
             }
 
             return obj;

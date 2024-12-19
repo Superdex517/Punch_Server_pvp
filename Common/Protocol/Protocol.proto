@@ -108,6 +108,21 @@ message S_EnterGame
 	bool respawn = 3;
 }
 
+message C_GameResult
+{
+	RoomInfo roomInfo = 1;
+}
+
+message S_GameResult
+{
+	bool isGameOver = 1;
+}
+
+message C_LeaveGame
+{
+
+}
+
 message S_LeaveGame
 {
 

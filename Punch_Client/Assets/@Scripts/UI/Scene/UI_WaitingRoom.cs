@@ -41,10 +41,6 @@ public class UI_WaitingRoom : UI_Scene
     [SerializeField] private LeanTweenType tweenType;
     #endregion
 
-    public int RoomId;
-    public int RoomName;
-    public bool isHost;
-
     protected override void Awake()
     {
         base.Awake();
@@ -89,7 +85,7 @@ public class UI_WaitingRoom : UI_Scene
         {
             C_MakeWaitingRoom makeWaitingRoom = new C_MakeWaitingRoom();
             RoomInfo roomInfo = new RoomInfo();
-            roomInfo.RoomName = "asdasd";
+            roomInfo.RoomName = "Welcome to my Room";
             makeWaitingRoom.RoomInfo = roomInfo;
             Managers.MyPlayer.RoomInfo = roomInfo;
             Managers.Network.Send(makeWaitingRoom);

@@ -19,24 +19,15 @@ public class PlayerJumpState : PlayerBaseState, IRootState
 
     public override void UpdateState() 
     {
-        CheckSwitchStates();
         HandleGravity();
+        CheckSwitchStates();
     }
+
 
     public override void ExitState() 
     {
-        //Ctx.Animator.SetBool(Ctx.IsJumpingHash, false);
-
-        //if (Ctx.IsJumpPressed)
-        //{
-        //    Ctx.RequireNewJumpPress = true;
-        //}
-        //Ctx.CurrentJumpResetRoutine = Ctx.StartCoroutine(IJumpResetRoutine());
-        //if(Ctx.JumpCount == 3)
-        //{
-        //    Ctx.JumpCount = 0;
-        //    Ctx.Animator.SetInteger(Ctx.JumpCountHash, Ctx.JumpCount);
-        //}
+        if (Ctx.IsJumpPressed)
+            Ctx.RequireNewJumpPress = true;
     }
 
     public override void InitializeSubState() 
@@ -44,28 +35,23 @@ public class PlayerJumpState : PlayerBaseState, IRootState
         if (!Ctx.IsMovementPressed && !Ctx.IsRunPressed)
             SetSubState(Factory.Idle());
         else if (Ctx.IsMovementPressed && !Ctx.IsRunPressed)
-            SetSubState(Factory.Run());
+            SetSubState(Factory.Walk());
         else
             SetSubState(Factory.Run());
     }
-    
-    public override void CheckSwitchStates() 
+
+    public override void CheckSwitchStates()
     {
         if (Ctx.IsGrounded())
             SwitchState(Factory.Grounded());
     }
+
+    
+
     private void HandleJump()
     {
-        if(!Ctx.IsJumping && Ctx.IsGrounded())
-        {
-            Ctx.IsJumping = true;
-            Ctx.CurrentMovementY = Ctx.InitalJumpVelocity * 0.5f;
-            Ctx.AppliedMovementY = Ctx.InitalJumpVelocity * 0.5f;
-        }
-        else if(Ctx.IsJumpPressed && Ctx.IsJumping && Ctx.IsGrounded())
-        {
-            Ctx.IsJumping = false;
-        }
+        Ctx.CurrentMovementY = Ctx.InitalJumpVelocity * 0.5f;
+        Ctx.AppliedMovementY = Ctx.InitalJumpVelocity * 0.5f;
     }
 
     public void HandleGravity()

@@ -4,6 +4,7 @@ using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
@@ -82,7 +83,7 @@ namespace GameServer
                 Broadcast(obj.Pos, spawnPacket);
             }
 
-            Console.WriteLine($"EnterGame_{obj}");
+            //Console.WriteLine($"EnterGame_{obj}");
         }
 
         public void LeaveGame(int objectId, bool kick = false)
@@ -121,7 +122,18 @@ namespace GameServer
             }
         }
 
+        public void Gameover()
+        {
+            S_GameResult resultPacket = new S_GameResult();
+            resultPacket.IsGameOver = true;
 
+            byte[] packetBuffer = ClientSession.MakeSendBuffer(resultPacket);
+
+            foreach (Hero p in _heroes.Values)
+            {
+                p.Session?.Send(packetBuffer);
+            }
+        }
 
         public void Broadcast(Vector3 pos, IMessage packet)
         {
@@ -141,7 +153,7 @@ namespace GameServer
             while (true)
             {
                 randomPos.X = 0;
-                randomPos.Y = 0;
+                randomPos.Y = 1;
                 randomPos.Z = 0;
 
                 return randomPos;

@@ -82,7 +82,7 @@ public class UI_WaitingPopup : UI_Popup
         Debug.Log("Leave");
 
         S_LeaveWaitingRoom leaveWaitingRoom = new S_LeaveWaitingRoom();
-
+        
         Managers.Network.Send(leaveWaitingRoom);
 
         ClosePopupUI();

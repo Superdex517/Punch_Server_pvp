@@ -10,10 +10,10 @@ public class PlayerFallState : PlayerBaseState, IRootState
     {
         IsRootState = true;
         InitializeSubState();
+
     }
     public override void EnterState()
     {
-        Ctx.AppliedMovementY = 100.0f;
     }
     public override void UpdateState()
     {
@@ -23,8 +23,6 @@ public class PlayerFallState : PlayerBaseState, IRootState
     
     public override void ExitState() 
     {
-        //애니메이션 원상태
-        Ctx.ObjectState = EObjectState.Idle;
     }
 
     public void HandleGravity()
@@ -39,14 +37,15 @@ public class PlayerFallState : PlayerBaseState, IRootState
         if (Ctx.IsGrounded())
             SwitchState(Factory.Grounded());
     }
-    
+
     public override void InitializeSubState()
     {
         if (!Ctx.IsMovementPressed && !Ctx.IsRunPressed)
             SetSubState(Factory.Idle());
         else if (Ctx.IsMovementPressed && !Ctx.IsRunPressed)
-            SetSubState(Factory.Run());
+            SetSubState(Factory.Walk());
         else
             SetSubState(Factory.Run());
+
     }
 }

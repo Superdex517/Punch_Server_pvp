@@ -1,39 +1,62 @@
+using System.Collections.Generic;
+enum PlayerStates
+{
+    idle,
+    walk,
+    run,
+    grounded,
+    jump,
+    fall,
+    punch
+}
 public class PlayerStateFactory
 {
     protected TestPlayerCtr _context;
-    protected PlayerStateFactory _factory;
+    Dictionary<PlayerStates, PlayerBaseState> _states = new Dictionary<PlayerStates, PlayerBaseState>();
     public PlayerStateFactory(TestPlayerCtr currentContext)
     {
         _context = currentContext;
+        _states[PlayerStates.idle] = new PlayerIdleState(_context, this);
+        _states[PlayerStates.walk] = new PlayerWalkState(_context, this);
+        _states[PlayerStates.run] = new PlayerRunState(_context, this);
+        _states[PlayerStates.jump] = new PlayerJumpState(_context, this);
+        _states[PlayerStates.grounded] = new PlayerGroundState(_context, this);
+        _states[PlayerStates.fall] = new PlayerFallState(_context, this);
+        _states[PlayerStates.punch] = new PlayerPunchState(_context, this);
     }
 
     public PlayerBaseState Idle()
     {
-        return new PlayerIdleState(_context, this);
+        return _states[PlayerStates.idle];
+    }
+
+    public PlayerBaseState Walk()
+    {
+        return _states[PlayerStates.walk];
     }
 
     public PlayerBaseState Run()
     {
-        return new PlayerRunState(_context, this);
+        return _states[PlayerStates.run];
     }
 
     public PlayerBaseState Jump()
     {
-        return new PlayerJumpState(_context, this);
+        return _states[PlayerStates.jump];
     }
 
     public PlayerBaseState Punch()
     {
-        return new PlayerPunchState(_context, this);
+        return _states[PlayerStates.punch];
     }
 
     public PlayerBaseState Grounded()
     {
-        return new PlayerGroundState(_context, this);
+        return _states[PlayerStates.grounded];
     }
 
     public PlayerBaseState Fall()
     {
-        return new PlayerFallState(_context, this);
+        return _states[PlayerStates.fall];
     }
 }

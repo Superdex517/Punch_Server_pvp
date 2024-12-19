@@ -149,6 +149,12 @@ namespace GameServer
 
         public bool Remove(int roomId)
         {
+            if (!_waitingRooms.ContainsKey(roomId))
+            {
+                //Console.WriteLine($"{roomId} is already removed.");
+                return false;
+            }
+
             return _waitingRooms.Remove(roomId);
         }
 

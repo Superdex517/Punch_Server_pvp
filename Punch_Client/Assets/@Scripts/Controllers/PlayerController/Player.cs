@@ -18,7 +18,7 @@ public class Player : Creature
     {
         UpdateAI();
      
-        UpdateLerpToPos(MoveSpeed);
+        UpdatePos(MoveSpeed);
     }
 
     protected override void UpdateMove()
