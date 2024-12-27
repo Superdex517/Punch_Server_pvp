@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class PlayerPunchState : PlayerBaseState
 {
-    public PlayerPunchState(TestPlayerCtr currentContext, PlayerStateFactory playerStateFactory)
+    public PlayerPunchState(MyPlayer currentContext, PlayerStateFactory playerStateFactory)
             : base(currentContext, playerStateFactory) 
     {
+        IsRootState = true;
     }
 
     public override void EnterState() 
     {
-        InitializeSubState();
         HandlePunch();
-
+        InitializeSubState();
     }
 
     public override void UpdateState()
@@ -42,9 +42,28 @@ public class PlayerPunchState : PlayerBaseState
 
     public override void CheckSwitchStates()
     {
-        Debug.Log("Punch Check");
+        SwitchState(Factory.Grounded());
 
+        Ctx.CurrentPunchResetRoutine = Ctx.StartCoroutine(IPunchRoutine());
     }
+
+    IEnumerator IPunchRoutine()
+    {
+        yield return new WaitForSeconds(.5f);
+
+        ResetState();
+    }
+
+    public void ResetState()
+    {
+        if (!Ctx.IsMovementPressed && !Ctx.IsRunPressed)
+            Ctx.ObjectState = EObjectState.Idle;
+        else if (Ctx.IsMovementPressed && !Ctx.IsRunPressed)
+            Ctx.ObjectState = EObjectState.Move;
+        else
+            Ctx.ObjectState = EObjectState.Move;
+    }
+
 
     void HandlePunch()
     {

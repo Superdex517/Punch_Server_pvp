@@ -11,9 +11,9 @@ enum PlayerStates
 }
 public class PlayerStateFactory
 {
-    protected TestPlayerCtr _context;
+    protected MyPlayer _context;
     Dictionary<PlayerStates, PlayerBaseState> _states = new Dictionary<PlayerStates, PlayerBaseState>();
-    public PlayerStateFactory(TestPlayerCtr currentContext)
+    public PlayerStateFactory(MyPlayer currentContext)
     {
         _context = currentContext;
         _states[PlayerStates.idle] = new PlayerIdleState(_context, this);

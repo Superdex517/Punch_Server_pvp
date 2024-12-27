@@ -116,6 +116,7 @@ public class ObjectManager : MonoBehaviour
 
         GameObject go = Managers.Resource.Instantiate("FightPlayer"); // TEMP		
         go.name = info.Name;
+        go.transform.position = new Vector3(objectInfo.PosInfo.PosX, objectInfo.PosInfo.PosY, objectInfo.PosInfo.PosZ);
         go.transform.parent = HeroRoot;
         _objects.Add(objectInfo.ObjectId, go);
 
@@ -146,7 +147,9 @@ public class ObjectManager : MonoBehaviour
 
         GameObject go = Managers.Resource.Instantiate("FightPlayer"); // TEMP
         go.name = info.Name;
+        go.transform.position = new Vector3(objectInfo.PosInfo.PosX, objectInfo.PosInfo.PosY, objectInfo.PosInfo.PosZ);
         go.transform.parent = HeroRoot;
+        go.transform.GetComponentInChildren<Knife>().gameObject.tag = "EnemyWeapon";
         _objects.Add(objectInfo.ObjectId, go);
 
         Player player = Utils.GetOrAddComponent<Player>(go);

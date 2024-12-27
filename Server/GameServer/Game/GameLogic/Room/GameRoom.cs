@@ -20,6 +20,9 @@ namespace GameServer
         public EGameUIType UIType { get; protected set; } = EGameUIType.None;
 
         public Dictionary<int, Hero> _heroes = new Dictionary<int, Hero>();
+
+        Random _rand = new Random();
+
         public GameRoom()
         {
 
@@ -60,7 +63,7 @@ namespace GameServer
                 Hero hero = (Hero)obj;
                 _heroes.Add(obj.ObjectId, hero);
                 hero.WaitingRoom.GameRoom = this;
-                
+
                 ApplyMove(hero, new Vector3(hero.Pos.X, hero.Pos.Y, hero.Pos.Z), hero.MoveDir);
 
                 hero.State = EObjectState.Idle;
@@ -152,9 +155,9 @@ namespace GameServer
 
             while (true)
             {
-                randomPos.X = 0;
+                randomPos.X = _rand.Next(1, 50);
                 randomPos.Y = 1;
-                randomPos.Z = 0;
+                randomPos.Z = _rand.Next(1, 50);
 
                 return randomPos;
             }

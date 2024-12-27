@@ -6,11 +6,10 @@ using UnityEngine;
 
 public class PlayerGroundState : PlayerBaseState, IRootState
 {
-    public PlayerGroundState(TestPlayerCtr currentContext, PlayerStateFactory playerStateFactory)
+    public PlayerGroundState(MyPlayer currentContext, PlayerStateFactory playerStateFactory)
         : base (currentContext, playerStateFactory) 
     {
         IsRootState = true;
-        InitializeSubState();
     }
 
     public void HandleGravity()
@@ -21,6 +20,7 @@ public class PlayerGroundState : PlayerBaseState, IRootState
 
     public override void EnterState() 
     {
+        InitializeSubState();
         HandleGravity();
     }
 
@@ -43,8 +43,10 @@ public class PlayerGroundState : PlayerBaseState, IRootState
 
     public override void CheckSwitchStates() 
     {
-        if (Ctx.IsJumpPressed)
+        if (Ctx.IsJumpPressed && !Ctx.RequireNewJumpPress)
             SwitchState(Factory.Jump());
+        else if (Ctx.IsPunchPressed && !Ctx.RequireNewPunchPress)
+            SwitchState(Factory.Punch());
         else if(!Ctx.IsGrounded())
             SwitchState(Factory.Fall());
     }

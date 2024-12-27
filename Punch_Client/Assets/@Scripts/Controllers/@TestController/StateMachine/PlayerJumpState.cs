@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class PlayerJumpState : PlayerBaseState, IRootState
 {
-    public PlayerJumpState(TestPlayerCtr currentContext, PlayerStateFactory playerStateFactory) 
+    public PlayerJumpState(MyPlayer currentContext, PlayerStateFactory playerStateFactory) 
         : base(currentContext, playerStateFactory) 
     {
         IsRootState = true;
-        InitializeSubState();
     }
 
     public override void EnterState() 
     {
         HandleJump();
+        InitializeSubState();
     }
 
     public override void UpdateState() 
@@ -45,8 +45,6 @@ public class PlayerJumpState : PlayerBaseState, IRootState
         if (Ctx.IsGrounded())
             SwitchState(Factory.Grounded());
     }
-
-    
 
     private void HandleJump()
     {

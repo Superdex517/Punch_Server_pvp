@@ -6,6 +6,7 @@ using Google.Protobuf.Protocol;
 using System;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using static UI_GameScene;
 
 public class MyPlayer : Player
 {
@@ -72,8 +73,13 @@ public class MyPlayer : Player
     [SerializeField]
     private bool isDead = false;
 
+    [SerializeField]
+    private bool isGameOver = false;
+
     private PlayerBaseState _currentState;
     private PlayerStateFactory _states;
+    private Coroutine _currentPunchResetRoutine;
+    public Coroutine CurrentPunchResetRoutine { get { return _currentPunchResetRoutine; } set { _currentPunchResetRoutine = value; } }
 
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
     public Animator Animator { get { return _animator; } }
@@ -104,7 +110,7 @@ public class MyPlayer : Player
         _cc = GetComponent<CharacterController>();
         _animator = GetComponentInChildren<Animator>();
 
-        //_states = new PlayerStateFactory(this);
+        _states = new PlayerStateFactory(this);
         _currentState = _states.Grounded();
         _currentState.EnterState();
 
@@ -137,11 +143,14 @@ public class MyPlayer : Player
 
         freeLookCam.Follow = this.gameObject.transform;
         freeLookCam.LookAt = this.gameObject.transform;
+
     }
 
     protected override void Update()
     {
-        base.Update();
+        //base.Update();
+        transform.position = Position;
+
 
         UpdateAI();
 
@@ -155,11 +164,6 @@ public class MyPlayer : Player
         }
 
         UpdateSendMovePacket();
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            isDead = true;
-        }
 
         SendResult();
     }
@@ -274,8 +278,7 @@ public class MyPlayer : Player
             movePacket.PosInfo.Dir = PlayerDir;
             Managers.Network.GameServer.Send(movePacket);
             _sendMovePacket = false;
-
-            Debug.Log("sendPacket");
+            Debug.Log("SendPacket");
         }
     }
 
@@ -285,10 +288,26 @@ public class MyPlayer : Player
         {
             C_GameResult gameResult = new C_GameResult();
             Managers.Network.Send(gameResult);
+            FindObjectOfType<UI_GameScene>().Result = GameResult.Lose;
+
             isDead = false;
         }
     }
 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "EnemyWeapon")
+        {
+            if (!isGameOver)
+            {
+                _sendMovePacket = true;
+                isDead = true;
+                ObjectState = EObjectState.Dead;
+                isGameOver = Managers.Room.IsResult;
+            }
+        }
+    }
     private void OnEnable()
     {
         _punchInput.Player.Enable();

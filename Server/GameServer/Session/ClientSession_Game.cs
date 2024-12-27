@@ -3,6 +3,7 @@ using ServerCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -85,9 +86,9 @@ namespace GameServer
 
             MyHero.ObjectInfo.PosInfo.State = EObjectState.Idle;
             MyHero.SceneType = EGameSceneType.Game;
-            MyHero.ObjectInfo.PosInfo.PosX = 0;
+            MyHero.ObjectInfo.PosInfo.PosX = 5;
             MyHero.ObjectInfo.PosInfo.PosY = 1;
-            MyHero.ObjectInfo.PosInfo.PosZ = 0;
+            MyHero.ObjectInfo.PosInfo.PosZ = 5;
             MyHero.ObjectInfo.PosInfo.Dir = 0;
             MyHero.Session = this;
 
@@ -95,7 +96,7 @@ namespace GameServer
             {
                 Hero hero = MyHero;
 
-                GameLogic.Instance.Lobby.FindWaitingRoom(enterGamePacket.RoomInfo.RoomId).GameRoom.EnterGame(hero, respawn: false, pos: null);
+                GameLogic.Instance.Lobby.FindWaitingRoom(enterGamePacket.RoomInfo.RoomId).GameRoom.EnterGame(hero, respawn: false);
             });
         }        
         

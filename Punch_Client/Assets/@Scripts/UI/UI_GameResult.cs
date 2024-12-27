@@ -19,13 +19,6 @@ public class UI_GameResult : UI_GameScene
         LeaveButton,
     }
 
-    public enum GameResult
-    {
-        None,
-        Win,
-        Lose
-    }
-
     GameResult _result = GameResult.None;
     public GameResult Result
     {
@@ -36,6 +29,7 @@ public class UI_GameResult : UI_GameScene
             switch (value)
             {
                 case GameResult.None:
+                    GetText((int)GameTexts.ResultText).text = $"WL";
                     break;
                 case GameResult.Win:
                     GetText((int)GameTexts.ResultText).text = $"Win!";

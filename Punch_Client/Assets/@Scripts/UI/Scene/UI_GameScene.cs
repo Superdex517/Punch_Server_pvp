@@ -11,12 +11,45 @@ public class UI_GameScene : UI_Scene
         UI_GameResult,
     }
 
+    enum GameTexts
+    {
+        ResultText,
+    }
+
     enum GameButtons
     {
         MenuButton,
+        LeaveButton,
     }
 
-    public UI_GameResult gameResult;
+    public enum GameResult
+    {
+        None,
+        Win,
+        Lose
+    }
+
+    GameResult _result = GameResult.None;
+    public GameResult Result
+    {
+        get { return _result; }
+        set
+        {
+            _result = value;
+            switch (value)
+            {
+                case GameResult.None:
+                    GetText((int)GameTexts.ResultText).text = $"WL";
+                    break;
+                case GameResult.Win:
+                    GetText((int)GameTexts.ResultText).text = $"Win!";
+                    break;
+                case GameResult.Lose:
+                    GetText((int)GameTexts.ResultText).text = $"Lose!";
+                    break;
+            }
+        }
+    }
 
     protected override void Awake()
     {
@@ -24,9 +57,18 @@ public class UI_GameScene : UI_Scene
 
         BindObjects(typeof(GameObjects));
         BindButtons(typeof(GameButtons));
+        BindTexts(typeof(GameTexts));
 
-        gameResult = GetObject((int)GameObjects.UI_GameResult).GetComponent<UI_GameResult>();
-        gameResult.gameObject.SetActive(false);
+        Result = GameResult.Win;
+        GetObject((int)GameObjects.UI_GameResult).SetActive(false);
+
+        GetButton((int)GameButtons.LeaveButton).onClick.AddListener(() =>
+        {
+            OnClickLobby();
+            C_DestroyWaitingRoom destroyWaitingRoomPacket = new C_DestroyWaitingRoom();
+            destroyWaitingRoomPacket.RoomInfo = Managers.MyPlayer.RoomInfo;
+            Managers.Network.Send(destroyWaitingRoomPacket);
+        });
     }
 
     protected override void Start()
@@ -42,5 +84,10 @@ public class UI_GameScene : UI_Scene
         Managers.Network.Send(leaveGamePacket);
         Managers.Scene.LoadScene(EScene.ScelectRoomScene);
         Managers.Room.IsResult = false;
+    }
+
+    public void ActiveGameResult()
+    {
+        GetObject((int)GameObjects.UI_GameResult).SetActive(true);
     }
 }

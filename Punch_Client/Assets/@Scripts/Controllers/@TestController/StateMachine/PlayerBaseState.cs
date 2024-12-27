@@ -1,20 +1,21 @@
+using UnityEngine;
+
 public abstract class PlayerBaseState
 {
     private bool _isRootState = false;
-    private TestPlayerCtr _ctx;
+    private MyPlayer _ctx;
     private PlayerStateFactory _factory;
     private PlayerBaseState _currentSuperState;
     private PlayerBaseState _currentSubState;
-    public PlayerBaseState(TestPlayerCtr currentContext, PlayerStateFactory factory)
+
+    protected bool IsRootState { set { _isRootState = value; } }
+    protected MyPlayer Ctx { get { return _ctx; } }
+    protected PlayerStateFactory Factory { get { return _factory; } }
+    public PlayerBaseState(MyPlayer currentContext, PlayerStateFactory factory)
     {
         _ctx = currentContext;
         _factory = factory;
     }
-
-    protected bool IsRootState { set { _isRootState = value; } }
-    protected TestPlayerCtr Ctx { get { return _ctx; } }
-    protected PlayerStateFactory Factory { get { return _factory; } }
-
 
     public virtual void EnterState() {  }
     public virtual void UpdateState() { }

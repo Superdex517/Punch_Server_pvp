@@ -33,7 +33,6 @@ public class RoomManager : MonoBehaviour
 
     public void GameResult()
     {
-        FindObjectOfType<UI_GameScene>().gameResult.gameObject.SetActive(true);
-        Debug.Log("END GAEM");
+        FindObjectOfType<UI_GameScene>().ActiveGameResult();
     }
 }

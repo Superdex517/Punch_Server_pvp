@@ -5,20 +5,20 @@ using UnityEngine;
 
 public class PlayerFallState : PlayerBaseState, IRootState
 {
-    public PlayerFallState(TestPlayerCtr currentContext, PlayerStateFactory factory) 
+    public PlayerFallState(MyPlayer currentContext, PlayerStateFactory factory) 
         : base(currentContext, factory)
     {
         IsRootState = true;
-        InitializeSubState();
 
     }
     public override void EnterState()
     {
+        InitializeSubState();
     }
     public override void UpdateState()
     {
-        CheckSwitchStates();
         HandleGravity();
+        CheckSwitchStates();
     }
     
     public override void ExitState() 

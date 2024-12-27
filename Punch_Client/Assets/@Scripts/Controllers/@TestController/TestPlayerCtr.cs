@@ -43,6 +43,10 @@ public class TestPlayerCtr : MonoBehaviour
     private bool _isPunchPress = false;
     private bool _requireNewPunchPress = false;
 
+    private Coroutine _currentPunchResetRoutine;
+    public Coroutine CurrentPunchResetRoutine { get { return _currentPunchResetRoutine; } set { _currentPunchResetRoutine = value; } }
+
+
     private PlayerBaseState _currentState;
     private PlayerStateFactory _states;
 
@@ -66,14 +70,32 @@ public class TestPlayerCtr : MonoBehaviour
     public float AppliedMovementZ { get { return _appliedMovement.z; } set { _appliedMovement.z = value; } }
     public float RunMultiplier { get { return _runMultiplier; } }
     public Vector2 CurrentMovementInput { get { return _currentMovementInput; } }
+    
+
+    GameObject GetChildWithName(GameObject obj, string name)
+    {
+        //이걸 재귀로 돌면서 찾을수 있도록 수정
+        Transform trans = obj.transform;
+        Transform childTrans = trans.Find(name);
+        if (childTrans != null)
+        {
+            return childTrans.gameObject;
+        }
+        else
+        {
+            return obj = childTrans.gameObject;
+        }
+    }
 
     protected void Awake()
     {
+        transform.GetComponentInChildren<Knife>().gameObject.tag = "EnemyWeapon";
+
         _punchInput = new PunchInputAction();
         _cc = GetComponent<CharacterController>();
         _animator = GetComponentInChildren<Animator>();
 
-        _states = new PlayerStateFactory(this);
+        //_states = new PlayerStateFactory(this);
         _currentState = _states.Grounded();
         _currentState.EnterState();
 
@@ -88,7 +110,6 @@ public class TestPlayerCtr : MonoBehaviour
         _punchInput.Player.Jump.canceled += Jump;
 
         _punchInput.Player.Punch.started += Punch;
-        _punchInput.Player.Punch.performed += Punch;
         _punchInput.Player.Punch.canceled += Punch;
 
         SetJumpVariables();
@@ -103,6 +124,8 @@ public class TestPlayerCtr : MonoBehaviour
 
     private void Start()
     {
+        ObjectState = EObjectState.Idle;
+
         freeLookCam.Follow = this.gameObject.transform;
         freeLookCam.LookAt = this.gameObject.transform;
 
@@ -111,13 +134,18 @@ public class TestPlayerCtr : MonoBehaviour
 
     private void Update()
     {
-        UpdateAnimation();
-
         HandleRotation();
         _currentState.UpdateStates();
 
         _cameraRelativeMovement = ConvertToCameraSpace(_appliedMovement);
         _cc.Move(_cameraRelativeMovement * Time.deltaTime * 2);
+
+        UpdateAnimation();
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            ObjectState = EObjectState.Dead;
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+            ObjectState = EObjectState.Victory;
     }
 
     void HandleRotation()
@@ -198,7 +226,7 @@ public class TestPlayerCtr : MonoBehaviour
                 ChangeAnimation("Run");
                 break;
             case EObjectState.Skill:
-                ChangeAnimation("Punch");
+                ChangeAnimation("Stab");
                 break;
             case EObjectState.Dead:
                 ChangeAnimation("Dead");
@@ -232,9 +260,10 @@ public class TestPlayerCtr : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "EnemyWapeon")
+        if (other.gameObject.tag == "EnemyWeapon")
         {
-            Debug.Log("damaged");
+            //Debug.Log("damaged");
+            //KnifeCollider
         }
     }
 }

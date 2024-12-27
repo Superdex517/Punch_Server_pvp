@@ -14,7 +14,7 @@ public class BaseObject : MonoBehaviour
 
     public float MoveSpeed = 5.0f;
 
-    PositionInfo _positionInfo = new PositionInfo();
+    private PositionInfo _positionInfo = new PositionInfo();
     public PositionInfo PosInfo
     {
         get { return _positionInfo; }
@@ -97,7 +97,7 @@ public class BaseObject : MonoBehaviour
                 ChangeAnimation("Run");
                 break;
             case EObjectState.Skill:
-                ChangeAnimation("Punch");
+                ChangeAnimation("Stab");
                 break;
             case EObjectState.Dead:
                 ChangeAnimation("Dead");

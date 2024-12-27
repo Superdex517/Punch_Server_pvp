@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerRunState : PlayerBaseState
 {
-    public PlayerRunState(TestPlayerCtr currentContext, PlayerStateFactory playerStateFactory)
+    public PlayerRunState(MyPlayer currentContext, PlayerStateFactory playerStateFactory)
     : base(currentContext, playerStateFactory) { }
 
     public override void EnterState() 
@@ -16,9 +16,9 @@ public class PlayerRunState : PlayerBaseState
 
     public override void UpdateState()
     {
-        CheckSwitchStates();
         Ctx.AppliedMovementX = Ctx.CurrentMovementInput.x * Ctx.RunMultiplier;
         Ctx.AppliedMovementZ = Ctx.CurrentMovementInput.y * Ctx.RunMultiplier;
+        CheckSwitchStates();
     }
 
     public override void ExitState()
