@@ -51,7 +51,7 @@ public class WaitingRoomCard : UI_Base
 
     public void UpdateRoomTitle(string id)
     {
-        GetText((int)GameTexts.Room_NumberText).text = "¹æ ¹øÈ£: \n" + id;
+        GetText((int)GameTexts.Room_NumberText).text = "Title: \n" + id;
 
     }
 
